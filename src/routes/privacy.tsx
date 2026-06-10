@@ -7,7 +7,10 @@ export const Route = createFileRoute("/privacy")({
     meta: [
       { title: "Privacy — Clockout" },
       { name: "description", content: "How Clockout handles your information." },
+      { property: "og:url", content: "/privacy" },
+    
     ],
+    links: [{ rel: "canonical", href: "/privacy" }],
   }),
   component: Privacy,
 });

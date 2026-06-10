@@ -7,7 +7,10 @@ export const Route = createFileRoute("/terms")({
     meta: [
       { title: "Terms — Clockout" },
       { name: "description", content: "Terms of service for Clockout." },
+      { property: "og:url", content: "/terms" },
+    
     ],
+    links: [{ rel: "canonical", href: "/terms" }],
   }),
   component: Terms,
 });

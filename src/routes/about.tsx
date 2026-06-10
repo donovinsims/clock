@@ -10,7 +10,10 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Why Clockout exists, who's behind it, and the model that lets clients own their systems outright." },
       { property: "og:title", content: "About — Clockout" },
       { property: "og:description", content: "Built by Donovin. One-time builds. You own the system outright." },
+      { property: "og:url", content: "/about" },
+    
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: About,
 });

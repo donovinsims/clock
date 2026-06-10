@@ -9,7 +9,10 @@ export const Route = createFileRoute("/operator-os")({
       { name: "description", content: "Operator OS is a personal AI operating system for founders, sales reps, consultants, agents, and operators. Capture, follow-up, decisions, integrations — built once, owned forever." },
       { property: "og:title", content: "Operator OS — Clockout" },
       { property: "og:description", content: "A personal AI operating system for founders, sales reps, consultants, agents, and operators." },
+      { property: "og:url", content: "/operator-os" },
+    
     ],
+    links: [{ rel: "canonical", href: "/operator-os" }],
   }),
   component: OperatorOS,
 });

@@ -9,7 +9,10 @@ export const Route = createFileRoute("/blog")({
       { name: "description", content: "Practical writing on automation, AI, and running an owner-led business better." },
       { property: "og:title", content: "Field notes — Clockout" },
       { property: "og:description", content: "Practical writing on automation, AI, and running an owner-led business better." },
+      { property: "og:url", content: "/blog" },
+    
     ],
+    links: [{ rel: "canonical", href: "/blog" }],
   }),
   component: Blog,
 });

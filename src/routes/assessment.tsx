@@ -11,7 +11,10 @@ export const Route = createFileRoute("/assessment")({
       { name: "description", content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks. Book your Revenue Leak Audit." },
       { property: "og:title", content: "Book the Revenue Leak Audit — Clockout" },
       { property: "og:description", content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks." },
+      { property: "og:url", content: "/assessment" },
+    
     ],
+    links: [{ rel: "canonical", href: "/assessment" }],
   }),
   component: Assessment,
 });

@@ -10,7 +10,10 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Send us a note. We reply within one business day." },
       { property: "og:title", content: "Contact — Clockout" },
       { property: "og:description", content: "Send us a note. We reply within one business day." },
+      { property: "og:url", content: "/contact" },
+    
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: Contact,
 });

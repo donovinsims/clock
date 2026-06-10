@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { VERTICALS } from "@/lib/site";
 import { CTAButton } from "./CTAButton";
@@ -6,12 +6,25 @@ import { CTAButton } from "./CTAButton";
 export function Header() {
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState(false);
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isOperator = pathname.startsWith("/operator-os");
+
+  // Blue theme classes for Operator OS
+  const headerBg = isOperator
+    ? "border-[oklch(0.55_0.22_258)/0.18] bg-white/85"
+    : "border-border bg-background/80";
+  const navLink = isOperator
+    ? "rounded-full px-4 py-2 text-sm text-[oklch(0.30_0.10_258)] hover:bg-[oklch(0.55_0.22_258)/0.10] hover:text-[oklch(0.45_0.22_258)]"
+    : "rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink";
+  const brandDot = isOperator ? "bg-[oklch(0.55_0.22_258)]" : "bg-signal";
+  const brandText = isOperator ? "text-[oklch(0.16_0.02_258)]" : "";
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
+    <header className={`sticky top-0 z-50 border-b backdrop-blur-xl ${headerBg}`}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="inline-block h-2.5 w-2.5 rounded-full bg-signal" aria-hidden />
-          <span className="font-display text-2xl">Clockout</span>
+          <span className={`inline-block h-2.5 w-2.5 rounded-full ${brandDot}`} aria-hidden />
+          <span className={`font-display text-2xl ${brandText}`}>Clockout</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -20,10 +33,7 @@ export function Header() {
             onMouseEnter={() => setServices(true)}
             onMouseLeave={() => setServices(false)}
           >
-            <Link
-              to="/services"
-              className="rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink"
-            >
+            <Link to="/services" className={navLink}>
               Services
             </Link>
             {services && (
@@ -43,22 +53,16 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link to="/solutions" className="rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink">
-            Solutions
-          </Link>
-          <Link to="/operator-os" className="rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink">
-            Operator OS
-          </Link>
-          <Link to="/about" className="rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink">
-            About
-          </Link>
-          <Link to="/blog" className="rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink">
-            Blog
-          </Link>
+          <Link to="/solutions" className={navLink}>Solutions</Link>
+          <Link to="/operator-os" className={navLink}>Operator OS</Link>
+          <Link to="/about" className={navLink}>About</Link>
+          <Link to="/blog" className={navLink}>Blog</Link>
         </nav>
 
         <div className="hidden md:block">
-          <CTAButton to="/assessment">Book the audit</CTAButton>
+          <CTAButton to="/assessment" variant={isOperator ? "imessage" : "primary"}>
+            Book the audit
+          </CTAButton>
         </div>
 
         <button
@@ -88,7 +92,9 @@ export function Header() {
             <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm">Operator OS</Link>
             <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">About</Link>
             <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm">Blog</Link>
-            <div className="pt-3" onClick={() => setOpen(false)}><CTAButton to="/assessment">Book the audit</CTAButton></div>
+            <div className="pt-3" onClick={() => setOpen(false)}>
+              <CTAButton to="/assessment" variant={isOperator ? "imessage" : "primary"}>Book the audit</CTAButton>
+            </div>
           </div>
         </div>
       )}

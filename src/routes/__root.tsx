@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import clockoutIcon from "../assets/clockout-icon.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -77,29 +78,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Clockout builds done-for-you AI automation and operating systems for service businesses and professionals." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Clockout builds done-for-you AI automation and operating systems for service businesses and professionals." },
+      { title: "Clockout — Run better, not busier." },
+      { name: "description", content: "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system." },
+      { name: "author", content: "Clockout" },
+      { property: "og:site_name", content: "Clockout" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Clockout builds done-for-you AI automation and operating systems for service businesses and professionals." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/36653c58-96f9-4488-8608-336a594caabc/id-preview-8b911a6f--b111d495-3b05-4a01-b0dd-c2f04b4d64c1.lovable.app-1781076500522.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/36653c58-96f9-4488-8608-336a594caabc/id-preview-8b911a6f--b111d495-3b05-4a01-b0dd-c2f04b4d64c1.lovable.app-1781076500522.png" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "icon", type: "image/jpeg", href: clockoutIcon.url },
+      { rel: "apple-touch-icon", href: clockoutIcon.url },
+      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Clockout",
+          description: "Done-for-you AI automation and operating systems for owner-led service businesses.",
+          logo: clockoutIcon.url,
+          slogan: "Run better, not busier.",
+        }),
       },
     ],
   }),

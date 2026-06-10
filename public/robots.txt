@@ -1,0 +1,9 @@
+# Clockout — robots.txt
+# Allow all crawlers, including AI search bots (GPTBot, ChatGPT-User,
+# PerplexityBot, ClaudeBot, anthropic-ai, Google-Extended, Bingbot)
+User-agent: *
+Allow: /
+
+# Block training-only Common Crawl bot
+User-agent: CCBot
+Disallow: /
