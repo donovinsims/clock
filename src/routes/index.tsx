@@ -14,7 +14,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Done-for-you AI automation for owner-led service businesses. One $497 audit. 48-hour report. You own the system." },
       { property: "og:title", content: "Clockout — Run better, not busier." },
       { property: "og:description", content: "Done-for-you AI automation for owner-led service businesses." },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
@@ -25,9 +27,7 @@ function Index() {
       {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-32 md:pb-32">
-          <div className="op-label text-[0.7rem] text-clay">
-            <span className="text-signal">●</span>&nbsp;&nbsp;Done-for-you · One-time pricing · You own it
-          </div>
+          <GuaranteeBadge />
           <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight">
             Run better,<br />
             <span className="italic text-signal">not busier.</span>
@@ -40,9 +40,6 @@ function Index() {
               <span className="op-label text-[0.7rem]">Book the $497 audit</span>
             </CTAButton>
             <CTAButton to="/services" variant="ghost">See how it works</CTAButton>
-          </div>
-          <div className="mt-8">
-            <GuaranteeBadge />
           </div>
         </div>
       </section>

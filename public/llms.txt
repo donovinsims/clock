@@ -1,0 +1,30 @@
+# Clockout
+
+> Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing, 48-hour audits, and full ownership — no retainers, no lock-in.
+
+## What we do
+
+- **Revenue Leak Audit** — $497 flat. We map the workflow, quantify the leaks costing you bookings and margin, and deliver a written report in 48 hours. Refund if we don't surface at least $10K in fixable leaks.
+- **Done-for-you builds** — starting at $997. We design, ship, and install the automations (calls, quotes, follow-ups, reporting, dispatch) directly in your stack. Full handover. You own the system.
+- **Operator OS** — a personal AI operating system for founders, sales reps, consultants, agents, and operators. Capture, follow-up, decision support, and integrations across Gmail, Calendar, CRM, notes, and call transcripts.
+
+## Who it's for
+
+Trades and local service (HVAC, roofing, plumbing, electrical, landscaping, cleaning), property management, real estate, and individual operators who are the bottleneck in their own business.
+
+## Key pages
+
+- Home: /
+- Services overview: /services
+- Operator OS: /operator-os
+- Solutions: /solutions
+- About: /about
+- Book the audit: /assessment
+- Blog (field notes): /blog
+- Contact: /contact
+
+## Pricing
+
+- Revenue Leak Audit: $497 (one-time, 48-hour delivery, refund guarantee)
+- Done-for-you build: from $997 (one-time)
+- No retainers. No subscriptions. You own the system.
