@@ -81,30 +81,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Case study */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
-          <blockquote className="relative rounded-2xl bg-signal/5 border border-signal/15 p-6 md:p-8">
-            <div className="op-label mb-2 text-[0.65rem] text-signal">CASE STUDY</div>
-            <p className="text-base md:text-lg leading-relaxed">
-              &ldquo;An HVAC company in Austin was losing{" "}
-              <strong className="text-ink">$47K&thinsp;/&thinsp;year</strong>{" "}
-              to after-hours calls going to voicemail. We found it in 48 hours,
-              built an automated dispatch system, and the owner saw paid jobs
-              from it within the first week.&rdquo;
-            </p>
-            <div className="mt-4 flex items-center gap-3 text-sm text-clay">
-              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-signal/40 to-signal/20" />
-              <span>
-                <strong className="text-ink">Donovin&rsquo;s notes</strong>
-                <br />
-                Owner, Clockout
-              </span>
-            </div>
-          </blockquote>
-        </div>
-      </section>
-
       {/* Self-select */}
       <Section>
         <H2>Which one sounds like you?</H2>
