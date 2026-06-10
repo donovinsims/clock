@@ -8,7 +8,6 @@ export const Route = createFileRoute("/terms")({
       { title: "Terms — Clockout" },
       { name: "description", content: "Terms of service for Clockout." },
       { property: "og:url", content: "/terms" },
-    
     ],
     links: [{ rel: "canonical", href: "/terms" }],
   }),
@@ -24,10 +23,23 @@ function Terms() {
         <div className="mt-12 max-w-3xl space-y-6 text-lg text-muted-foreground">
           {/* TODO: replace with reviewed legal copy */}
           <p>Last updated: {new Date().getFullYear()}</p>
-          <p>By using this site, you agree to these terms. The audit is a one-time $497 engagement delivered within 48 business hours. If the audit does not surface at least $10K in fixable leaks, you receive a full refund.</p>
-          <p>Implementation engagements are scoped per project. Pricing starts at $997. Deliverables, timeline, and payment terms are documented in a written statement of work.</p>
-          <p>You own the systems we build for you outright at handover. We retain no rights to your customer data and run no monthly subscription against the systems we ship.</p>
-          <p>Content on this site is for general information only and is not legal, financial, or business advice.</p>
+          <p>
+            By using this site, you agree to these terms. The audit is a one-time $497 engagement
+            delivered within 48 business hours. If the audit does not surface at least $10K in
+            fixable leaks, you receive a full refund.
+          </p>
+          <p>
+            Implementation engagements are scoped per project. Pricing starts at $997. Deliverables,
+            timeline, and payment terms are documented in a written statement of work.
+          </p>
+          <p>
+            You own the systems we build for you outright at handover. We retain no rights to your
+            customer data and run no monthly subscription against the systems we ship.
+          </p>
+          <p>
+            Content on this site is for general information only and is not legal, financial, or
+            business advice.
+          </p>
         </div>
       </Section>
     </SiteLayout>

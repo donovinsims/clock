@@ -52,7 +52,9 @@ function VerticalPage() {
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <CTAButton to="/assessment">Book the audit</CTAButton>
-            <CTAButton to="/contact" variant="ghost">Talk to us</CTAButton>
+            <CTAButton to="/contact" variant="ghost">
+              Talk to us
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -83,7 +85,10 @@ function VerticalPage() {
         <H2>The {meta?.name} stack.</H2>
         <div className="mt-12 grid gap-3 md:grid-cols-2">
           {data.automations.map((a, i) => (
-            <div key={i} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5">
+            <div
+              key={i}
+              className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5"
+            >
               <span className="mt-1 font-mono text-xs text-signal">0{i + 1}</span>
               <div>
                 <div className="font-medium">{a.title}</div>

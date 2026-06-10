@@ -17,32 +17,58 @@ export function Footer() {
           </div>
           <FooterCol title="Services">
             {VERTICALS.slice(0, 4).map((v) => (
-              <Link key={v.slug} to="/services/$slug" params={{ slug: v.slug }} className="block py-1 text-sm text-bone/70 hover:text-bone">
+              <Link
+                key={v.slug}
+                to="/services/$slug"
+                params={{ slug: v.slug }}
+                className="block py-1 text-sm text-bone/70 hover:text-bone"
+              >
                 {v.name}
               </Link>
             ))}
           </FooterCol>
           <FooterCol title="More">
             {VERTICALS.slice(4).map((v) => (
-              <Link key={v.slug} to="/services/$slug" params={{ slug: v.slug }} className="block py-1 text-sm text-bone/70 hover:text-bone">
+              <Link
+                key={v.slug}
+                to="/services/$slug"
+                params={{ slug: v.slug }}
+                className="block py-1 text-sm text-bone/70 hover:text-bone"
+              >
                 {v.name}
               </Link>
             ))}
           </FooterCol>
           <FooterCol title="Company">
-            <Link to="/operator-os" className="block py-1 text-sm text-bone/70 hover:text-bone">Operator OS</Link>
-            <Link to="/solutions" className="block py-1 text-sm text-bone/70 hover:text-bone">Solutions</Link>
-            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone">About</Link>
-            <Link to="/blog" className="block py-1 text-sm text-bone/70 hover:text-bone">Blog</Link>
-            <Link to="/contact" className="block py-1 text-sm text-bone/70 hover:text-bone">Contact</Link>
-            <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone">Book the audit</Link>
+            <Link to="/operator-os" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Operator OS
+            </Link>
+            <Link to="/solutions" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Solutions
+            </Link>
+            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              About
+            </Link>
+            <Link to="/blog" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Blog
+            </Link>
+            <Link to="/contact" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Contact
+            </Link>
+            <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Book the audit
+            </Link>
           </FooterCol>
         </div>
         <div className="mt-16 flex flex-col gap-4 border-t border-bone/15 pt-6 text-xs text-bone/50 md:flex-row md:items-center md:justify-between">
           <div>© {new Date().getFullYear()} Clockout. All rights reserved.</div>
           <div className="flex gap-6">
-            <Link to="/privacy" className="hover:text-bone">Privacy</Link>
-            <Link to="/terms" className="hover:text-bone">Terms</Link>
+            <Link to="/privacy" className="hover:text-bone">
+              Privacy
+            </Link>
+            <Link to="/terms" className="hover:text-bone">
+              Terms
+            </Link>
           </div>
         </div>
       </div>

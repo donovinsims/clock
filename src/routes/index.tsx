@@ -11,9 +11,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Clockout — Run better, not busier." },
-      { name: "description", content: "Done-for-you AI automation for owner-led service businesses. One $497 audit. 48-hour report. You own the system." },
+      {
+        name: "description",
+        content:
+          "Done-for-you AI automation for owner-led service businesses. One $497 audit. 48-hour report. You own the system.",
+      },
       { property: "og:title", content: "Clockout — Run better, not busier." },
-      { property: "og:description", content: "Done-for-you AI automation for owner-led service businesses." },
+      {
+        property: "og:description",
+        content: "Done-for-you AI automation for owner-led service businesses.",
+      },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -29,17 +36,21 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-32 md:pb-32">
           <GuaranteeBadge />
           <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight">
-            Run better,<br />
+            Run better,
+            <br />
             <span className="italic text-signal">not busier.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-            Clockout builds the AI systems that quietly run your business — so calls get answered, jobs get booked, and you stop doing the work software should be doing.
+            Clockout builds the AI systems that quietly run your business — so calls get answered,
+            jobs get booked, and you stop doing the work software should be doing.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
               <span className="op-label text-[0.7rem]">Book the $497 audit</span>
             </CTAButton>
-            <CTAButton to="/services" variant="ghost">See how it works</CTAButton>
+            <CTAButton to="/services" variant="ghost">
+              See how it works
+            </CTAButton>
           </div>
         </div>
       </section>
@@ -95,9 +106,18 @@ function Index() {
         <div className="mt-12">
           <Steps
             steps={[
-              { title: "Book the audit", body: "Tell us about your business. We map your workflow, find the leaks, and quantify them in dollars. 48-hour written report." },
-              { title: "We build it", body: "We design and ship the automations — calls, quotes, follow-ups, reporting — installed directly in your stack." },
-              { title: "You own it", body: "Full handover. Docs, access, training. No subscription, no lock-in. The system is yours." },
+              {
+                title: "Book the audit",
+                body: "Tell us about your business. We map your workflow, find the leaks, and quantify them in dollars. 48-hour written report.",
+              },
+              {
+                title: "We build it",
+                body: "We design and ship the automations — calls, quotes, follow-ups, reporting — installed directly in your stack.",
+              },
+              {
+                title: "You own it",
+                body: "Full handover. Docs, access, training. No subscription, no lock-in. The system is yours.",
+              },
             ]}
           />
         </div>
@@ -125,12 +145,16 @@ function SelfSelectCard({
   accent?: "imessage";
 }) {
   return (
-      <Link
+    <Link
       to={to as "/services"}
       className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-2xl"
     >
       <div>
-        <div className={`op-label text-[0.7rem] ${accent === "imessage" ? "text-[oklch(0.55_0.22_258)]" : "text-clay"}`}>{tag}</div>
+        <div
+          className={`op-label text-[0.7rem] ${accent === "imessage" ? "text-[oklch(0.55_0.22_258)]" : "text-clay"}`}
+        >
+          {tag}
+        </div>
         <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
         <p className="mt-4 text-sm text-muted-foreground">{body}</p>
       </div>

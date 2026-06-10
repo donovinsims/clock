@@ -1,4 +1,9 @@
 node_modules
+.agents
+.ctx
+.nitro
+.vercel
+audit-tool
 dist
 .output
 .vinxi

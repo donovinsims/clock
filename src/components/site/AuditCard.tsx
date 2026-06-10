@@ -6,19 +6,24 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
   return (
     <div
       className={`relative overflow-hidden rounded-3xl border p-8 md:p-12 ${
-        dark
-          ? "bg-ink text-bone border-ink"
-          : "bg-card text-ink border-border"
+        dark ? "bg-ink text-bone border-ink" : "bg-card text-ink border-border"
       }`}
     >
-      <div className="absolute right-0 top-0 h-40 w-40 -translate-y-10 translate-x-10 rounded-full bg-signal/40 blur-3xl" aria-hidden />
+      <div
+        className="absolute right-0 top-0 h-40 w-40 -translate-y-10 translate-x-10 rounded-full bg-signal/40 blur-3xl"
+        aria-hidden
+      />
       <div className="relative grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
         <div>
-          <div className={`op-label text-[0.7rem] ${dark ? "text-bone/60" : "text-clay"}`}>The offer</div>
+          <div className={`op-label text-[0.7rem] ${dark ? "text-bone/60" : "text-clay"}`}>
+            The offer
+          </div>
           <h3 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
             {OFFER.audit.name}
           </h3>
-          <p className={`mt-4 max-w-xl text-base md:text-lg ${dark ? "text-bone/75" : "text-muted-foreground"}`}>
+          <p
+            className={`mt-4 max-w-xl text-base md:text-lg ${dark ? "text-bone/75" : "text-muted-foreground"}`}
+          >
             {OFFER.audit.outcome} {OFFER.audit.guarantee}
           </p>
           <ul className={`mt-6 grid gap-2 text-sm ${dark ? "text-bone/85" : "text-ink/80"}`}>

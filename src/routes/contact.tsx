@@ -11,7 +11,6 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Clockout" },
       { property: "og:description", content: "Send us a note. We reply within one business day." },
       { property: "og:url", content: "/contact" },
-    
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -35,13 +34,22 @@ function Contact() {
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-medium">Email</span>
-              <input type="email" className="w-full rounded-xl border border-input bg-background px-4 py-3" />
+              <input
+                type="email"
+                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+              />
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-medium">What's on your mind?</span>
-              <textarea rows={6} className="w-full rounded-xl border border-input bg-background px-4 py-3" />
+              <textarea
+                rows={6}
+                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+              />
             </label>
-            <button type="submit" className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-medium text-bone hover:bg-ink/85">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-medium text-bone hover:bg-ink/85"
+            >
               Send →
             </button>
           </form>
@@ -53,7 +61,9 @@ function Contact() {
             </div>
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="eyebrow">Looking for a build?</div>
-              <p className="mt-3 text-sm text-muted-foreground">Skip the form and book the Revenue Leak Audit. Fastest way to see if we're a fit.</p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Skip the form and book the Revenue Leak Audit. Fastest way to see if we're a fit.
+              </p>
             </div>
           </aside>
         </div>

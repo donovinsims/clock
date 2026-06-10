@@ -80,7 +80,7 @@
   --signal: oklch(0.66 0.21 38);
   --signal-foreground: oklch(0.98 0.01 85);
   --imessage: oklch(0.66 0.18 252);
-  --imessage-deep: oklch(0.46 0.20 258);
+  --imessage-deep: oklch(0.46 0.2 258);
 
   --background: var(--bone);
   --foreground: var(--ink);
@@ -164,7 +164,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: var(--font-display);
     font-weight: 500;
     letter-spacing: -0.025em;
@@ -235,7 +237,9 @@
   padding: 0.7rem 1rem;
   display: inline-block;
   max-width: 28rem;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 24px -8px oklch(0.55 0.22 258 / 0.35);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 8px 24px -8px oklch(0.55 0.22 258 / 0.35);
 }
 .imessage-bubble.gray {
   background: oklch(0.93 0.008 250);

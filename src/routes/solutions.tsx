@@ -7,11 +7,14 @@ export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
       { title: "Solutions — Clockout" },
-      { name: "description", content: "Every automation Clockout builds — lead capture, AI receptionists, follow-ups, reporting, dispatch, reactivation, and more." },
+      {
+        name: "description",
+        content:
+          "Every automation Clockout builds — lead capture, AI receptionists, follow-ups, reporting, dispatch, reactivation, and more.",
+      },
       { property: "og:title", content: "Solutions — Clockout" },
       { property: "og:description", content: "Every automation we build, across every workflow." },
       { property: "og:url", content: "/solutions" },
-    
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
   }),
@@ -84,9 +87,14 @@ function Solutions() {
     <SiteLayout>
       <Section>
         <Eyebrow>Solutions</Eyebrow>
-        <H2>Every workflow.<br />One operator behind it.</H2>
+        <H2>
+          Every workflow.
+          <br />
+          One operator behind it.
+        </H2>
         <Lede>
-          We've built across phones, dispatch, sales, ops, and reporting. If a part of your business is run by a sticky note, we've probably automated it before.
+          We've built across phones, dispatch, sales, ops, and reporting. If a part of your business
+          is run by a sticky note, we've probably automated it before.
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {GROUPS.map((g) => (

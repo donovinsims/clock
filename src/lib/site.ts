@@ -43,15 +43,13 @@ export const VERTICALS = [
     slug: "roofing",
     name: "Roofing",
     short: "Turn storm leads into signed jobs.",
-    blurb:
-      "Speed-to-lead automations, insurance follow-ups, and canvasser tracking for roofers.",
+    blurb: "Speed-to-lead automations, insurance follow-ups, and canvasser tracking for roofers.",
   },
   {
     slug: "plumbing",
     name: "Plumbing",
     short: "Emergency calls answered before the competitor's.",
-    blurb:
-      "After-hours triage, automated dispatch, and reactivation flows for plumbing shops.",
+    blurb: "After-hours triage, automated dispatch, and reactivation flows for plumbing shops.",
   },
   {
     slug: "electrical",

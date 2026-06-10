@@ -53,10 +53,18 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link to="/solutions" className={navLink}>Solutions</Link>
-          <Link to="/operator-os" className={navLink}>Operator OS</Link>
-          <Link to="/about" className={navLink}>About</Link>
-          <Link to="/blog" className={navLink}>Blog</Link>
+          <Link to="/solutions" className={navLink}>
+            Solutions
+          </Link>
+          <Link to="/operator-os" className={navLink}>
+            Operator OS
+          </Link>
+          <Link to="/about" className={navLink}>
+            About
+          </Link>
+          <Link to="/blog" className={navLink}>
+            Blog
+          </Link>
         </nav>
 
         <div className="hidden md:block">
@@ -77,7 +85,9 @@ export function Header() {
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <div className="mx-auto max-w-6xl px-6 py-4 grid gap-1">
-            <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm">Services</Link>
+            <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm">
+              Services
+            </Link>
             {VERTICALS.map((v) => (
               <Link
                 key={v.slug}
@@ -88,12 +98,22 @@ export function Header() {
                 {v.name}
               </Link>
             ))}
-            <Link to="/solutions" onClick={() => setOpen(false)} className="py-2 text-sm">Solutions</Link>
-            <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm">Operator OS</Link>
-            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">About</Link>
-            <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm">Blog</Link>
+            <Link to="/solutions" onClick={() => setOpen(false)} className="py-2 text-sm">
+              Solutions
+            </Link>
+            <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm">
+              Operator OS
+            </Link>
+            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">
+              About
+            </Link>
+            <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm">
+              Blog
+            </Link>
             <div className="pt-3" onClick={() => setOpen(false)}>
-              <CTAButton to="/assessment" variant={isOperator ? "imessage" : "primary"}>Book the audit</CTAButton>
+              <CTAButton to="/assessment" variant={isOperator ? "imessage" : "primary"}>
+                Book the audit
+              </CTAButton>
             </div>
           </div>
         </div>

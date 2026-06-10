@@ -8,11 +8,17 @@ export const Route = createFileRoute("/assessment")({
   head: () => ({
     meta: [
       { title: "Book the Revenue Leak Audit — Clockout" },
-      { name: "description", content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks. Book your Revenue Leak Audit." },
+      {
+        name: "description",
+        content:
+          "$497. 48-hour report. Refund if we don't find $10K in fixable leaks. Book your Revenue Leak Audit.",
+      },
       { property: "og:title", content: "Book the Revenue Leak Audit — Clockout" },
-      { property: "og:description", content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks." },
+      {
+        property: "og:description",
+        content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks.",
+      },
       { property: "og:url", content: "/assessment" },
-    
     ],
     links: [{ rel: "canonical", href: "/assessment" }],
   }),
@@ -48,10 +54,14 @@ function Assessment() {
       <Section>
         <Eyebrow>The Revenue Leak Audit</Eyebrow>
         <h1 className="font-display text-5xl md:text-7xl tracking-tight">
-          $497. 48 hours.<br />Refunded if we can&apos;t find $10K.
+          $497. 48 hours.
+          <br />
+          Refunded if we can&apos;t find $10K.
         </h1>
         <Lede>
-          Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and follow-up. You&apos;ll get a written report with quantified leaks and the exact fixes — yours to keep, with or without us.
+          Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and
+          follow-up. You&apos;ll get a written report with quantified leaks and the exact fixes —
+          yours to keep, with or without us.
         </Lede>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.2fr_1fr]">
