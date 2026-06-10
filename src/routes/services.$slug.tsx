@@ -52,8 +52,8 @@ function VerticalPage() {
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <CTAButton to="/assessment">Book the audit</CTAButton>
-            <CTAButton to="/contact" variant="ghost">
-              Talk to us
+            <CTAButton to="/solutions" variant="ghost">
+              See the {data.name} build
             </CTAButton>
           </div>
         </div>

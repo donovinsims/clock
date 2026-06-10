@@ -77,27 +77,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Clockout — Run better, not busier." },
+      { title: "Clockout — Find your revenue leaks." },
       {
         name: "description",
         content:
-          "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system.",
+          "Clockout builds AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
       },
       { name: "author", content: "Clockout" },
       { property: "og:site_name", content: "Clockout" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { property: "og:title", content: "Clockout — Run better, not busier." },
-      { name: "twitter:title", content: "Clockout — Run better, not busier." },
+      { property: "og:title", content: "Clockout — Find your revenue leaks." },
+      { name: "twitter:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
         content:
-          "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system.",
+          "Clockout builds AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
       },
       {
         name: "twitter:description",
         content:
-          "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system.",
+          "Clockout builds AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
       },
       {
         property: "og:image",
@@ -129,9 +129,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Organization",
           name: "Clockout",
           description:
-            "Done-for-you AI automation and operating systems for owner-led service businesses.",
+            "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
           logo: clockoutIcon.url,
-          slogan: "Run better, not busier.",
+          slogan: "Find your revenue leaks.",
         }),
       },
     ],

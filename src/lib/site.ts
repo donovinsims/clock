@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Clockout",
-  tagline: "Run better, not busier.",
+  tagline: "Find your revenue leaks.",
   description:
-    "Done-for-you AI automation for owner-led service businesses. One-time builds. You own the system.",
+    "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
   bookingUrl: "#book", // TODO: real booking link (Cal.com / SavvyCal)
   email: "hello@clockout.co", // TODO: real email
 };

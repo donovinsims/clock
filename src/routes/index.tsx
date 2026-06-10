@@ -10,16 +10,16 @@ import { Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Clockout — Run better, not busier." },
+      { title: "Clockout — Find your revenue leaks." },
       {
         name: "description",
         content:
-          "Done-for-you AI automation for owner-led service businesses. One $497 audit. 48-hour report. You own the system.",
+          "We found $127K in revenue leaks in 47 trades businesses. Start with a $497 audit. Refunded if we don't find $10K.",
       },
-      { property: "og:title", content: "Clockout — Run better, not busier." },
+      { property: "og:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
-        content: "Done-for-you AI automation for owner-led service businesses.",
+        content: "We found $127K in revenue leaks in 47 trades businesses. Yours is next.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -35,14 +35,16 @@ function Index() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-32 md:pb-32">
           <GuaranteeBadge />
-          <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight">
-            Run better,
+          <h1 className="mt-6 font-display text-5xl md:text-8xl tracking-tight">
+            We found{" "}
+            <span className="text-signal">$127K</span> in
             <br />
-            <span className="italic text-signal">not busier.</span>
+            revenue leaks in 47
+            <br />
+            <span className="italic text-signal">trades businesses.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-            Clockout builds the AI systems that quietly run your business — so calls get answered,
-            jobs get booked, and you stop doing the work software should be doing.
+            Yours is next.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">

@@ -1,0 +1,24 @@
+{
+  "cache_hits": 0,
+  "cache_misses": 2,
+  "files": {
+    "vite.config.ts": {
+      "fingerprint": "2453c445ea9837de",
+      "line_count": 28,
+      "symbol_count": 11,
+      "outline_lines": [
+        "- import import { defineConfig } from \"vite\"; :: import { defineConfig } from \"vite\";",
+        "- import import react from \"@vitejs/plugin-react\"; :: import react from \"@vitejs/plugin-react\";",
+        "- import import { tanstackStart } from \"@tanstack/react-start/plugin/vite\"; :: import { tanstackStart } from \"@tanstack/react-start/plugin/vite\";",
+        "- import import { tanstackRouter } from \"@tanstack/router-plugin/vite\"; :: import { tanstackRouter } from \"@tanstack/router-plugin/vite\";",
+        "- import import tailwindcss from \"@tailwindcss/vite\"; :: import tailwindcss from \"@tailwindcss/vite\";",
+        "- import import { resolve } from \"path\"; :: import { resolve } from \"path\";",
+        "- import import tailwindcss from \"@tailwindcss/vite\"; :: import tailwindcss from \"@tailwindcss/vite\";",
+        "- import import { tanstackRouter } from \"@tanstack/router-plugin\"; :: import { tanstackRouter } from \"@tanstack/router-plugin\";",
+        "- import import { tanstackStart } from \"@tanstack/react-start/plugin/vite\"; :: import { tanstackStart } from \"@tanstack/react-start/plugin/vite\";",
+        "- import import react from \"@vitejs/plugin-react\"; :: import react from \"@vitejs/plugin-react\";",
+        "- import import { defineConfig } from \"vite\"; :: import { defineConfig } from \"vite\";"
+      ]
+    }
+  }
+}

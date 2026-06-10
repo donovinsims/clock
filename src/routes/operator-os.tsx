@@ -9,13 +9,13 @@ export const Route = createFileRoute("/operator-os")({
       {
         name: "description",
         content:
-          "Operator OS is a personal AI operating system for founders, sales reps, consultants, agents, and operators. Capture, follow-up, decisions, integrations — built once, owned forever.",
+          "An operating system for how you actually work. Capture, follow-up, decision support across your stack. Built once. Owned forever.",
       },
       { property: "og:title", content: "Operator OS — Clockout" },
       {
         property: "og:description",
         content:
-          "A personal AI operating system for founders, sales reps, consultants, agents, and operators.",
+          "An operating system for how you actually work. Capture, follow-up, decision support across your stack.",
       },
       { property: "og:url", content: "/operator-os" },
     ],
@@ -33,14 +33,13 @@ function OperatorOS() {
           <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
             <div className="eyebrow text-[oklch(0.45_0.18_258)]">Operator OS</div>
             <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight text-[oklch(0.16_0.02_258)]">
-              Your second brain,
+              An operating system for
               <br />
-              <span className="italic text-[oklch(0.55_0.22_258)]">finally on call.</span>
+              <span className="italic text-[oklch(0.55_0.22_258)]">how you actually work.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-              A personal AI operating system for founders, sales reps, consultants, agents, and
-              operators. Capture everything. Follow up on time. Make calls with context. Built once.
-              Owned forever.
+              Captures across your stack. Follows up in your voice. Briefs you before every call.
+              Built once. Owned forever.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <CTAButton href="#book" variant="imessage">
@@ -178,21 +177,21 @@ const FEATURES = [
   {
     tag: "01 — Capture",
     title: "Nothing slips. Ever.",
-    body: "Every call, email, meeting note, and DM is captured, summarized, and indexed. Searchable in seconds.",
+    body: "Every call, email, meeting note, and DM lands in one place automatically. Stop worrying about what you forgot.",
   },
   {
     tag: "02 — Follow-up",
     title: "The right reply, on time.",
-    body: "Drafted replies in your voice, surfaced when they need to go out. Approve, edit, send.",
+    body: "Drafts replies in your voice based on everything you've discussed. Approve in one tap instead of starting from scratch.",
   },
   {
     tag: "03 — Decision support",
     title: "Context, before the meeting.",
-    body: "Walks into every call briefed: last conversation, sentiment, open threads, what to ask next.",
+    body: "Walks you into every call with the full thread — last conversation, sentiment, open items, what to ask next. You sound prepared without having to prepare.",
   },
   {
     tag: "04 — Integrations",
     title: "Lives in the tools you already use.",
-    body: "Gmail, Calendar, HubSpot, Salesforce, Notion, Slack, your phone. No new app to learn.",
+    body: "Gmail, Calendar, HubSpot, Salesforce, Notion, Slack. No new tabs. No daily migration to a 'central hub.' Works where you already are.",
   },
 ];

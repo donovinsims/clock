@@ -88,13 +88,13 @@ function Solutions() {
       <Section>
         <Eyebrow>Solutions</Eyebrow>
         <H2>
-          Every workflow.
+          Run by a sticky note?
           <br />
-          One operator behind it.
+          We&apos;ve built it.
         </H2>
         <Lede>
-          We've built across phones, dispatch, sales, ops, and reporting. If a part of your business
-          is run by a sticky note, we've probably automated it before.
+          Phones, dispatch, sales, ops, reporting. 30+ automations that replace the workarounds you
+          shouldn&apos;t need.
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {GROUPS.map((g) => (

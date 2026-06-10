@@ -1,0 +1,21 @@
+{
+  "name": "clockout-interface-audit",
+  "version": "1.0.0",
+  "description": "Static analysis tool for evaluating Clock website against interface quality principles",
+  "main": "dist/cli/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "audit": "node dist/cli/index.js",
+    "test": "echo \"Tests not yet implemented\" && exit 0",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["audit", "interface", "quality", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.6"
+  },
+  "devDependencies": {}
+}

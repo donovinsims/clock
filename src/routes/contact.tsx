@@ -7,9 +7,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Clockout" },
-      { name: "description", content: "Send us a note. We reply within one business day." },
+      { name: "description", content: "Tell us what's broken in your ops. We'll reply within one business day." },
       { property: "og:title", content: "Contact — Clockout" },
-      { property: "og:description", content: "Send us a note. We reply within one business day." },
+      { property: "og:description", content: "Tell us what's broken in your ops. We'll reply within one business day." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -22,7 +22,7 @@ function Contact() {
     <SiteLayout>
       <Section>
         <Eyebrow>Contact</Eyebrow>
-        <h1 className="font-display text-5xl md:text-7xl tracking-tight">Say hello.</h1>
+        <h1 className="font-display text-5xl md:text-7xl tracking-tight">Tell us what&apos;s broken.</h1>
         <Lede>Direct line to the team. We answer every note within one business day.</Lede>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.2fr_1fr]">

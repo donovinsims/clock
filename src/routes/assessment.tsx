@@ -58,6 +58,11 @@ function Assessment() {
           <br />
           Refunded if we can&apos;t find $10K.
         </h1>
+        <div className="mt-4">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-signal/30 bg-signal/5 px-3 py-1 font-mono text-xs tracking-wider text-signal uppercase">
+            ✓ Guaranteed
+          </span>
+        </div>
         <Lede>
           Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and
           follow-up. You&apos;ll get a written report with quantified leaks and the exact fixes —
@@ -91,10 +96,7 @@ function Assessment() {
                 <li>— Loom walkthrough from our team</li>
               </ul>
             </div>
-            <div className="rounded-3xl border border-signal/30 bg-signal/5 p-8">
-              <div className="op-label text-[0.7rem] text-signal">Guarantee</div>
-              <p className="mt-3 text-base">{OFFER.audit.guarantee}</p>
-            </div>
+
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="op-label text-[0.7rem] text-clay">The deal</div>
               <ul className="mt-4 space-y-3 text-sm">

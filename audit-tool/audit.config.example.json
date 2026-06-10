@@ -1,0 +1,24 @@
+{
+  "routeFilter": [
+    "/",
+    "/about",
+    "/services/*"
+  ],
+  "componentFilter": [
+    "Button",
+    "Card"
+  ],
+  "principleFilter": [
+    "text-wrap-balance",
+    "concentric-radius",
+    "tabular-numbers",
+    "font-smoothing",
+    "transition-specificity"
+  ],
+  "dryRun": false,
+  "autoFix": true,
+  "verbose": true,
+  "previousReportPath": ".kiro/specs/clockout-interface-audit/audit-report.md",
+  "outputPath": ".kiro/specs/clockout-interface-audit/audit-report.md",
+  "format": "markdown"
+}

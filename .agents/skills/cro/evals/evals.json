@@ -1,5 +1,7 @@
 {
   "skill_name": "cro",
+  "version": "2.1.0",
+  "last_updated": "2026-06-10",
   "evals": [
     {
       "id": 1,
@@ -104,6 +106,54 @@
         "Notes organic traffic source and search intent match",
         "Suggests specific experiment hypotheses",
         "Cross-references ab-testing skill"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "audit my website /example.com — it's for a local HVAC business",
+      "expected_output": "Should trigger on 'audit my website' phrase. Should read the actual website files if available locally. Should apply service business CRO framework from industry-benchmarks.md. Should check for: prominent phone number (click-to-call), service area clarity, pricing transparency, reviews, before/after photos, mobile optimization. Should provide comprehensive audit with scores, critical issues, quick wins, and prioritized action plan. Should reference industry-specific benchmarks (5-15% contact rate for service businesses).",
+      "assertions": [
+        "Triggers on 'audit my website'",
+        "Reads actual website code/files",
+        "Applies service business CRO framework",
+        "Checks for click-to-call prominence",
+        "Checks for service area clarity",
+        "Checks for pricing transparency",
+        "Checks mobile experience",
+        "Provides numerical scores",
+        "References industry benchmarks"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "increase bookings on our contact page — we're getting traffic but nobody fills out the form",
+      "expected_output": "Should trigger on 'increase bookings'. Should focus on form optimization using references/form.md guidance. Should check for: too many fields, unclear value proposition, missing trust signals, poor mobile experience, broken form functionality. Should analyze form field count and suggest reducing to minimum viable (name, email/phone, message). Should recommend adding trust signals near form ('We respond in 1 hour'). Should check if form actually works (critical blocker). Should provide form-specific improvements with before/after examples.",
+      "assertions": [
+        "Triggers on 'increase bookings'",
+        "Focuses on form optimization",
+        "References form.md guidance",
+        "Checks field count",
+        "Checks for broken form (critical blocker)",
+        "Recommends trust signals near form",
+        "Analyzes mobile form experience",
+        "Provides before/after form examples"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "boost conversions on our homepage — here's the code: [React component]",
+      "expected_output": "Should trigger on 'boost conversions'. Should read the actual React code provided. Should check for technical blockers (broken CTAs, non-functional forms, missing loading states). Should analyze component structure for CRO opportunities (CTA placement, form validation, error handling, micro-interactions). Should provide specific code fixes with React/JSX examples. Should check if dependencies are available (react-hook-form, zod, etc.). Should reference make-interfaces-feel-better skill for animation/interaction improvements.",
+      "assertions": [
+        "Triggers on 'boost conversions'",
+        "Reads provided code",
+        "Checks for technical blockers",
+        "Analyzes component structure",
+        "Provides specific code examples",
+        "References available dependencies",
+        "Cross-references make-interfaces-feel-better skill"
       ],
       "files": []
     }
