@@ -106,6 +106,7 @@ function Index() {
       </section>
 
       {/* Self-select */}
+      <Section>
         <H2>Which one sounds like you?</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <SelfSelectCard
