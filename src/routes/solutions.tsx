@@ -10,7 +10,10 @@ export const Route = createFileRoute("/solutions")({
       { name: "description", content: "Every automation Clockout builds — lead capture, AI receptionists, follow-ups, reporting, dispatch, reactivation, and more." },
       { property: "og:title", content: "Solutions — Clockout" },
       { property: "og:description", content: "Every automation we build, across every workflow." },
+      { property: "og:url", content: "/solutions" },
+    
     ],
+    links: [{ rel: "canonical", href: "/solutions" }],
   }),
   component: Solutions,
 });
