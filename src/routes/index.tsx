@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
-        content: "We found $127K in revenue leaks in 47 trades businesses. Yours is next.",
+        content: "You're losing $8K\u2013$15K every month in missed calls, cold quotes, and unbilled work. We find the leaks in 48 hours for $497.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -44,15 +44,22 @@ function Index() {
             <span className="italic text-signal">trades businesses.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-            Yours is next.
+            You&rsquo;re losing{" "}
+            <strong className="text-signal">$8K&ndash;$15K</strong> every
+            month. Here&rsquo;s where.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
-              <span className="op-label text-[0.7rem]">Book the $497 audit</span>
+              <span className="op-label text-[0.7rem]">Show me my $10K in leaks</span>
             </CTAButton>
             <CTAButton to="/services" variant="ghost">
               See how it works
             </CTAButton>
+          </div>
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
+            <span>✓ $497 flat, no retainer</span>
+            <span>✓ 48-hour written report</span>
+            <span>✓ Refund if we don&rsquo;t find $10K</span>
           </div>
         </div>
       </section>
@@ -74,9 +81,31 @@ function Index() {
         </div>
       </section>
 
+      {/* Case study */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+          <blockquote className="relative rounded-2xl bg-signal/5 border border-signal/15 p-6 md:p-8">
+            <div className="op-label mb-2 text-[0.65rem] text-signal">CASE STUDY</div>
+            <p className="text-base md:text-lg leading-relaxed">
+              &ldquo;An HVAC company in Austin was losing{" "}
+              <strong className="text-ink">$47K&thinsp;/&thinsp;year</strong>{" "}
+              to after-hours calls going to voicemail. We found it in 48 hours,
+              built an automated dispatch system, and the owner saw paid jobs
+              from it within the first week.&rdquo;
+            </p>
+            <div className="mt-4 flex items-center gap-3 text-sm text-clay">
+              <div className="h-8 w-8 rounded-full bg-gradient-to-br from-signal/40 to-signal/20" />
+              <span>
+                <strong className="text-ink">Donovin&rsquo;s notes</strong>
+                <br />
+                Owner, Clockout
+              </span>
+            </div>
+          </blockquote>
+        </div>
+      </section>
+
       {/* Self-select */}
-      <Section>
-        <Eyebrow>Pick your lane</Eyebrow>
         <H2>Which one sounds like you?</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <SelfSelectCard

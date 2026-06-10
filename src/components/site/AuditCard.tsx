@@ -43,7 +43,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
         </div>
         <div className="flex flex-col items-start gap-3 md:items-end">
           <CTAButton to="/assessment" variant={dark ? "primary" : "primary"}>
-            <span className="op-label text-[0.7rem]">Book the $497 audit</span>
+            <span className="op-label text-[0.7rem]">Show me my $10K in leaks</span>
           </CTAButton>
           <span className={`op-label text-[0.65rem] ${dark ? "text-bone/50" : "text-clay"}`}>
             48-hour turnaround · $497
