@@ -84,6 +84,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Clockout" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { property: "og:title", content: "Clockout — Run better, not busier." },
+      { name: "twitter:title", content: "Clockout — Run better, not busier." },
+      { property: "og:description", content: "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system." },
+      { name: "twitter:description", content: "Clockout builds done-for-you AI automation and operating systems for owner-led service businesses. One-time pricing. You own the system." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/30bd4ee8-2732-46de-a186-54cc133884d0" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/30bd4ee8-2732-46de-a186-54cc133884d0" },
     ],
     links: [
       { rel: "icon", type: "image/jpeg", href: clockoutIcon.url },
