@@ -13,17 +13,20 @@ export const Route = createFileRoute("/services/$slug")({
     if (!data) throw notFound();
     return { data };
   },
-  head: ({ loaderData }) => {
+  head: ({ params, loaderData }) => {
     const name = loaderData?.data.name ?? "Service";
     const title = `${name} automation — Clockout`;
     const desc = loaderData?.data.heroLede ?? "";
+    const url = `/services/${params.slug}`;
     return {
       meta: [
         { title },
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
+        { property: "og:url", content: url },
       ],
+      links: [{ rel: "canonical", href: url }],
     };
   },
   component: VerticalPage,
