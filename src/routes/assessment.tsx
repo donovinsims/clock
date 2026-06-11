@@ -60,8 +60,8 @@ function Assessment() {
           Audit + full implementation.
         </h1>
         <div className="mt-4">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-signal/30 bg-signal/5 px-3 py-1 font-mono text-xs tracking-wider text-signal uppercase">
-            ✓ 10 hrs/week back in 30 days or I keep working. Free.
+          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-signal/30 bg-signal/5 px-3 py-1 font-mono text-xs tracking-wider text-signal uppercase">
+            ✓ 10 hrs/wk back in 30 days or I keep working
           </span>
         </div>
         <Lede>
