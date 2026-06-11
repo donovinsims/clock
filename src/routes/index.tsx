@@ -72,7 +72,7 @@ function Index() {
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
             ["3 SPOTS", "BETA PRICING AVAILABLE NOW"],
-            ["$0", "RETAINERS. EVER."],
+            ["FLAT", "ONE PRICE. DONE."],
           ].map(([k, v]) => (
             <div key={k}>
               <div className="card-title text-3xl md:text-4xl tabular-nums">{k}</div>
@@ -110,7 +110,7 @@ function Index() {
       {/* How it works */}
       <Section tone="muted">
         <Eyebrow>How it works</Eyebrow>
-        <H2>Three steps. No retainer.</H2>
+        <H2>Three steps. Flat and done.</H2>
         <div className="mt-12">
           <Steps
             steps={[

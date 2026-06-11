@@ -20,6 +20,7 @@ export const Route = createFileRoute("/services/")({
         property: "og:description",
         content: "Industry-specific automation builds for owner-led service businesses.",
       },
+      { property: "og:url", content: fullUrl("/services") },
     ],
     links: [{ rel: "canonical", href: fullUrl("/services") }],
   }),

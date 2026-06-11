@@ -38,7 +38,7 @@ const POSTS = [
     date: "Coming soon",
   },
   {
-    title: "Owning your stack: why we refuse retainers",
+    title: "Owning your stack: flat fee, full ownership",
     tag: "Philosophy",
     read: "4 min",
     date: "Coming soon",

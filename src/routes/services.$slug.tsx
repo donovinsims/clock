@@ -111,7 +111,6 @@ function VerticalPage() {
 
       <Section tone="muted">
         <Eyebrow>Proof</Eyebrow>
-        {/* TODO: replace with real case study and verified numbers */}
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
           <div>
             <H2>{data.proof.headline}</H2>

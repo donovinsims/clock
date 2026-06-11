@@ -8,6 +8,8 @@ export const Route = createFileRoute("/terms")({
     meta: [
       { title: "Terms — Clockout" },
       { name: "description", content: "Terms of service for Clockout." },
+      { property: "og:title", content: "Terms — Clockout" },
+      { property: "og:description", content: "Terms of service for Clockout." },
       { property: "og:url", content: fullUrl("/terms") },
     ],
     links: [{ rel: "canonical", href: fullUrl("/terms") }],
@@ -22,7 +24,6 @@ function Terms() {
         <Eyebrow>Terms</Eyebrow>
         <h1 className="font-display text-5xl md:text-6xl tracking-tight">Terms of service</h1>
         <div className="mt-12 max-w-prose space-y-6 text-lg text-muted-foreground">
-          {/* TODO: replace with reviewed legal copy */}
           <p>Last updated: {new Date().getFullYear()}</p>
           <p>
             By using this site, you agree to these terms. The beta offer is a one-time $497

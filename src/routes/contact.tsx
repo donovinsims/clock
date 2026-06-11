@@ -27,22 +27,34 @@ function Contact() {
         <Lede>Direct line to the team. We answer every note within one business day.</Lede>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.2fr_1fr]">
-          <form className="rounded-3xl border border-border bg-card p-8 md:p-10 space-y-5">
-            {/* TODO: wire to real form handler */}
+          <form
+            action={`mailto:${SITE.email}`}
+            method="POST"
+            encType="text/plain"
+            className="rounded-3xl border border-border bg-card p-8 md:p-10 space-y-5"
+          >
             <label className="block">
               <span className="mb-2 block text-sm font-medium">Name</span>
-              <input className="w-full rounded-xl border border-input bg-background px-4 py-3" />
+              <input
+                name="Name"
+                required
+                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+              />
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-medium">Email</span>
               <input
                 type="email"
+                name="Email"
+                required
                 className="w-full rounded-xl border border-input bg-background px-4 py-3"
               />
             </label>
             <label className="block">
               <span className="mb-2 block text-sm font-medium">What's on your mind?</span>
               <textarea
+                name="Message"
+                required
                 rows={6}
                 className="w-full rounded-xl border border-input bg-background px-4 py-3"
               />

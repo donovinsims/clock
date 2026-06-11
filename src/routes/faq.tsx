@@ -62,7 +62,7 @@ const FAQS = [
   },
   {
     q: "What happens six months from now when something breaks or needs changing?",
-    a: "Three things. One: we document everything. Full wiring diagrams, every connection documented — you're not dependent on us. Two: we hand over all access. Every login, every API key, every automation — it's in your tools, owned by you. Three: if you want ongoing support, we can do hourly blocks or a lightweight retainer. But it's optional. There is no forced relationship. Most clients come back for changes anyway, but nobody wants to be held hostage for basic maintenance.",
+    a: "Three things. One: we document everything. Full wiring diagrams, every connection documented — you're not dependent on us. Two: we hand over all access. Every login, every API key, every automation — it's in your tools, owned by you. Three: if you want ongoing support, we can do hourly blocks or a lightweight support arrangement. But it's optional. There is no forced relationship. Most clients come back for changes anyway, but nobody wants to be held hostage for basic maintenance.",
   },
   {
     q: "I don't need automation — I need more jobs. Can you actually get me leads?",

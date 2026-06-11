@@ -223,7 +223,7 @@ export const VERTICAL_CONTENT: Record<string, VerticalContent> = {
         title: "Build",
         body: "AI quote follow-up, permit tracking, and reactivation sequences shipped into your CRM.",
       },
-      { title: "Handover", body: "Your team owns it. No retainer. No license fee." },
+      { title: "Handover", body: "Your team owns it. No monthly fees. No license fee." },
     ],
     automations: [
       {

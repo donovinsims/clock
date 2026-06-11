@@ -17,7 +17,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About — Clockout" },
       {
         property: "og:description",
-        content: "Built by Donovin. Product operations at massive scale. Now fixing revenue leaks for local service businesses. No retainer, you own it.",
+        content: "Built by Donovin. Product operations at massive scale. Now fixing revenue leaks for local service businesses. One-time build, you own it.",
       },
       { property: "og:url", content: fullUrl("/about") },
     ],
@@ -84,7 +84,7 @@ function About() {
             <div className="op-label text-clay">What Clockout does</div>
             <p className="mt-3 text-lg text-muted-foreground">
               I build the actual workflow — calls, quotes, follow-ups — install it inside
-              your business, and hand you the keys. No retainer, no lock-in.
+              your business, and hand you the keys. No lock-in, no monthly fees.
             </p>
           </Card>
         </div>
@@ -95,7 +95,7 @@ function About() {
         <H2>You own it. Outright.</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {[
-            { t: "One-time price", b: "No retainer. No license fee. No surprise SaaS bills." },
+            { t: "One-time price", b: "No monthly fees. No license fee. No surprise SaaS bills." },
             {
               t: "Your stack",
               b: "Built on tools you already use, or ones we recommend that you'll own.",

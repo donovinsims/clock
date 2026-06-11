@@ -14,12 +14,12 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "One-time pricing, no retainers. Revenue Leak Audit: $497. Done-for-you builds from $997. You own the system outright.",
+          "One-time pricing, no monthly fees. Revenue Leak Audit: $497. Done-for-you builds from $997. You own the system outright.",
       },
       { property: "og:title", content: "Pricing — Clockout" },
       {
         property: "og:description",
-        content: "Flat price, one-time build, no retainer. Audit: $497. Builds from $997. You own the system.",
+        content: "Flat price, one-time build. Audit: $497. Builds from $997. You own the system.",
       },
       { property: "og:url", content: fullUrl("/pricing") },
     ],
@@ -66,7 +66,7 @@ const PLANS = [
 
 const FAQS = [
   { q: "What's the difference between Beta and Standard?", a: "Same audit. Same build. Same guarantee. Beta is $497 all-in for the first 3 trade businesses. After they're filled, standard pricing is $1,494. The only difference is the price." },
-  { q: "How is this one-time? No monthly fees?", a: "Correct. We build the system in your tools. You get all the logins, all the docs. There's nothing to subscribe to. If you need ongoing support, we can scope that separately, but there's no forced retainer." },
+  { q: "How is this one-time? No monthly fees?", a: "Correct. We build the system in your tools. You get all the logins, all the docs. There's nothing to subscribe to. If you need ongoing support, we can scope that separately, but there's no forced commitment." },
   { q: "What if the audit doesn't find enough leaks?", a: "If we don't surface at least $10K in fixable revenue leaks, the audit is free. No questions." },
   { q: "Do you work with my existing tools?", a: "We integrate with your current CRM, dispatch software, phone system, and anything else you're running. No forced migrations." },
 ];
@@ -87,7 +87,7 @@ function PricingPage() {
           <Lede>
             Beta pricing is <strong className="text-foreground">$497 all-in</strong> for
             the first 3 trade businesses. After that, standard is $1,494. Same audit, same
-            build, same guarantee. Most shops charge $2K–$5K/month in retainers. We charge a
+            build, same guarantee. Most shops charge $2K–$5K/month in ongoing fees. We charge a
             flat price, build the whole system, hand you the keys. Done.
           </Lede>
         </div>
@@ -99,7 +99,7 @@ function PricingPage() {
           <div className="rounded-2xl border border-border bg-card p-6 opacity-60">
             <div className="op-label">Typical agency</div>
             <div className="mt-4 space-y-2 text-sm">
-              <p>✗ $2,000–$5,000/month retainer</p>
+              <p>✗ $2,000–$5,000/month ongoing</p>
               <p>✗ 12-month contract</p>
               <p>✗ You don't own the system</p>
               <p>✗ Pay to make changes</p>
@@ -110,7 +110,7 @@ function PricingPage() {
             <div className="op-label text-signal">Clockout</div>
             <div className="mt-4 space-y-2 text-sm font-medium">
               <p>✓ One-time price. Done.</p>
-              <p>✓ No contract. No retainer.</p>
+              <p>✓ No contract. No commitment.</p>
               <p>✓ You own the system. All the logins.</p>
               <p>✓ Full handover and training included</p>
               <p>✓ Walk away anytime. No penalty.</p>

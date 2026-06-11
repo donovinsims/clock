@@ -8,6 +8,8 @@ export const Route = createFileRoute("/privacy")({
     meta: [
       { title: "Privacy — Clockout" },
       { name: "description", content: "How Clockout handles your information." },
+      { property: "og:title", content: "Privacy — Clockout" },
+      { property: "og:description", content: "How Clockout handles your information." },
       { property: "og:url", content: fullUrl("/privacy") },
     ],
     links: [{ rel: "canonical", href: fullUrl("/privacy") }],
@@ -22,7 +24,6 @@ function Privacy() {
         <Eyebrow>Privacy</Eyebrow>
         <h1 className="font-display text-5xl md:text-6xl tracking-tight">Privacy policy</h1>
         <div className="prose prose-lg mt-12 max-w-prose text-foreground">
-          {/* TODO: replace with reviewed legal copy */}
           <p className="text-lg text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
           <h2 className="mt-10 font-display text-3xl">What we collect</h2>
           <p className="text-muted-foreground">

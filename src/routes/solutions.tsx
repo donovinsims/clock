@@ -15,7 +15,7 @@ export const Route = createFileRoute("/solutions")({
           "30+ automations — lead capture, dispatch, follow-ups, reporting. One-time build, you own it.",
       },
       { property: "og:title", content: "Solutions — Clockout" },
-      { property: "og:description", content: "30+ automations, one-time build, no retainer. Built for local service businesses, not SaaS templates." },
+      { property: "og:description", content: "30+ automations, one-time build. Built for local service businesses, not SaaS templates." },
       { property: "og:url", content: fullUrl("/solutions") },
     ],
     links: [{ rel: "canonical", href: fullUrl("/solutions") }],
