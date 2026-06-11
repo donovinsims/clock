@@ -5,17 +5,17 @@ import { CTAButton } from "@/components/site/CTAButton";
 export const Route = createFileRoute("/operator-os")({
   head: () => ({
     meta: [
-      { title: "Operator OS — Operational AI for service businesses" },
+      { title: "Operator OS — Your Personal AI Operating System" },
       {
         name: "description",
         content:
-          "An operational AI layer for your service business. Capture, follow-up, decision support across your entire stack. Built once. Owned forever. Beta pricing available.",
+          "A personal AI operating system for founders, sales reps, and professionals drowning in tasks they haven't delegated yet. Captures across your stack. Routes in real time. You own it outright.",
       },
-      { property: "og:title", content: "Operator OS — Clockout" },
+      { property: "og:title", content: "Operator OS — Your Personal AI Operating System" },
       {
         property: "og:description",
         content:
-          "An operational AI layer for service businesses. Capture, follow-up, decision support across your stack. Built once. Owned forever. Beta pricing available.",
+          "A personal AI operating system for founders, sales reps, and professionals drowning in tasks they haven't delegated yet. Captures across your stack. Routes in real time. You own it outright.",
       },
       { property: "og:url", content: "/operator-os" },
     ],
@@ -33,13 +33,15 @@ function OperatorOS() {
           <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
             <div className="eyebrow text-[oklch(0.45_0.18_258)]">Operator OS</div>
             <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight text-[oklch(0.16_0.02_258)]">
-              An operating system for
+              You Are the Bottleneck.
               <br />
-              <span className="italic text-[oklch(0.55_0.22_258)]">how you actually work.</span>
+              <span className="italic text-[oklch(0.55_0.22_258)]">This Is the Fix.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-              Captures across your stack. Follows up in your voice. Briefs you before every call.
-              Built once. Owned forever.
+              A personal AI operating system for founders, sales reps, agents, and professionals
+              who are drowning in tasks they haven't delegated to a machine yet. Captures
+              everything, routes everything, surfaces what needs your attention — in the channel
+              you already live in.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <CTAButton href="/assessment" variant="imessage">
@@ -74,7 +76,7 @@ function OperatorOS() {
                 </div>
               </div>
               <div className="mt-6 text-xs font-mono text-muted-foreground">
-                — a real Tuesday morning with Operator OS
+                iMessage is one channel. Voice, WhatsApp, Telegram, Slack — same OS. No login required.
               </div>
             </div>
           </div>
@@ -85,12 +87,14 @@ function OperatorOS() {
           <div className="mx-auto max-w-6xl px-6 py-24">
             <div className="eyebrow text-[oklch(0.45_0.18_258)]">The problem</div>
             <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-[oklch(0.16_0.02_258)]">
-              You're the bottleneck. And you know it.
+              You already work hard. The problem isn't effort.
             </h2>
             <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
-              Your follow-ups live in your head. Your context lives in 14 tabs. Your decisions wait
-              until you have a quiet hour you'll never get. Operator OS pulls all of it into one
-              place and works alongside you in real time.
+              The problem is that all that effort doesn't compound. You close the deal and forget
+              to follow up. You think of the idea and it's gone by morning. You build the
+              relationship and lose the thread three weeks later. Operator OS captures everything,
+              routes everything, and surfaces what needs your attention — in the channel you
+              already live in.
             </p>
           </div>
         </section>
@@ -100,12 +104,12 @@ function OperatorOS() {
           <div className="mx-auto max-w-6xl px-6 py-24">
             <div className="eyebrow text-[oklch(0.45_0.18_258)]">What it is</div>
             <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-[oklch(0.16_0.02_258)]">
-              Not another app. An operating layer.
+              Voice memo or text. That's the whole input.
             </h2>
             <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
-              Operator OS sits across your email, calendar, CRM, notes, and call transcripts. It
-              captures, summarizes, drafts, and prompts you — so the next right action is always one
-              tap away.
+              "New estimate for Tom on Harrison, furnace, $3,200." The system writes the estimate,
+              logs the lead, schedules the follow-up, and pings you only when it needs a yes.
+              You answer the way you already text. No dashboard. No new app. No login to forget.
             </p>
 
             <div className="mt-16 grid gap-4 md:grid-cols-2">
@@ -190,8 +194,8 @@ const FEATURES = [
     body: "Walks you into every call with the full thread — last conversation, sentiment, open items, what to ask next. You sound prepared without having to prepare.",
   },
   {
-    tag: "04 — Integrations",
-    title: "Lives in the tools you already use.",
-    body: "Gmail, Calendar, HubSpot, Salesforce, Notion, Slack. No new tabs. No daily migration to a 'central hub.' Works where you already are.",
+    tag: "04 — Channels",
+    title: "You already use it. No new logins.",
+    body: "iMessage runs on your existing number. Prefer voice memos, Google Voice, Telegram, WhatsApp, or Slack? All work. You interact the way you already interact. No dashboard to check. No new app to open.",
   },
 ];
