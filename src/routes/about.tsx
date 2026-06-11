@@ -28,8 +28,9 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <SiteLayout>
-      <Section>
-        <Eyebrow>About</Eyebrow>
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
+          <Eyebrow>About</Eyebrow>
           <h1 className="font-display text-5xl md:text-7xl tracking-tight">
             Your ops failures are the same ones
             <br />
@@ -40,7 +41,8 @@ function About() {
             operational systems at massive scale, and watched local service businesses bleed
             revenue from the same leaks the big guys solved years ago.
           </Lede>
-      </Section>
+        </div>
+      </section>
 
       <Section tone="muted">
         <Eyebrow>The founder</Eyebrow>
@@ -69,7 +71,7 @@ function About() {
       <Section tone="muted">
         <Eyebrow>The philosophy</Eyebrow>
         <H2>Run better, not busier.</H2>
-        <div className="mt-10 grid gap-8 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           <Card variant="outline" className="p-6">
             <div className="op-label text-[0.7rem] text-clay">Most &ldquo;automation&rdquo;</div>
             <p className="mt-3 text-lg text-muted-foreground">
@@ -90,7 +92,7 @@ function About() {
       <Section>
         <Eyebrow>The model</Eyebrow>
         <H2>You own it. Outright.</H2>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
           {[
             { t: "One-time price", b: "No retainer. No license fee. No surprise SaaS bills." },
             {
@@ -112,7 +114,7 @@ function About() {
 
       <Section tone="highlight">
         <div className="mx-auto max-w-3xl">
-          <Card className="p-10 md:p-12 text-center">
+          <Card className="p-8 md:p-10 text-center">
             <div className="eyebrow">The guarantee</div>
             <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
               &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,

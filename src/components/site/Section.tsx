@@ -24,7 +24,7 @@ export function Section({
 
   return (
     <section className={`w-full ${toneClass} ${className}`}>
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">{children}</div>
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">{children}</div>
     </section>
   );
 }
@@ -39,7 +39,7 @@ export function H2({ children, className = "" }: { children: ReactNode; classNam
 
 export function Lede({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <p className={`mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground ${className}`}>
+    <p className={`mt-5 max-w-2xl text-lg md:text-xl text-muted-foreground ${className}`}>
       {children}
     </p>
   );

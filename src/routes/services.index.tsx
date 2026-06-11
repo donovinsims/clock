@@ -28,9 +28,9 @@ function ServicesHub() {
               key={v.slug}
               to="/services/$slug"
               params={{ slug: v.slug }}
-              className="group flex flex-col justify-between transition-transform hover:-translate-y-1"
+              className="flex flex-col justify-between"
             >
-              <Card className="flex flex-col justify-between p-8 hover:border-signal/40 hover:shadow-2xl">
+              <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:border-signal/40">
                 <div>
                   <div className="eyebrow">{v.name}</div>
                   <h3 className="card-title mt-4 text-2xl md:text-3xl">{v.short}</h3>

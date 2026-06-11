@@ -4,7 +4,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
   const dark = variant === "dark";
   return (
     <div
-      className={`relative overflow-hidden rounded-3xl border p-8 md:p-12 ${
+      className={`relative overflow-hidden rounded-2xl border p-8 md:p-10 ${
         dark ? "bg-ink text-bone border-ink" : "bg-card text-ink border-border"
       }`}
     >

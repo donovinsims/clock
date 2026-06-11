@@ -34,7 +34,7 @@ function Index() {
     <SiteLayout>
       {/* Hero */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-32 md:pb-32">
+        <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
           <h1 className="mt-6 font-display text-5xl md:text-8xl tracking-tight">
             Your Revenue Leaks
@@ -43,14 +43,14 @@ function Index() {
             <br />
             <span className="italic">So Is the Fix.</span>
           </h1>
-          <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
+          <p className="mt-5 max-w-2xl text-lg md:text-2xl text-muted-foreground">
             I spent years building operational systems for{" "}
             <strong className="text-signal">Uber</strong> and{" "}
             <strong className="text-signal">Walgreens</strong>.
             The same failures bleeding local service businesses right now
             are the ones I stress-tested at 100x the scale.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
               <span className="op-label text-[0.7rem]">Claim a Beta Spot</span>
             </CTAButton>
@@ -58,7 +58,7 @@ function Index() {
               Explore services
             </CTAButton>
           </div>
-          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
             <span>✓ $497 all-in · audit + full build</span>
           </div>
         </div>
@@ -151,9 +151,9 @@ function SelfSelectCard({
   return (
     <Link
       to={to as "/services"}
-      className="group flex flex-col justify-between transition-transform hover:-translate-y-1"
+      className="flex flex-col justify-between"
     >
-      <Card className="flex flex-col justify-between p-8 shadow-none transition-shadow group-hover:shadow-2xl">
+      <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg">
         <div>
           <div className="op-label text-[0.7rem] text-clay">{tag}</div>
           <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>

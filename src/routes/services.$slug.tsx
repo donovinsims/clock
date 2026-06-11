@@ -47,11 +47,11 @@ function VerticalPage() {
   return (
     <SiteLayout>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28">
+        <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <div className="eyebrow">{meta?.name}</div>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">{data.hero}</h1>
-          <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <p className="mt-5 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
+          <div className="mt-8 flex flex-wrap gap-4">
             <CTAButton to="/assessment">Claim a Beta Spot</CTAButton>
             <CTAButton to="/solutions" variant="ghost">
               See the {data.name} build
@@ -84,12 +84,12 @@ function VerticalPage() {
       <Section>
         <Eyebrow>What we build</Eyebrow>
         <H2>The {meta?.name} stack.</H2>
-        <div className="mt-12 grid gap-3 md:grid-cols-2">
+          <div className="mt-12 grid gap-4 md:grid-cols-2">
           {data.automations.map((a, i) => (
             <Card
               key={i}
               variant="outline"
-              className="flex items-start gap-4 p-5"
+              className="flex items-start gap-4 p-6"
             >
               <span className="mt-1 font-mono text-xs text-signal">0{i + 1}</span>
               <div>
