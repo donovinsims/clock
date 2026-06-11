@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 import { Steps } from "@/components/site/Steps";
 import { CTAButton } from "@/components/site/CTAButton";
@@ -64,15 +65,15 @@ function VerticalPage() {
         <H2>{data.painTitle}</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           {data.pains.map((p, i) => (
-            <div key={i} className="rounded-2xl border border-border bg-card p-6">
+            <Card key={i} variant="outline" className="p-6">
               <div className="font-mono text-xs text-signal">— Leak {i + 1}</div>
               <p className="mt-3 text-lg">{p}</p>
-            </div>
+            </Card>
           ))}
         </div>
       </Section>
 
-      <Section className="bg-secondary/40">
+      <Section tone="muted">
         <Eyebrow>How it works</Eyebrow>
         <H2>From audit to handover.</H2>
         <div className="mt-12">
@@ -85,21 +86,22 @@ function VerticalPage() {
         <H2>The {meta?.name} stack.</H2>
         <div className="mt-12 grid gap-3 md:grid-cols-2">
           {data.automations.map((a, i) => (
-            <div
+            <Card
               key={i}
-              className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5"
+              variant="outline"
+              className="flex items-start gap-4 p-5"
             >
               <span className="mt-1 font-mono text-xs text-signal">0{i + 1}</span>
               <div>
                 <div className="font-medium">{a.title}</div>
                 <div className="text-sm text-muted-foreground">{a.body}</div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </Section>
 
-      <Section className="bg-secondary/40">
+      <Section tone="muted">
         <Eyebrow>Proof</Eyebrow>
         {/* TODO: replace with real case study and verified numbers */}
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
@@ -109,10 +111,10 @@ function VerticalPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {data.proof.stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-border bg-card p-6">
+              <Card key={s.label} variant="outline" className="p-6">
                 <div className="card-title text-3xl tabular-nums">{s.value}</div>
                 <div className="mt-2 text-xs text-muted-foreground">{s.label}</div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

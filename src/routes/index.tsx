@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { CTAButton } from "@/components/site/CTAButton";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 import { Steps } from "@/components/site/Steps";
 import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
@@ -110,7 +111,7 @@ function Index() {
       </Section>
 
       {/* How it works */}
-      <Section className="bg-secondary/40">
+      <Section tone="muted">
         <Eyebrow>How it works</Eyebrow>
         <H2>Three steps. No retainer.</H2>
         <div className="mt-12">
@@ -155,18 +156,18 @@ function SelfSelectCard({
   return (
     <Link
       to={to as "/services"}
-      className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-2xl"
+      className="group flex flex-col justify-between transition-transform hover:-translate-y-1"
     >
-      <div>
-        <div className="op-label text-[0.7rem] text-clay">
-          {tag}
+      <Card className="flex flex-col justify-between p-8 shadow-none transition-shadow group-hover:shadow-2xl">
+        <div>
+          <div className="op-label text-[0.7rem] text-clay">{tag}</div>
+          <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
+          <p className="mt-4 text-sm text-muted-foreground">{body}</p>
         </div>
-        <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
-        <p className="mt-4 text-sm text-muted-foreground">{body}</p>
-      </div>
-      <div className="op-label mt-8 text-[0.7rem] text-ink/70 group-hover:text-signal">
-        Explore →
-      </div>
+        <div className="op-label mt-8 text-[0.7rem] text-ink/70 group-hover:text-signal">
+          Explore →
+        </div>
+      </Card>
     </Link>
   );
 }

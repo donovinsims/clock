@@ -1,13 +1,20 @@
-export function Steps({ steps }: { steps: { title: string; body: string }[] }) {
+type Step = { title: string; body: string };
+
+export function Steps({ steps }: { steps: Step[] }) {
   return (
-    <div className="grid gap-6 md:grid-cols-3">
-      {steps.map((s, i) => (
-        <div key={i} className="relative rounded-2xl border border-border bg-card p-6">
-          <div className="op-label text-[0.7rem] text-signal">STEP 0{i + 1}</div>
-          <h3 className="card-title mt-3 text-xl">{s.title}</h3>
-          <p className="mt-2 text-sm text-muted-foreground">{s.body}</p>
-        </div>
+    <ol className="grid gap-6 md:grid-cols-3">
+      {steps.map((step, i) => (
+        <li
+          key={step.title}
+          className="relative flex flex-col rounded-3xl border border-border bg-card p-6"
+        >
+          <span className="mb-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-signal/10 text-xs font-mono text-signal">
+            0{i + 1}
+          </span>
+          <h3 className="text-base font-semibold">{step.title}</h3>
+          <p className="mt-3 text-sm text-muted-foreground">{step.body}</p>
+        </li>
       ))}
-    </div>
+    </ol>
   );
 }

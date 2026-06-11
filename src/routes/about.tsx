@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 
 export const Route = createFileRoute("/about")({
@@ -41,19 +42,24 @@ function About() {
           </Lede>
       </Section>
 
-      <Section className="bg-secondary/40">
+      <Section tone="muted">
         <Eyebrow>The philosophy</Eyebrow>
         <H2>Run better, not busier.</H2>
-        <div className="mt-8 grid gap-12 md:grid-cols-2">
-          <p className="text-lg text-muted-foreground">
-            Most "automation" out there is software pretending to be a solution. It gives you a
-            dashboard and a monthly bill and asks you to figure out the rest. I build the actual
-            workflow, install it inside your business, and hand you the keys.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            No retainers. No lock-in. One price, full build, full handover. You own the system
-            forever — the same way you own your truck and your tools.
-          </p>
+        <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <Card variant="outline" className="p-6">
+            <div className="op-label text-[0.7rem] text-clay">Most &ldquo;automation&rdquo;</div>
+            <p className="mt-3 text-lg text-muted-foreground">
+              Most tools give you another dashboard, another login, and a monthly bill.
+              You still have to figure out the workflow.
+            </p>
+          </Card>
+          <Card variant="soft" className="p-6">
+            <div className="op-label text-[0.7rem] text-clay">What Clockout does</div>
+            <p className="mt-3 text-lg text-muted-foreground">
+              I build the actual workflow — calls, quotes, follow-ups — install it inside
+              your business, and hand you the keys. No retainer, no lock-in.
+            </p>
+          </Card>
         </div>
       </Section>
 
@@ -72,16 +78,16 @@ function About() {
               b: "Docs, training, access. If we got hit by a bus tomorrow, your system keeps running.",
             },
           ].map((c) => (
-            <div key={c.t} className="rounded-2xl border border-border bg-card p-6">
+            <Card key={c.t} variant="outline" className="p-6">
               <h3 className="card-title text-xl">{c.t}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{c.b}</p>
-            </div>
+            </Card>
           ))}
         </div>
       </Section>
 
-      <Section>
-        <div className="rounded-3xl border border-border bg-card p-10 md:p-12">
+      <Section tone="highlight">
+        <Card className="p-10 md:p-12">
           <div className="eyebrow">The guarantee</div>
           <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
             &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
@@ -90,10 +96,10 @@ function About() {
           <p className="mt-4 text-base text-muted-foreground">
             That&apos;s not a marketing line. It&apos;s how I intend to run this.
           </p>
-        </div>
+        </Card>
       </Section>
 
-      <Section className="bg-secondary/40">
+      <Section tone="muted">
         <Eyebrow>The founder</Eyebrow>
         <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
           <div

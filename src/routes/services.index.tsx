@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 import { VERTICALS } from "@/lib/site";
 
@@ -27,21 +28,23 @@ function ServicesHub() {
               key={v.slug}
               to="/services/$slug"
               params={{ slug: v.slug }}
-              className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-signal/40 hover:shadow-2xl"
+              className="group flex flex-col justify-between transition-transform hover:-translate-y-1"
             >
-              <div>
-                <div className="eyebrow">{v.name}</div>
-                <h3 className="card-title mt-4 text-2xl md:text-3xl">{v.short}</h3>
-                <p className="mt-4 text-sm text-muted-foreground">{v.blurb}</p>
-              </div>
-              <div className="mt-8 text-sm font-medium text-ink/70 group-hover:text-signal">
-                See the {v.name} build →
-              </div>
+              <Card className="flex flex-col justify-between p-8 hover:border-signal/40 hover:shadow-2xl">
+                <div>
+                  <div className="eyebrow">{v.name}</div>
+                  <h3 className="card-title mt-4 text-2xl md:text-3xl">{v.short}</h3>
+                  <p className="mt-4 text-sm text-muted-foreground">{v.blurb}</p>
+                </div>
+                <div className="mt-8 text-sm font-medium text-ink/70 group-hover:text-signal">
+                  See the {v.name} build →
+                </div>
+              </Card>
             </Link>
           ))}
         </div>
       </Section>
-      <Section>
+      <Section tone="highlight">
         <AuditCard />
       </Section>
     </SiteLayout>
