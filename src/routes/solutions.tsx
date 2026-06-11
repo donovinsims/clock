@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 
 export const Route = createFileRoute("/solutions")({
@@ -10,10 +11,10 @@ export const Route = createFileRoute("/solutions")({
       {
         name: "description",
         content:
-          "30+ automations built on Uber/Walgreens-grade operational logic — lead capture, dispatch, follow-ups, reporting. One-time build, you own it.",
+          "30+ automations — lead capture, dispatch, follow-ups, reporting. One-time build, you own it.",
       },
       { property: "og:title", content: "Solutions — Clockout" },
-      { property: "og:description", content: "30+ automations, one-time build, no retainer. Built on operational systems experience from Uber and Walgreens." },
+      { property: "og:description", content: "30+ automations, one-time build, no retainer. Built for local service businesses, not SaaS templates." },
       { property: "og:url", content: "/solutions" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
@@ -93,8 +94,8 @@ function Solutions() {
           We&apos;ve built it.
         </H2>
         <Lede>
-          Phones, dispatch, sales, ops, reporting. 30+ automations, architected from operational
-          systems experience across Uber and Walgreens. One-time build. You own it.
+          Phones, dispatch, sales, ops, reporting. 30+ automations, architected from real
+          operations experience at massive scale. One-time build. You own it.
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {GROUPS.map((g) => (
@@ -112,15 +113,24 @@ function Solutions() {
           ))}
         </div>
       </Section>
-      <Section>
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-lg text-muted-foreground">
-            Not ready for the beta yet?{" "}
-            <a href="/assessment" className="underline underline-offset-4 hover:text-signal transition-colors">
-              Get the free Operational Leak Audit Checklist
-            </a>
-            . The 5 most common revenue leaks in local service businesses. One page.
-          </p>
+      <Section tone="highlight">
+        <div className="mx-auto max-w-2xl">
+          <Card className="p-10 md:p-12 text-center">
+            <div className="eyebrow">Free Resource</div>
+            <H2>Operational Leak Audit Checklist</H2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The 5 most common revenue leaks in local service businesses.
+              One page. No email required.
+            </p>
+            <div className="mt-8">
+              <a
+                href="/assessment"
+                className="inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3 text-sm font-medium text-background transition-all hover:bg-ink/80"
+              >
+                Download the checklist →
+              </a>
+            </div>
+          </Card>
         </div>
       </Section>
       <Section>

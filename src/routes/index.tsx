@@ -15,12 +15,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "AI automation for local service businesses. Audit + implementation built on operational systems experience from Uber and Walgreens. Flat price, 7-day install, you own it outright. 3 beta spots open.",
+          "AI automation for local service businesses. Audit + implementation built on real operations experience at massive scale. Flat price, 7-day install, you own it outright.",
       },
       { property: "og:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
-        content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems for Uber and Walgreens. The same failures bleeding local service businesses are the ones I stress-tested at 100x scale.",
+        content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems at massive scale. The same failures bleeding local service businesses are the ones I stress-tested at 100x the size.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -47,10 +47,8 @@ function Index() {
             I spent years building operational systems for{" "}
             <strong className="text-signal">Uber</strong> and{" "}
             <strong className="text-signal">Walgreens</strong>.
-            <br />
-            The same failures bleeding local service businesses are
-            <br />
-            the ones I stress-tested at 100x the scale.
+            The same failures bleeding local service businesses right now
+            are the ones I stress-tested at 100x the scale.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
@@ -62,19 +60,16 @@ function Index() {
           </div>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
             <span>✓ $497 all-in · audit + full build</span>
-            <span>✓ 3 beta spots available</span>
-            <span>✓ 10 hrs/week back in 30 days or I keep working. Free.</span>
           </div>
         </div>
       </section>
 
       {/* Proof bar */}
       <section className="border-b border-border bg-secondary/50">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-3 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-3">
           {[
-            ["6+ YRS", "UBER · WALGREENS OPS"],
+            ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
-            ["3 SPOTS", "BETA PRICING AVAILABLE NOW"],
             ["$0", "RETAINERS. EVER."],
           ].map(([k, v]) => (
             <div key={k}>

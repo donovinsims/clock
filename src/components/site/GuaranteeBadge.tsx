@@ -5,7 +5,7 @@ export function GuaranteeBadge({ className = "" }: { className?: string }) {
     >
       <span className="op-label text-[0.65rem] text-signal">Guarantee</span>
       <span className="text-sm text-ink/80">
-         If the system doesn&apos;t recover 10 hours a week within 30 days, I keep working until it does. Free.
+        10 hrs/week or I keep working. Free.
       </span>
     </div>
   );

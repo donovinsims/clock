@@ -11,12 +11,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Built by Donovin. Product operations at Uber and Walgreens. Now building automation systems for local service businesses. One-time build, you own it.",
+          "Built by Donovin. Product operations at massive scale. Now building automation systems for local service businesses. One-time build, you own it.",
       },
       { property: "og:title", content: "About — Clockout" },
       {
         property: "og:description",
-        content: "Built by Donovin. Product operations at Uber and Walgreens. Now fixing revenue leaks for local service businesses. No retainer, you own it.",
+        content: "Built by Donovin. Product operations at massive scale. Now fixing revenue leaks for local service businesses. No retainer, you own it.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -37,9 +37,33 @@ function About() {
           </h1>
           <Lede>
             Clockout was started by Donovin — a product operations lead who spent years building
-            operational systems at Uber and Walgreens, and watched local service businesses bleed
+            operational systems at massive scale, and watched local service businesses bleed
             revenue from the same leaks the big guys solved years ago.
           </Lede>
+      </Section>
+
+      <Section tone="muted">
+        <Eyebrow>The founder</Eyebrow>
+        <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
+          <div
+            className="aspect-square rounded-3xl bg-gradient-to-br from-signal/40 to-ink/20"
+            aria-hidden
+          />
+          <div>
+            <H2>Donovin</H2>
+            <p className="mt-6 text-lg text-muted-foreground">
+              Product Operations at Uber (major events, US &amp; Canada — 50,000+ person venues,
+              real-time dispatch, zero-margin operations). Then Walgreens, where the same class of
+              operational problems played out at enterprise scale.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              The missed-call leak, the quote follow-up vacuum, the maintenance customer who churns
+              because nobody called — these aren't mysteries to me. I've stress-tested them at
+              100x the scale of a local shop. Clockout is me applying everything I learned to the
+              businesses that need it most. At a price that doesn't require enterprise budget.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <Section tone="muted">
@@ -87,39 +111,17 @@ function About() {
       </Section>
 
       <Section tone="highlight">
-        <Card className="p-10 md:p-12">
-          <div className="eyebrow">The guarantee</div>
-          <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
-            &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
-            I keep working until it does. Free.&rdquo;
-          </blockquote>
-          <p className="mt-4 text-base text-muted-foreground">
-            That&apos;s not a marketing line. It&apos;s how I intend to run this.
-          </p>
-        </Card>
-      </Section>
-
-      <Section tone="muted">
-        <Eyebrow>The founder</Eyebrow>
-        <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
-          <div
-            className="aspect-square rounded-3xl bg-gradient-to-br from-signal/40 to-ink/20"
-            aria-hidden
-          />
-          <div>
-            <H2>Donovin</H2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Product Operations at Uber (major events, US &amp; Canada — 50,000+ person venues,
-              real-time dispatch, zero-margin operations). Then Walgreens, where the same class of
-              operational problems played out at enterprise scale.
+        <div className="mx-auto max-w-3xl">
+          <Card className="p-10 md:p-12 text-center">
+            <div className="eyebrow">The guarantee</div>
+            <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
+              &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
+              I keep working until it does. Free.&rdquo;
+            </blockquote>
+            <p className="mt-4 text-base text-muted-foreground">
+              That&apos;s not a marketing line. It&apos;s how I intend to run this.
             </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              The missed-call leak, the quote follow-up vacuum, the maintenance customer who churns
-              because nobody called — these aren't mysteries to me. I've stress-tested them at
-              100x the scale of a local shop. Clockout is me applying everything I learned to the
-              businesses that need it most. At a price that doesn't require enterprise budget.
-            </p>
-          </div>
+          </Card>
         </div>
       </Section>
 
