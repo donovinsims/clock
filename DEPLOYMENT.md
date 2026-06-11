@@ -200,7 +200,7 @@ vercel deploy --prod --prebuilt --force
 
 ## 🌐 Live URLs
 
-- **Production:** https://clock-mu-henna.vercel.app
+- **Production:** https://clockout.us
 - **Dashboard:** https://vercel.com/team_PpwGPSLyPfmRspwxIVX0pZJl/clock
 
 ## 🐛 Debugging Checklist

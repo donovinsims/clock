@@ -145,7 +145,7 @@ Go to Vercel Dashboard → Settings → Build & Development Settings:
 
 After deployment:
 
-- [ ] Visit: https://clock-mu-henna.vercel.app
+- [ ] Visit: https://clockout.us
 - [ ] Check all routes load
 - [ ] Verify no console errors
 - [ ] Test mobile responsiveness
@@ -252,7 +252,7 @@ The following documentation has been created for reference:
 ## Support Resources
 
 - **Vercel Dashboard:** https://vercel.com/team_PpwGPSLyPfmRspwxIVX0pZJl/clock
-- **Production URL:** https://clock-mu-henna.vercel.app
+- **Production URL:** https://clockout.us
 - **Nitro Docs:** https://nitro.unjs.io/deploy/providers/vercel
 - **TanStack Start Docs:** https://tanstack.com/start/latest/docs/framework/react/start/deployment/vercel
 

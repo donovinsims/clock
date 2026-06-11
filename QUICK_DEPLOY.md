@@ -79,7 +79,7 @@ vercel deploy --prod --prebuilt --force
 ## 🌐 URLs
 
 - **Dashboard:** https://vercel.com/team_PpwGPSLyPfmRspwxIVX0pZJl/clock
-- **Production:** https://clock-mu-henna.vercel.app
+- **Production:** https://clockout.us
 
 ---
 

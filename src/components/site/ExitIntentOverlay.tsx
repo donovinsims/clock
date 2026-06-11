@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BetaCounter } from "./BetaCounter";
 import { CTAButton } from "./CTAButton";
 
@@ -16,16 +16,29 @@ const STORAGE_KEY = "clockout-exit-intent-dismissed";
  * — Desktop: fires on mouseleave (cursor exits the viewport from top)
  * — Homepage: fires on scroll past 600px (once)
  * — Pricing & Services pages: fires after 12 seconds
+ *
+ * Accessibility:
+ * — role="dialog" + aria-modal="true" announces the overlay as a modal
+ * — Focus trap cycles Tab/Shift+Tab within the dialog
+ * — Focus returns to trigger element on dismiss
  */
 export function ExitIntentOverlay() {
   const [show, setShow] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    // Already dismissed this session — skip registration entirely
+    if (sessionStorage.getItem(STORAGE_KEY)) return;
+
     const cleanups: (() => void)[] = [];
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
     const path = window.location.pathname;
 
     const fire = () => {
+      // Guard: ignore if already dismissed this session
+      if (sessionStorage.getItem(STORAGE_KEY)) return;
+      previousFocusRef.current = document.activeElement as HTMLElement | null;
       setShow(true);
       sessionStorage.setItem(STORAGE_KEY, "1");
     };
@@ -57,6 +70,48 @@ export function ExitIntentOverlay() {
     return () => { cleanups.forEach((fn) => fn()); };
   }, []);
 
+  // Focus trap: when overlay opens, trap focus inside dialog
+  useEffect(() => {
+    if (!show || !dialogRef.current) return;
+    const dialog = dialogRef.current;
+
+    const focusableSelector =
+      'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const focusableEls = dialog.querySelectorAll<HTMLElement>(focusableSelector);
+    const firstFocusable = focusableEls[0];
+    const lastFocusable = focusableEls[focusableEls.length - 1];
+
+    // Move focus to first focusable element in dialog
+    firstFocusable?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const focusInside = dialog.contains(document.activeElement);
+      if (e.shiftKey) {
+        if (!focusInside || document.activeElement === firstFocusable) {
+          e.preventDefault();
+          lastFocusable?.focus();
+        }
+      } else {
+        if (!focusInside || document.activeElement === lastFocusable) {
+          e.preventDefault();
+          firstFocusable?.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [show]);
+
+  const handleDismiss = () => {
+    setShow(false);
+    // Restore focus to element that triggered the overlay
+    requestAnimationFrame(() => {
+      previousFocusRef.current?.focus();
+    });
+  };
+
   if (!show) return null;
 
   return (
@@ -65,17 +120,24 @@ export function ExitIntentOverlay() {
       <button
         type="button"
         className="absolute inset-0"
-        onClick={() => setShow(false)}
+        onClick={handleDismiss}
         aria-label="Close"
+        tabIndex={-1}
       />
 
-      <div className="relative mx-4 w-full max-w-md rounded-2xl border border-border bg-card p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Lock in beta pricing"
+        className="relative mx-4 w-full max-w-md rounded-2xl border border-border bg-card p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+      >
         {/* Close button */}
         <button
           type="button"
-          onClick={() => setShow(false)}
+          onClick={handleDismiss}
           className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full text-clay hover:bg-ink/5 hover:text-ink transition-colors"
-          aria-label="Close"
+          aria-label="Close dialog"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path
@@ -110,7 +172,7 @@ export function ExitIntentOverlay() {
 
         <button
           type="button"
-          onClick={() => setShow(false)}
+          onClick={handleDismiss}
           className="mt-4 w-full text-center text-xs text-clay hover:text-ink transition-colors"
         >
           No thanks — I'll keep leaking revenue

@@ -55,7 +55,7 @@ When using Git integration:
    - Verify deployment success notification
 
 3. **Test production URL:**
-   - Visit: https://clock-mu-henna.vercel.app
+   - Visit: https://clockout.us
    - Test all major features
    - Check browser console for errors
 

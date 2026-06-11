@@ -5,7 +5,7 @@
 - **Project Name:** clock
 - **Project ID:** `prj_owcKG7tpv8yzHdACz7bElUOwTLli`
 - **Team ID:** `team_PpwGPSLyPfmRspwxIVX0pZJl`
-- **Production URL:** https://clock-mu-henna.vercel.app
+- **Production URL:** https://clockout.us
 
 ## Required Settings in Vercel Dashboard
 
@@ -78,13 +78,16 @@ Navigate to: **Settings → Functions**
 Navigate to: **Settings → Domains**
 
 **Current Domains:**
-- `clock-mu-henna.vercel.app` (auto-generated)
+- `clockout.us` (primary — custom domain)
+- `clock-mu-henna.vercel.app` (auto-generated, redirects to clockout.us)
 
-**To add custom domain:**
+**To add or update custom domain:**
 1. Click "Add Domain"
-2. Enter your domain (e.g., `yourdomain.com`)
+2. Enter your domain (e.g., `clockout.us`)
 3. Follow DNS configuration instructions
 4. Wait for SSL certificate provisioning
+5. Set as primary domain
+6. Enable "Redirect `.vercel.app` domain to custom domain"
 
 ## Deployment Configuration
 
@@ -92,11 +95,11 @@ Navigate to: **Settings → Domains**
 
 **Production Deployments:**
 - Triggered by: Push to `main` branch
-- URL: https://clock-mu-henna.vercel.app
+- URL: https://clockout.us
 
 **Preview Deployments:**
 - Triggered by: Push to any branch except `main`
-- URL: `clock-{branch-name}-{team}.vercel.app`
+- URL: `clock-{branch-name}-{team}.vercel.app` (preview always uses the auto-generated `.vercel.app` domain)
 
 **Pull Request Deployments:**
 - Triggered by: Opening/updating PRs

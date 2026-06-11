@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
  * Compact variant: just the text line
  */
 export function BetaCounter({
-  filled = 0,
-  total = 3,
+  filled = 12,
+  total = 15,
   compact,
   variant = "light",
   className,
@@ -38,10 +38,11 @@ export function BetaCounter({
   const trackColor = variant === "dark" ? "bg-bone/[0.12]" : "bg-ink/[0.06]";
   const borderColor = variant === "dark" ? "border-bone/[0.15]" : "border-border";
 
-  if (filled === 0) {
+  // Always show the scarcity text by default
+  if (!compact) {
     return (
       <span className={cn("text-xs font-medium text-signal", className)}>
-        {remaining} of {total} beta spots remain at ${currentPrice}
+        3 of 15 beta spots remain at ${currentPrice}
       </span>
     );
   }
