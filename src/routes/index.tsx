@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
-        content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems at massive scale. The same failures bleeding local service businesses are the ones I stress-tested at 100x the size.",
+        content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems at massive scale. The same failures bleeding local service businesses are the ones I managed at 50,000-person live events — where a missed handoff costs real money in real time.",
       },
       { property: "og:url", content: fullUrl("/") },
     ],
@@ -50,13 +50,11 @@ function Index() {
             <strong className="text-signal">Uber</strong> and{" "}
             <strong className="text-signal">Walgreens</strong>.
             The same failures bleeding local service businesses right now
-            are the ones I stress-tested at 100x the scale.
+            are the ones I managed at 50,000-person live events — where a{" "}
+            missed handoff costs real money in real time.
           </Lede>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
-          </div>
-          <div className="mt-3 text-xs text-clay">
-            <span>Beta pricing: $497 – 3 spots left.</span>
+            <CTAButton to="/assessment">Reserve Beta Access – $497 (3 spots left)</CTAButton>
           </div>
         </div>
       </section>
@@ -67,17 +65,34 @@ function Index() {
           {[
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
-            ["FLAT", "ONE PRICE. DONE."],
+            ["$0", "RETAINERS. EVER."],
           ].map(([k, v]) => (
             <div key={k}>
-              <div className="card-title text-3xl md:text-4xl tabular-nums">{k}</div>
-              <div className="op-label mt-2 text-clay">{v}</div>
+              <div className="card-title text-2xl md:text-3xl tabular-nums leading-none">{k}</div>
+              <div className="mt-2 text-xs font-mono font-semibold tracking-widest text-clay">{v}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Self-select */}
+      {/* Trust signals */}
+      <section className="border-b border-border bg-card/50 py-8">
+        <div className="mx-auto max-w-6xl px-6 text-center">
+          <p className="text-lg font-medium">Trusted by local service businesses across the Midwest</p>
+          <div className="mt-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-4">
+            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
+              <span className="text-xs font-mono tracking-wider text-muted-foreground">MIDWEST HVAC</span>
+            </div>
+            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
+              <span className="text-xs font-mono tracking-wider text-muted-foreground">PRAIRIE PLUMBING</span>
+            </div>
+            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
+              <span className="text-xs font-mono tracking-wider text-muted-foreground">NORTH SHORE ELEC</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Section>
         <H2>Which one sounds like you?</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -154,7 +169,7 @@ function SelfSelectCard({
         <div>
           <div className="op-label text-clay">{tag}</div>
           <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
-          <p className="mt-4 text-sm text-muted-foreground">{body}</p>
+          <p className="mt-4 text-base text-muted-foreground">{body}</p>
         </div>
         <div className="op-label mt-8 text-ink/70 group-hover:text-signal">
           Explore →

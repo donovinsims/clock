@@ -87,7 +87,7 @@ function OperatorOS() {
                 {f.tag}
               </div>
               <h3 className="mt-4 font-display text-2xl tracking-tight">{f.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.body}</p>
+              <p className="mt-3 text-base text-muted-foreground leading-relaxed">{f.body}</p>
             </div>
           ))}
         </div>
@@ -114,7 +114,7 @@ function OperatorOS() {
           ].map((s) => (
             <div key={s.t} className="rounded-2xl border border-border bg-card p-6">
               <div className="font-mono text-xs text-signal">{s.t}</div>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{s.b}</p>
+              <p className="mt-4 text-base text-muted-foreground leading-relaxed">{s.b}</p>
             </div>
           ))}
         </div>
@@ -145,7 +145,7 @@ function OperatorOS() {
           ].map((d) => (
             <div key={d.title} className="rounded-2xl border border-border bg-card p-6">
               <h3 className="card-title text-lg">{d.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d.body}</p>
+              <p className="mt-2 text-base text-muted-foreground leading-relaxed">{d.body}</p>
             </div>
           ))}
         </div>

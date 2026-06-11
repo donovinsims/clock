@@ -89,7 +89,7 @@ function Assessment() {
           <aside className="space-y-6">
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="op-label text-clay">What you get</div>
-              <ul className="mt-4 space-y-3 text-sm">
+              <ul className="mt-4 space-y-3 text-base">
                 <li>— Full audit: every leak quantified in dollars (48 hrs)</li>
                 <li>— Complete automation build installed in your stack (7 days)</li>
                 <li>— Docs, training, access — you own everything outright</li>
@@ -99,7 +99,7 @@ function Assessment() {
 
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="op-label text-clay">The deal</div>
-              <ul className="mt-4 space-y-3 text-sm">
+              <ul className="mt-4 space-y-3 text-base">
                 <li className="flex items-baseline gap-2">
                   <span className="op-label text-signal">$497</span>
                   <span>all-in (normally $1,494)</span>

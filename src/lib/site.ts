@@ -3,13 +3,13 @@ export const SITE = {
   tagline: "Find your revenue leaks.",
   description:
     "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
-  url: "https://clockout.co",
+  url: "https://clockout.us",
   bookingUrl: "#book", // TODO: real booking link (Cal.com / SavvyCal)
-  email: "hello@clockout.co", // TODO: real email
+  email: "hello@clockout.us", // TODO: real email
 };
 
 export const OFFER = {
-  audit: {
+  beta: {
     name: "Revenue Leak Audit + Full Implementation",
     price: "$497 all-in (normally $1,494)",
     turnaround: "48-hour report / 7-day build",
@@ -17,12 +17,6 @@ export const OFFER = {
     guarantee:
       "If the system doesn't recover 10 hours a week within 30 days, I keep working until it does. Free.",
     cta: "Reserve Beta Access",
-  },
-  build: {
-    name: "Done-for-you build",
-    price: "Starting at $997",
-    turnaround: "Live in days, not quarters",
-    outcome: "We build, install, and hand it over. You own the system outright.",
   },
 };
 

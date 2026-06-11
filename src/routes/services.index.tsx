@@ -113,7 +113,7 @@ function ServicesHub() {
                 <div>
                   <div className="eyebrow">{v.name}</div>
                   <h3 className="card-title mt-4 text-2xl md:text-3xl">{v.short}</h3>
-                  <p className="mt-4 text-sm text-muted-foreground">{v.blurb}</p>
+                  <p className="mt-4 text-base text-muted-foreground">{v.blurb}</p>
                 </div>
                 <div className="mt-8 text-sm font-medium text-ink/70 group-hover:text-signal">
                   See the {v.name} build →
@@ -129,7 +129,7 @@ function ServicesHub() {
         <H2>
           Run by a sticky note?
           <br />
-          We&apos;ve built it.
+          We Build It.
         </H2>
         <Lede>
           Phones, dispatch, sales, ops, reporting. 30+ automations, architected from real
@@ -141,7 +141,7 @@ function ServicesHub() {
               <div className="eyebrow">{g.name}</div>
               <ul className="mt-6 space-y-2">
                 {g.items.map((i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
+                  <li key={i} className="flex items-start gap-3 text-base">
                     <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
                     {i}
                   </li>

@@ -55,15 +55,22 @@ function About() {
           <div>
             <H2>Donovin</H2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Product Operations at Uber (major events, US &amp; Canada — 50,000+ person venues,
-              real-time dispatch, zero-margin operations). Then Walgreens, where the same class of
-              operational problems played out at enterprise scale.
+              Grew up in Roscoe. Hononegah baseball, NIC-10 MVP, baseball scholarship to NIU.
+              Summers with the Winnebago County Highway Department — learned what real work
+              looks like before I learned what margin looks like. Came back home.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              The missed-call leak, the quote follow-up vacuum, the maintenance customer who churns
-              because nobody called — these aren't mysteries to me. I've stress-tested them at
-              100x the scale of a local shop. Clockout is me applying everything I learned to the
-              businesses that need it most. At a price that doesn't require enterprise budget.
+              Then the corporate detour: Product Operations at Uber — major events, US &amp;
+              Canada, 50,000+ person venues, real-time dispatch, zero-margin operations.
+              Then Walgreens, where the same class of operational problems played out at
+              enterprise scale. The missed-call leak, the quote follow-up vacuum, the
+              maintenance customer who churns because nobody called — these aren't mysteries
+              to me. I've stress-tested them at a scale most operators never see.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Clockout is me applying everything I learned to the businesses that need it
+              most. At a price that doesn't require enterprise budget. In the region
+              where I grew up.
             </p>
           </div>
         </div>
@@ -75,14 +82,14 @@ function About() {
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           <Card variant="soft" className="p-6">
             <div className="op-label text-clay">Most &ldquo;automation&rdquo;</div>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground">
               Most tools give you another dashboard, another login, and a monthly bill.
               You still have to figure out the workflow.
             </p>
           </Card>
           <Card variant="soft" className="p-6">
             <div className="op-label text-clay">What Clockout does</div>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <p className="mt-3 text-base text-muted-foreground">
               I build the actual workflow — calls, quotes, follow-ups — install it inside
               your business, and hand you the keys. No lock-in, no monthly fees.
             </p>
@@ -107,7 +114,7 @@ function About() {
           ].map((c) => (
             <Card key={c.t} variant="outline" className="p-6">
               <h3 className="card-title text-xl">{c.t}</h3>
-              <p className="mt-3 text-sm text-muted-foreground">{c.b}</p>
+              <p className="mt-3 text-base text-muted-foreground">{c.b}</p>
             </Card>
           ))}
         </div>

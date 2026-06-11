@@ -14,12 +14,12 @@ export const Route = createFileRoute("/audit")({
       {
         name: "description",
         content:
-          `${OFFER.audit.price} for a full revenue leak audit + implementation build. 48-hour written report. 30-day outcome guarantee.`,
+          `${OFFER.beta.price} for a full revenue leak audit + implementation build. 48-hour written report. 30-day outcome guarantee.`,
       },
       { property: "og:title", content: "Revenue Leak Audit — Clockout" },
       {
         property: "og:description",
-        content: `${OFFER.audit.price}. Full audit + build. 48-hour report. You own the system.`,
+        content: `${OFFER.beta.price}. Full audit + build. 48-hour report. You own the system.`,
       },
       { property: "og:url", content: fullUrl("/audit") },
     ],
@@ -46,7 +46,7 @@ function AuditPage() {
           </Lede>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
-              <span className="op-label">{OFFER.audit.cta}</span>
+              <span className="op-label">{OFFER.beta.cta}</span>
             </CTAButton>
             <CTAButton to="/services" variant="ghost">
               See what we build
@@ -79,7 +79,7 @@ function AuditPage() {
             <div key={leak.metric} className="rounded-2xl border border-border bg-card p-6">
               <div className="text-2xl font-display text-signal">{leak.impact}</div>
               <h3 className="mt-2 card-title">{leak.metric}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{leak.detail}</p>
+              <p className="mt-2 text-base text-muted-foreground">{leak.detail}</p>
             </div>
           ))}
         </div>

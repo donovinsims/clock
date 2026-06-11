@@ -71,11 +71,11 @@ function VerticalPage() {
       <Section>
         <Eyebrow>What's leaking</Eyebrow>
         <H2>{data.painTitle}</H2>
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {data.pains.map((p, i) => (
             <Card key={i} variant="outline" className="p-6">
               <div className="font-mono text-xs text-signal">— Leak {i + 1}</div>
-              <p className="mt-3 text-sm text-muted-foreground">{p}</p>
+              <p className="mt-3 text-base text-muted-foreground">{p}</p>
             </Card>
           ))}
         </div>
@@ -92,7 +92,7 @@ function VerticalPage() {
       <Section>
         <Eyebrow>What we build</Eyebrow>
         <H2>The {meta?.name} stack.</H2>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
           {data.automations.map((a, i) => (
             <Card
               key={i}
@@ -102,7 +102,7 @@ function VerticalPage() {
               <span className="mt-1 font-mono text-xs text-signal">0{i + 1}</span>
               <div>
                 <div className="font-medium">{a.title}</div>
-                <div className="text-sm text-muted-foreground">{a.body}</div>
+                <div className="text-base text-muted-foreground">{a.body}</div>
               </div>
             </Card>
           ))}
@@ -110,7 +110,7 @@ function VerticalPage() {
       </Section>
 
       <Section tone="muted">
-        <Eyebrow>Proof</Eyebrow>
+        <Eyebrow>Why It Works</Eyebrow>
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr]">
           <div>
             <H2>{data.proof.headline}</H2>

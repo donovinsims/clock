@@ -32,7 +32,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
             <BetaCounter variant={dark ? "dark" : "light"} />
           </div>
 
-          <ul className={`mt-6 grid gap-2 text-sm ${dark ? "text-bone/85" : "text-ink/80"}`}>
+          <ul className={`mt-6 grid gap-2 text-base ${dark ? "text-bone/85" : "text-ink/80"}`}>
             <li className="flex items-start gap-2">
               <span className="op-label mt-0.5 text-signal">AUDIT</span>
               <span>Full workflow audit, leaks quantified in dollars. 48-hour report.</span>

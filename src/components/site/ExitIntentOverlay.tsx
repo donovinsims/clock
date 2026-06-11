@@ -103,7 +103,7 @@ export function ExitIntentOverlay() {
           This Goes to{" "}
           <span className="line-through decoration-1">$1,494</span>
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-2 text-base leading-relaxed text-muted-foreground">
           Full audit + full automation build. Written report in 48 hours.
           You own everything — no subscriptions, no licenses.
         </p>

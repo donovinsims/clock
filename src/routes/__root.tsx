@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import clockoutIcon from "../assets/clockout-icon.asset.json";
+// Note: favicon hosted from /public/ — replace the files in public/ to update
 
 function NotFoundComponent() {
   return (
@@ -111,8 +111,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
     ],
     links: [
-      { rel: "icon", type: "image/jpeg", href: clockoutIcon.url },
-      { rel: "apple-touch-icon", href: clockoutIcon.url },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
@@ -137,7 +137,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
           logo: clockoutIcon.url,
           slogan: "Find your revenue leaks.",
-          url: "https://clockout.co",
+          url: "https://clockout.us",
         }),
       },
       {
@@ -148,7 +148,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Clockout",
           description:
             "Done-for-you AI automation for local service businesses. Revenue leak audits, AI front desk, missed-call rescue, quote follow-ups, and operations automation.",
-          url: "https://clockout.co",
+          url: "https://clockout.us",
           image: clockoutIcon.url,
           priceRange: "$497-$5,000",
           areaServed: [

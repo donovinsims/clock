@@ -31,32 +31,32 @@ function Contact() {
             action={`mailto:${SITE.email}`}
             method="POST"
             encType="text/plain"
-            className="rounded-3xl border border-border bg-card p-8 md:p-10 space-y-5"
+            className="rounded-3xl border border-border bg-card p-8 md:p-10 space-y-5 max-w-lg"
           >
             <label className="block">
-              <span className="mb-2 block text-sm font-medium">Name</span>
+              <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Name</span>
               <input
                 name="Name"
                 required
-                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+                className="w-full rounded-xl border border-input bg-background px-4 py-3 text-base"
               />
             </label>
             <label className="block">
-              <span className="mb-2 block text-sm font-medium">Email</span>
+              <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted-foreground">Email</span>
               <input
                 type="email"
                 name="Email"
                 required
-                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+                className="w-full rounded-xl border border-input bg-background px-4 py-3 text-base"
               />
             </label>
             <label className="block">
-              <span className="mb-2 block text-sm font-medium">What's on your mind?</span>
+              <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-muted-foreground">What's on your mind?</span>
               <textarea
                 name="Message"
                 required
                 rows={6}
-                className="w-full rounded-xl border border-input bg-background px-4 py-3"
+                className="w-full rounded-xl border border-input bg-background px-4 py-3 text-base"
               />
             </label>
             <button
@@ -74,7 +74,7 @@ function Contact() {
             </div>
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="eyebrow">Looking for a build?</div>
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mt-3 text-base text-muted-foreground">
                 Skip the form and book the Revenue Leak Audit. Fastest way to see if we're a fit.
               </p>
             </div>

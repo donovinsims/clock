@@ -105,7 +105,7 @@ function Solutions() {
               <div className="eyebrow">{g.name}</div>
               <ul className="mt-6 space-y-2">
                 {g.items.map((i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm">
+                  <li key={i} className="flex items-start gap-3 text-base">
                     <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
                     {i}
                   </li>

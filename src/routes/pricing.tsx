@@ -106,9 +106,9 @@ function PricingPage() {
       </Section>
 
       <Section>
-        <Eyebrow>Pick your path</Eyebrow>
-        <H2>Three ways to stop leaking revenue.</H2>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <Eyebrow>The offer</Eyebrow>
+        <H2>A flat price. Full ownership.</H2>
+        <div className="mt-12">
           {PLANS.map((plan) => (
             <Card
               key={plan.name}
@@ -119,7 +119,7 @@ function PricingPage() {
               )}
               <h3 className="card-title text-3xl">{plan.name}</h3>
               <div className="mt-2 font-display text-4xl tracking-tight">{plan.price}</div>
-              <p className="mt-2 text-sm text-muted-foreground">{plan.tagline}</p>
+              <p className="mt-2 text-base text-muted-foreground">{plan.tagline}</p>
               {plan.isBeta && (
                 <div className="mt-4">
                   <BetaCounter />
@@ -127,7 +127,7 @@ function PricingPage() {
               )}
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.features.map((f) => (
-                  <li key={f} className="text-sm text-foreground flex items-start gap-2">
+                  <li key={f} className="text-base text-foreground flex items-start gap-2">
                     <span className="mt-0.5 text-signal">✓</span>
                     {f}
                   </li>
@@ -138,6 +138,10 @@ function PricingPage() {
                   {plan.cta}
                 </CTAButton>
               </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Beta pricing is available for the first 3 trade businesses only.
+                Same audit, same build, same guarantee. Price goes to $1,494 when spots fill.
+              </p>
             </Card>
           ))}
         </div>
@@ -150,7 +154,7 @@ function PricingPage() {
           {FAQS.map((faq) => (
             <div key={faq.q}>
               <h3 className="text-lg font-semibold">{faq.q}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+              <p className="mt-2 text-base text-muted-foreground leading-relaxed">{faq.a}</p>
             </div>
           ))}
         </div>

@@ -66,11 +66,11 @@ const FAQS = [
   },
   {
     q: "I don't need automation — I need more jobs. Can you actually get me leads?",
-    a: "You probably have enough leads coming in. The problem is what happens to them. Trade businesses typically lose 15-30% of revenue to operational leaks: missed calls, quotes that go out late, leads nobody follows up on. Fixing those leaks is the fastest way to 'get more jobs' without spending a dollar on marketing. We've watched owners double their close rate just by cutting response time from 24 hours to 5 minutes. The leads were already there. They were just falling through the cracks. We fix the cracks.",
+    a: "You probably have enough leads coming in. The problem is what happens to them. Trade businesses typically lose 15-30% of revenue to operational leaks: missed calls, quotes that go out late, leads nobody follows up on. Fixing those leaks is the fastest way to 'get more jobs' without spending a dollar on marketing. The data on lead response is consistent: cutting from 24 hours to 5 minutes typically doubles close rate. The leads were already there. They were falling through the gap.",
   },
   {
     q: "Give me a real price. Not a 'starting at' or 'it depends.'",
-    a: "Fair. The audit is $497 — flat, all-in. If we don't find at least $10K in fixable leaks, it's free. After the audit, builds typically run between $997 and $4,997 depending on scope. Most are in the lower half of that range. Operator OS is custom-priced because it's a full layer across your stack. We can give you a firm number after the audit, when we know exactly what needs building. The audit cost comes off the build, so you're never paying out of pocket twice.",
+    a: "Fair. The beta price is $497 all-in — audit and full build included. After the three beta spots fill, standard pricing is $1,494. Same deliverables. Same guarantee. The price is the only difference.",
   },
   {
     q: "How do I know you won't lock me into a monthly subscription after I'm dependent on your system?",
@@ -90,7 +90,7 @@ const FAQS = [
   },
   {
     q: "What if I don't like what you built?",
-    a: "Then we fix it. The audit report serves as the blueprint — you approve the scope and price before any build work starts. If during the build something doesn't match what was agreed, we adjust at no cost. If after delivery you discover a gap we missed, we close it at no cost within 30 days. If you still don't like it after 30 days, I don't know what to tell you — but it hasn't happened yet. The audit-to-build workflow is designed to prevent mismatches. We scope together, build transparently, and adjust continuously.",
+    a: "Then we fix it. The audit report serves as the blueprint — you approve the scope and price before any build work starts. If during the build something doesn't match what was agreed, we adjust at no cost. If after delivery you discover a gap we missed, we close it at no cost within 30 days. The audit-to-build workflow is designed to prevent mismatches. We scope together, build transparently, and adjust continuously.",
   },
 ];
 
@@ -111,15 +111,18 @@ function FAQPage() {
       </section>
 
       <Section>
-        <div className="mx-auto max-w-3xl space-y-12">
+        <div className="mx-auto max-w-3xl">
           {FAQS.map((faq, i) => (
             <div key={i}>
-              <h2 className="text-lg font-semibold leading-relaxed">{faq.q}</h2>
-              <div className="mt-3 text-muted-foreground leading-relaxed space-y-2">
+              <h2 className="text-base md:text-lg font-semibold leading-snug">{faq.q}</h2>
+              <div className="mt-2 text-muted-foreground leading-relaxed space-y-2">
                 {faq.a.split("\n\n").map((p, j) => (
                   <p key={j}>{p}</p>
                 ))}
               </div>
+              {i < FAQS.length - 1 && (
+                <div className="mt-12 border-b border-border/50" />
+              )}
             </div>
           ))}
         </div>

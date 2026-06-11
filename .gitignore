@@ -32,3 +32,7 @@ dist-ssr
 *.sw?
 .vercel
 .omx/
+
+# Screenshots
+clockout-*.png
+vite.config.timestamp_*.js

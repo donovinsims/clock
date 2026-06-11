@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 type Props = {
   to?: string;
   href?: string;
-  variant?: "primary" | "ghost" | "imessage";
+  variant?: "primary" | "ghost" | "imessage" | "tertiary";
   children: ReactNode;
   className?: string;
 };
@@ -18,19 +18,21 @@ const variants = {
   ghost: "border border-ink/15 text-ink hover:bg-ink/5",
   imessage:
     "text-white bg-gradient-to-b from-[oklch(0.70_0.18_252)] to-[oklch(0.55_0.22_258)] hover:opacity-95 shadow-[0_8px_24px_-8px_oklch(0.55_0.22_258_/_0.6)]",
+  tertiary: "text-ink/60 hover:text-ink transition-colors",
 };
 
 export function CTAButton({ to, href, variant = "primary", children, className = "" }: Props) {
   const cls = `${base} ${variants[variant]} ${className}`;
+  const showArrow = variant !== "tertiary";
   if (to)
     return (
       <Link to={to} className={cls}>
-        {children} <span aria-hidden>→</span>
+        {children} {showArrow && <span aria-hidden>→</span>}
       </Link>
     );
   return (
     <a href={href ?? "#"} className={cls}>
-      {children} <span aria-hidden>→</span>
+      {children} {showArrow && <span aria-hidden>→</span>}
     </a>
   );
 }

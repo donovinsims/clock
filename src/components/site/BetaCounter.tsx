@@ -1,13 +1,15 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Scarcity component: 12/15 beta spots filled, $497 vs $1,494 anchoring.
+ * Scarcity component: beta spots filled (real paid clients only).
  *
  * Psychology:
  * - Anchoring: shows full price FIRST in the loss-aversion line
  * - Loss aversion: "Lock in $497 before it goes to $1,494" (loss = $997 delta)
- * - Social proof: "12 of 15 claimed" = others committed
- * - Scarcity: "3 spots remaining" = limited quantity
+ * - Scarcity: limited quantity — must be updated with real paid clients
+ *
+ * ⚠️ CRITICAL: `filled` MUST always reflect real paid beta clients.
+ *    Do not fabricate social proof. Honest scarcity beats fake urgency.
  *
  * Design: soft brutalism — visible structure, assertive copy, mechanical feel.
  * Full variant: progress bar + stats
@@ -22,8 +24,8 @@ export function BetaCounter({
   variant?: "light" | "dark";
   className?: string;
 }) {
-  const filled = 12;
-  const total = 15;
+  const filled = 0; // ⬅️ Update when each beta client locks in
+  const total = 3;
   const remaining = total - filled;
   const currentPrice = 497;
   const fullPrice = 1494;
