@@ -8,4 +8,4 @@ Allow: /
 User-agent: CCBot
 Disallow: /
 
-Sitemap: https://clockout.co/sitemap.xml
+Sitemap: https://clockout.us/sitemap.xml
