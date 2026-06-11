@@ -56,11 +56,11 @@ function VerticalPage() {
       />
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
-          <div className="eyebrow">{meta?.name}</div>
+          <Eyebrow>{meta?.name}</Eyebrow>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">{data.hero}</h1>
-          <p className="mt-5 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
+          <Lede>{data.heroLede}</Lede>
           <div className="mt-8 flex flex-wrap gap-4">
-            <CTAButton to="/assessment">Claim a Beta Spot</CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
             <CTAButton to="/solutions" variant="ghost">
               See the {data.name} build
             </CTAButton>
@@ -75,7 +75,7 @@ function VerticalPage() {
           {data.pains.map((p, i) => (
             <Card key={i} variant="outline" className="p-6">
               <div className="font-mono text-xs text-signal">— Leak {i + 1}</div>
-              <p className="mt-3 text-lg">{p}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{p}</p>
             </Card>
           ))}
         </div>
@@ -120,7 +120,7 @@ function VerticalPage() {
             {data.proof.stats.map((s) => (
               <Card key={s.label} variant="outline" className="p-6">
                 <div className="card-title text-3xl tabular-nums">{s.value}</div>
-                <div className="mt-2 text-xs text-muted-foreground">{s.label}</div>
+                <div className="mt-2 op-label text-clay">{s.label}</div>
               </Card>
             ))}
           </div>

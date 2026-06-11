@@ -107,7 +107,7 @@ function ServicesHub() {
               key={v.slug}
               to="/services/$slug"
               params={{ slug: v.slug }}
-              className="flex flex-col justify-between"
+              className="group flex flex-col justify-between"
             >
               <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:border-signal/40">
                 <div>
@@ -137,11 +137,11 @@ function ServicesHub() {
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {CAPABILITIES.map((g) => (
-            <div key={g.name} className="rounded-3xl border border-border bg-card p-8">
+            <div key={g.name} className="rounded-2xl border border-border bg-card p-8">
               <div className="eyebrow">{g.name}</div>
               <ul className="mt-6 space-y-2">
                 {g.items.map((i) => (
-                  <li key={i} className="flex items-start gap-3 text-base">
+                  <li key={i} className="flex items-start gap-3 text-sm">
                     <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
                     {i}
                   </li>

@@ -83,7 +83,7 @@ function OperatorOS() {
         <div className="mt-16 grid gap-6 md:grid-cols-4">
           {FEATURES.map((f) => (
             <div key={f.title} className="rounded-2xl border border-border bg-card p-6">
-              <div className="text-xs font-semibold uppercase tracking-wider text-signal">
+              <div className="op-label text-signal">
                 {f.tag}
               </div>
               <h3 className="mt-4 font-display text-2xl tracking-tight">{f.title}</h3>
@@ -114,7 +114,7 @@ function OperatorOS() {
           ].map((s) => (
             <div key={s.t} className="rounded-2xl border border-border bg-card p-6">
               <div className="font-mono text-xs text-signal">{s.t}</div>
-              <p className="mt-4 text-lg text-foreground leading-relaxed">{s.b}</p>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{s.b}</p>
             </div>
           ))}
         </div>
@@ -144,7 +144,7 @@ function OperatorOS() {
             },
           ].map((d) => (
             <div key={d.title} className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="font-semibold text-lg">{d.title}</h3>
+              <h3 className="card-title text-lg">{d.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d.body}</p>
             </div>
           ))}
@@ -162,7 +162,7 @@ function OperatorOS() {
             Operator OS build would look like for your business.
           </p>
           <div className="mt-8">
-            <CTAButton to="/assessment">Claim a Beta Spot</CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
           </div>
         </div>
       </Section>

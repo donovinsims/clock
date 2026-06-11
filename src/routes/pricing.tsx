@@ -122,7 +122,7 @@ function PricingPage() {
       <Section>
         <Eyebrow>Pick your path</Eyebrow>
         <H2>Three ways to stop leaking revenue.</H2>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {PLANS.map((plan) => (
             <Card
               key={plan.name}

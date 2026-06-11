@@ -72,17 +72,17 @@ function About() {
       <Section tone="muted">
         <Eyebrow>The philosophy</Eyebrow>
         <H2>Run better, not busier.</H2>
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          <Card variant="outline" className="p-6">
+        <div className="mt-12 grid gap-4 md:grid-cols-2">
+          <Card variant="soft" className="p-6">
             <div className="op-label text-clay">Most &ldquo;automation&rdquo;</div>
-            <p className="mt-3 text-lg text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground">
               Most tools give you another dashboard, another login, and a monthly bill.
               You still have to figure out the workflow.
             </p>
           </Card>
           <Card variant="soft" className="p-6">
             <div className="op-label text-clay">What Clockout does</div>
-            <p className="mt-3 text-lg text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground">
               I build the actual workflow — calls, quotes, follow-ups — install it inside
               your business, and hand you the keys. No lock-in, no monthly fees.
             </p>

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, Lede } from "@/components/site/Section";
+import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
 import { OFFER } from "@/lib/site";
 import { fullUrl } from "@/lib/seo";
 
@@ -60,9 +61,9 @@ function Assessment() {
           Audit + full implementation.
         </h1>
         <div className="mt-4">
-          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-signal/30 bg-signal/5 px-3 py-1 font-mono text-xs tracking-wider text-signal uppercase">
-            ✓ 10 hrs/wk back in 30 days or I keep working
-          </span>
+          <GuaranteeBadge description="10 hrs/wk back in 30 days or I keep working">
+            ✓ Guarantee
+          </GuaranteeBadge>
         </div>
         <Lede>
           Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and

@@ -82,7 +82,7 @@ function AuditPage() {
           ].map((leak) => (
             <div key={leak.metric} className="rounded-2xl border border-border bg-card p-6">
               <div className="text-2xl font-display text-signal">{leak.impact}</div>
-              <h3 className="mt-2 font-semibold">{leak.metric}</h3>
+              <h3 className="mt-2 card-title">{leak.metric}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{leak.detail}</p>
             </div>
           ))}

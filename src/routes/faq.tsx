@@ -100,7 +100,7 @@ function FAQPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-3xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
-          <h1 className="mt-6 font-display text-5xl md:text-6xl tracking-tight">
+          <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
             FAQ
           </h1>
           <Lede>

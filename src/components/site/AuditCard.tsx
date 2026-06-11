@@ -45,8 +45,8 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
           </ul>
         </div>
         <div className="flex flex-col items-start gap-3 md:items-end">
-          <CTAButton to="/assessment" variant={dark ? "primary" : "primary"}>
-            Claim a Beta Spot
+          <CTAButton to="/assessment" variant="primary">
+            <span className="op-label">Claim a Beta Spot</span>
           </CTAButton>
         </div>
       </div>

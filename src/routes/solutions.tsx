@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
+import { CTAButton } from "@/components/site/CTAButton";
 import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/solutions")({
@@ -100,11 +101,11 @@ function Solutions() {
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {GROUPS.map((g) => (
-            <div key={g.name} className="rounded-3xl border border-border bg-card p-8">
+            <div key={g.name} className="rounded-2xl border border-border bg-card p-8">
               <div className="eyebrow">{g.name}</div>
               <ul className="mt-6 space-y-2">
                 {g.items.map((i) => (
-                  <li key={i} className="flex items-start gap-3 text-base">
+                  <li key={i} className="flex items-start gap-3 text-sm">
                     <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-signal" />
                     {i}
                   </li>
@@ -124,12 +125,7 @@ function Solutions() {
               One page. No email required.
             </p>
             <div className="mt-8">
-              <a
-                href="/assessment"
-                className="inline-flex items-center gap-2 rounded-full bg-ink px-8 py-3 text-sm font-medium text-background transition-all hover:bg-ink/80"
-              >
-                Download the checklist →
-              </a>
+              <CTAButton to="/assessment">Download the checklist</CTAButton>
             </div>
           </Card>
         </div>

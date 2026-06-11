@@ -89,7 +89,7 @@ export function Header() {
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <div className="mx-auto max-w-6xl px-6 py-4 grid gap-1">
-            <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Services
             </Link>
             {VERTICALS.map((v) => (
@@ -97,24 +97,24 @@ export function Header() {
                 key={v.slug}
                 to={`/services/${v.slug}`}
                 onClick={() => setOpen(false)}
-                className="pl-4 py-1.5 text-sm text-muted-foreground"
+                className="pl-4 py-1.5 text-sm text-muted-foreground active:bg-ink/5"
               >
                 {v.name}
               </Link>
             ))}
-            <Link to="/audit" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/audit" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Audit
             </Link>
-            <Link to="/pricing" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/pricing" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Pricing
             </Link>
-            <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Operator OS
             </Link>
-            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               About
             </Link>
-            <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm">
+            <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Blog
             </Link>
             <div className="pt-3" onClick={() => setOpen(false)}>

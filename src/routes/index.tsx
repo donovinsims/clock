@@ -44,17 +44,15 @@ function Index() {
             <br />
             <span className="italic">So Is the Fix.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg md:text-2xl text-muted-foreground">
+          <Lede>
             I spent years building operational systems for{" "}
             <strong className="text-signal">Uber</strong> and{" "}
             <strong className="text-signal">Walgreens</strong>.
             The same failures bleeding local service businesses right now
             are the ones I stress-tested at 100x the scale.
-          </p>
+          </Lede>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <CTAButton to="/assessment">
-              <span className="op-label">Claim a Beta Spot</span>
-            </CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
             <CTAButton to="/services" variant="ghost">
               Explore services
             </CTAButton>
@@ -153,7 +151,7 @@ function SelfSelectCard({
   return (
     <Link
       to={to as "/services"}
-      className="flex flex-col justify-between"
+      className="group flex flex-col justify-between"
     >
       <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg">
         <div>
@@ -161,7 +159,7 @@ function SelfSelectCard({
           <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
           <p className="mt-4 text-sm text-muted-foreground">{body}</p>
         </div>
-        <div className="op-label mt-8 text-[0.7rem] text-ink/70 group-hover:text-signal">
+        <div className="op-label mt-8 text-ink/70 group-hover:text-signal">
           Explore →
         </div>
       </Card>

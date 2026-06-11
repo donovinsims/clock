@@ -73,7 +73,7 @@ function Blog() {
                 <h3 className="card-title mt-3 text-2xl md:text-3xl">{p.title}</h3>
               </div>
               <div className="text-sm text-muted-foreground">
-                {p.read} · {p.date}
+                {p.read}{p.date === "Coming soon" ? "" : ` · ${p.date}`}
               </div>
             </article>
           ))}
