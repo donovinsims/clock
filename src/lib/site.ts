@@ -9,13 +9,13 @@ export const SITE = {
 
 export const OFFER = {
   audit: {
-    name: "Revenue Leak Audit",
-    price: "$497",
-    turnaround: "48-hour report",
-    outcome: "We map and quantify the leaks costing you bookings, jobs, and margin.",
+    name: "Revenue Leak Audit + Full Implementation",
+    price: "$497 all-in (normally $1,494)",
+    turnaround: "48-hour report / 7-day build",
+    outcome: "Full workflow audit, complete automation build, and handover. Beta pricing.",
     guarantee:
-      "If we don't surface at least $10K in fixable leaks, you get a full refund. No back-and-forth.",
-    cta: "Book the audit",
+      "10 hrs/week back in 30 days or the build is free.",
+    cta: "Claim a Beta Spot",
   },
   build: {
     name: "Done-for-you build",
@@ -26,8 +26,8 @@ export const OFFER = {
 };
 
 export const CTA = {
-  primary: "Book the audit",
-  secondary: "See how it works",
+  primary: "Claim a Beta Spot",
+  secondary: "Explore services",
   build: "Start a build",
 };
 

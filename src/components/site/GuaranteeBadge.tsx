@@ -5,7 +5,7 @@ export function GuaranteeBadge({ className = "" }: { className?: string }) {
     >
       <span className="op-label text-[0.65rem] text-signal">Guarantee</span>
       <span className="text-sm text-ink/80">
-        Refund if we don&apos;t find $10K in fixable leaks
+        10 hrs/week back in 30 days or the build is free.
       </span>
     </div>
   );

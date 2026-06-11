@@ -51,7 +51,7 @@ function VerticalPage() {
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">{data.hero}</h1>
           <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">{data.heroLede}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <CTAButton to="/assessment">Book the audit</CTAButton>
+            <CTAButton to="/assessment">Claim a Beta Spot</CTAButton>
             <CTAButton to="/solutions" variant="ghost">
               See the {data.name} build
             </CTAButton>

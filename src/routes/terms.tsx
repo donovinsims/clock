@@ -24,12 +24,13 @@ function Terms() {
           {/* TODO: replace with reviewed legal copy */}
           <p>Last updated: {new Date().getFullYear()}</p>
           <p>
-            By using this site, you agree to these terms. The audit is a one-time $497 engagement
-            delivered within 48 business hours. If the audit does not surface at least $10K in
-            fixable leaks, you receive a full refund.
+            By using this site, you agree to these terms. The beta offer is a one-time $497
+            engagement covering audit, build, and handover (normally $1,494). If the delivered
+            system does not recover at least 10 hours per week within 30 days, I keep working
+            at no additional cost.
           </p>
           <p>
-            Implementation engagements are scoped per project. Pricing starts at $997. Deliverables,
+            Post-beta engagements are scoped per project. Standard pricing applies. Deliverables,
             timeline, and payment terms are documented in a written statement of work.
           </p>
           <p>

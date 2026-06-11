@@ -14,12 +14,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "We found $127K in revenue leaks in 47 trades businesses. Start with a $497 audit. Refunded if we don't find $10K.",
+          "AI automation for local service businesses. Audit + implementation built on operational systems experience from Uber and Walgreens. Flat price, 7-day install, you own it outright. 3 beta spots open.",
       },
       { property: "og:title", content: "Clockout — Find your revenue leaks." },
       {
         property: "og:description",
-        content: "You're losing $8K\u2013$15K every month in missed calls, cold quotes, and unbilled work. We find the leaks in 48 hours for $497.",
+        content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems for Uber and Walgreens. The same failures bleeding local service businesses are the ones I stress-tested at 100x scale.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -36,30 +36,33 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-32 md:pb-32">
           <GuaranteeBadge />
           <h1 className="mt-6 font-display text-5xl md:text-8xl tracking-tight">
-            We found{" "}
-            <span className="text-signal">$127K</span> in
+            Your Revenue Leaks
             <br />
-            revenue leaks in 47
+            <span className="text-signal">Are Predictable.</span>
             <br />
-            <span className="italic text-signal">trades businesses.</span>
+            <span className="italic">So Is the Fix.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
-            You&rsquo;re losing{" "}
-            <strong className="text-signal">$8K&ndash;$15K</strong> every
-            month. Here&rsquo;s where.
+            I spent years building operational systems for{" "}
+            <strong className="text-signal">Uber</strong> and{" "}
+            <strong className="text-signal">Walgreens</strong>.
+            <br />
+            The same failures bleeding local service businesses are
+            <br />
+            the ones I stress-tested at 100x the scale.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
-              <span className="op-label text-[0.7rem]">Show me my $10K in leaks</span>
+              <span className="op-label text-[0.7rem]">Claim a Beta Spot</span>
             </CTAButton>
             <CTAButton to="/services" variant="ghost">
-              See how it works
+              Explore services
             </CTAButton>
           </div>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
-            <span>✓ $497 flat, no retainer</span>
-            <span>✓ 48-hour written report</span>
-            <span>✓ Refund if we don&rsquo;t find $10K</span>
+            <span>✓ $497 all-in · audit + full build</span>
+            <span>✓ 3 beta spots available</span>
+            <span>✓ 10 hrs/week back in 30 days or free</span>
           </div>
         </div>
       </section>
@@ -68,10 +71,10 @@ function Index() {
       <section className="border-b border-border bg-secondary/50">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-4">
           {[
-            ["$2.4M+", "REVENUE LEAKS IDENTIFIED"],
-            ["48 HRS", "TO DELIVER YOUR AUDIT"],
-            ["$0", "RETAINERS, EVER"],
-            ["100%", "YOU OWN THE SYSTEM"],
+            ["6+ YRS", "UBER · WALGREENS OPS"],
+            ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
+            ["3 SPOTS", "BETA PRICING AVAILABLE NOW"],
+            ["$0", "RETAINERS. EVER."],
           ].map(([k, v]) => (
             <div key={k}>
               <div className="card-title text-3xl md:text-4xl tabular-nums">{k}</div>
@@ -101,8 +104,7 @@ function Index() {
             to="/operator-os"
             tag="INDIVIDUAL OPERATORS"
             title="I am the bottleneck. Help."
-            body="Operator OS is a personal AI system for founders, agents, and sales pros who want their life out of inboxes and notebooks."
-            accent="imessage"
+            body="An operational AI layer that captures your context, drafts your follow-ups, and briefs you before every call. Built for founders, agents, and sales pros."
           />
         </div>
       </Section>
@@ -115,7 +117,7 @@ function Index() {
           <Steps
             steps={[
               {
-                title: "Book the audit",
+                title: "Audit — claim your beta spot",
                 body: "Tell us about your business. We map your workflow, find the leaks, and quantify them in dollars. 48-hour written report.",
               },
               {
@@ -144,13 +146,11 @@ function SelfSelectCard({
   tag,
   title,
   body,
-  accent,
 }: {
   to: string;
   tag: string;
   title: string;
   body: string;
-  accent?: "imessage";
 }) {
   return (
     <Link
@@ -158,9 +158,7 @@ function SelfSelectCard({
       className="group flex flex-col justify-between rounded-3xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-2xl"
     >
       <div>
-        <div
-          className={`op-label text-[0.7rem] ${accent === "imessage" ? "text-[oklch(0.55_0.22_258)]" : "text-clay"}`}
-        >
+        <div className="op-label text-[0.7rem] text-clay">
           {tag}
         </div>
         <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>

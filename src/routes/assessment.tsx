@@ -7,16 +7,16 @@ import { OFFER } from "@/lib/site";
 export const Route = createFileRoute("/assessment")({
   head: () => ({
     meta: [
-      { title: "Book the Revenue Leak Audit — Clockout" },
+      { title: "Claim a Beta Spot — Clockout" },
       {
         name: "description",
         content:
-          "$497. 48-hour report. Refund if we don't find $10K in fixable leaks. Book your Revenue Leak Audit.",
+          "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots available. 10 hrs/week back in 30 days or I keep working.",
       },
-      { property: "og:title", content: "Book the Revenue Leak Audit — Clockout" },
+      { property: "og:title", content: "Claim a Beta Spot — Clockout" },
       {
         property: "og:description",
-        content: "$497. 48-hour report. Refund if we don't find $10K in fixable leaks.",
+        content: "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots. 10 hrs/week back in 30 days or free.",
       },
       { property: "og:url", content: "/assessment" },
     ],
@@ -52,21 +52,21 @@ function Assessment() {
   return (
     <SiteLayout>
       <Section>
-        <Eyebrow>The Revenue Leak Audit</Eyebrow>
+        <Eyebrow>BETA OFFER — 3 SPOTS REMAINING</Eyebrow>
         <h1 className="font-display text-5xl md:text-7xl tracking-tight">
-          $497. 48 hours.
+          $497 all-in.
           <br />
-          Refunded if we can&apos;t find $10K.
+          Audit + full implementation.
         </h1>
         <div className="mt-4">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-signal/30 bg-signal/5 px-3 py-1 font-mono text-xs tracking-wider text-signal uppercase">
-            ✓ Guaranteed
+            ✓ 10 hrs/week back in 30 days or I keep working. Free.
           </span>
         </div>
         <Lede>
           Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and
-          follow-up. You&apos;ll get a written report with quantified leaks and the exact fixes —
-          yours to keep, with or without us.
+          follow-up. You&apos;ll get a written report with quantified leaks — and the full
+          automation build installed in your stack. Audit, build, handover. Normally $1,494.
         </Lede>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.2fr_1fr]">
@@ -90,10 +90,10 @@ function Assessment() {
             <div className="rounded-3xl border border-border bg-card p-8">
               <div className="op-label text-[0.7rem] text-clay">What you get</div>
               <ul className="mt-4 space-y-3 text-sm">
-                <li>— A 48-hour written report</li>
-                <li>— Quantified leaks in dollars</li>
-                <li>— Prioritized fix list</li>
-                <li>— Loom walkthrough from our team</li>
+                <li>— Full audit: every leak quantified in dollars (48 hrs)</li>
+                <li>— Complete automation build installed in your stack (7 days)</li>
+                <li>— Docs, training, access — you own everything outright</li>
+                <li>— Before/after case study I can publish</li>
               </ul>
             </div>
 
@@ -102,15 +102,15 @@ function Assessment() {
               <ul className="mt-4 space-y-3 text-sm">
                 <li className="flex items-baseline gap-2">
                   <span className="op-label text-[0.65rem] text-signal">$497</span>
-                  <span>flat — no retainer, ever</span>
+                  <span>all-in (normally $1,494)</span>
                 </li>
                 <li className="flex items-baseline gap-2">
-                  <span className="op-label text-[0.65rem] text-signal">48 HRS</span>
-                  <span>written report turnaround</span>
+                  <span className="op-label text-[0.65rem] text-signal">3 SPOTS</span>
+                  <span>beta pricing — next is $1,494</span>
                 </li>
                 <li className="flex items-baseline gap-2">
-                  <span className="op-label text-[0.65rem] text-signal">YOURS</span>
-                  <span>you own every fix we find</span>
+                  <span className="op-label text-[0.65rem] text-signal">30 DAYS</span>
+                  <span>or 10 hrs/week back, free</span>
                 </li>
               </ul>
             </div>

@@ -10,12 +10,12 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Why Clockout exists, who's behind it, and the model that lets clients own their systems outright.",
+          "Built by Donovin. Product operations at Uber and Walgreens. Now building automation systems for local service businesses. One-time build, you own it.",
       },
       { property: "og:title", content: "About — Clockout" },
       {
         property: "og:description",
-        content: "Built by Donovin. One-time builds. You own the system outright.",
+        content: "Built by Donovin. Product operations at Uber and Walgreens. Now fixing revenue leaks for local service businesses. No retainer, you own it.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -29,16 +29,16 @@ function About() {
     <SiteLayout>
       <Section>
         <Eyebrow>About</Eyebrow>
-        <h1 className="font-display text-5xl md:text-7xl tracking-tight">
-          Built for owners who are sick
-          <br />
-          of paying rent on their own tools.
-        </h1>
-        <Lede>
-          Clockout was started by Donovin after watching too many sharp operators get bled out by
-          stacks of subscriptions they didn't fully understand and consultants who never quite
-          finished the job.
-        </Lede>
+          <h1 className="font-display text-5xl md:text-7xl tracking-tight">
+            Your ops failures are the same ones
+            <br />
+            I fixed at Uber and Walgreens.
+          </h1>
+          <Lede>
+            Clockout was started by Donovin — a product operations lead who spent years building
+            operational systems at Uber and Walgreens, and watched local service businesses bleed
+            revenue from the same leaks the big guys solved years ago.
+          </Lede>
       </Section>
 
       <Section className="bg-secondary/40">
@@ -47,13 +47,12 @@ function About() {
         <div className="mt-8 grid gap-12 md:grid-cols-2">
           <p className="text-lg text-muted-foreground">
             Most "automation" out there is software pretending to be a solution. It gives you a
-            dashboard and a monthly bill and asks you to figure out the rest. We build the actual
-            workflow, install it inside your business, and walk away.
+            dashboard and a monthly bill and asks you to figure out the rest. I build the actual
+            workflow, install it inside your business, and hand you the keys.
           </p>
           <p className="text-lg text-muted-foreground">
-            We're not interested in retainers. We're not interested in lock-in. We're interested in
-            handing you a system that quietly earns its keep every single day — and stays yours
-            forever.
+            No retainers. No lock-in. One price, full build, full handover. You own the system
+            forever — the same way you own your truck and your tools.
           </p>
         </div>
       </Section>
@@ -91,13 +90,15 @@ function About() {
           <div>
             <H2>Donovin</H2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Donovin spent years inside operations at fast-moving service businesses, and watched
-              the same pattern play out: owners working harder than they needed to because their
-              tools were stitched together with hope.
+              Product Operations at Uber (major events, US &amp; Canada — 50,000+ person venues,
+              real-time dispatch, zero-margin operations). Then Walgreens, where the same class of
+              operational problems played out at enterprise scale.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Clockout exists to break that pattern. Sharp builds. Plain pricing. Real handover.
-              Then we get out of the way.
+              The missed-call leak, the quote follow-up vacuum, the maintenance customer who churns
+              because nobody called — these aren't mysteries to me. I've stress-tested them at
+              100x the scale of a local shop. Clockout is me applying everything I learned to the
+              businesses that need it most. At a price that doesn't require enterprise budget.
             </p>
           </div>
         </div>

@@ -19,7 +19,7 @@ function ServicesHub() {
           Not a SaaS template.
         </H2>
         <Lede>
-          Every vertical has its own leaks. After eight industries, we know where yours are.
+          Every vertical has its own leaks. The big guys solved these years ago. Now you can too.
         </Lede>
         <div className="mt-16 grid gap-4 md:grid-cols-2">
           {VERTICALS.map((v) => (

@@ -5,17 +5,17 @@ import { CTAButton } from "@/components/site/CTAButton";
 export const Route = createFileRoute("/operator-os")({
   head: () => ({
     meta: [
-      { title: "Operator OS — A personal AI operating system" },
+      { title: "Operator OS — Operational AI for service businesses" },
       {
         name: "description",
         content:
-          "An operating system for how you actually work. Capture, follow-up, decision support across your stack. Built once. Owned forever.",
+          "An operational AI layer for your service business. Capture, follow-up, decision support across your entire stack. Built once. Owned forever. Beta pricing available.",
       },
       { property: "og:title", content: "Operator OS — Clockout" },
       {
         property: "og:description",
         content:
-          "An operating system for how you actually work. Capture, follow-up, decision support across your stack.",
+          "An operational AI layer for service businesses. Capture, follow-up, decision support across your stack. Built once. Owned forever. Beta pricing available.",
       },
       { property: "og:url", content: "/operator-os" },
     ],
@@ -42,8 +42,8 @@ function OperatorOS() {
               Built once. Owned forever.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <CTAButton href="#book" variant="imessage">
-                Start a build
+              <CTAButton href="/assessment" variant="imessage">
+                Claim a Beta Spot
               </CTAButton>
               <CTAButton to="/assessment" variant="ghost">
                 Take the assessment
@@ -163,7 +163,7 @@ function OperatorOS() {
                 variant="primary"
                 className="!bg-white !text-[oklch(0.45_0.18_258)] hover:!bg-white/90"
               >
-                Book the audit
+                Claim a Beta Spot
               </CTAButton>
             </div>
           </div>

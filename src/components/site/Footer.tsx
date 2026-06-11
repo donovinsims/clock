@@ -56,7 +56,7 @@ export function Footer() {
               Contact
             </Link>
             <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Book the audit
+               Claim a Beta Spot
             </Link>
           </FooterCol>
         </div>

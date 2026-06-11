@@ -10,10 +10,10 @@ export const Route = createFileRoute("/solutions")({
       {
         name: "description",
         content:
-          "Every automation Clockout builds — lead capture, AI receptionists, follow-ups, reporting, dispatch, reactivation, and more.",
+          "30+ automations built on Uber/Walgreens-grade operational logic — lead capture, dispatch, follow-ups, reporting. One-time build, you own it.",
       },
       { property: "og:title", content: "Solutions — Clockout" },
-      { property: "og:description", content: "Every automation we build, across every workflow." },
+      { property: "og:description", content: "30+ automations, one-time build, no retainer. Built on operational systems experience from Uber and Walgreens." },
       { property: "og:url", content: "/solutions" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
@@ -93,8 +93,8 @@ function Solutions() {
           We&apos;ve built it.
         </H2>
         <Lede>
-          Phones, dispatch, sales, ops, reporting. 30+ automations that replace the workarounds you
-          shouldn&apos;t need.
+          Phones, dispatch, sales, ops, reporting. 30+ automations, architected from operational
+          systems experience across Uber and Walgreens. One-time build. You own it.
         </Lede>
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {GROUPS.map((g) => (
