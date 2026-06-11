@@ -48,22 +48,6 @@ const PLANS = [
     featured: true,
     isBeta: true,
   },
-  {
-    name: "Standard Build",
-    price: "$1,494",
-    badge: "Normal price",
-    tagline: "Same audit + same build. Standard pricing after beta fills.",
-    features: [
-      "Full lead-to-cash workflow mapping",
-      "$10K+ leak guarantee — or it's free",
-      "48-hour written report with dollar figures",
-      "Custom automation build for top 3 leaks",
-      "Installed in your existing stack",
-      "Full handover. Docs. Training.",
-    ],
-    cta: "Get Started",
-    to: "/assessment",
-  },
 ];
 
 const FAQS = [

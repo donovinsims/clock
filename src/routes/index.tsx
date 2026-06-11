@@ -52,19 +52,11 @@ function Index() {
             The same failures bleeding local service businesses right now
             are the ones I stress-tested at 100x the scale.
           </Lede>
-          {/* Scarcity — prominent, between value prop and CTA */}
-          <div className="mt-8 max-w-sm">
-            <BetaCounter />
-          </div>
-
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
-            <CTAButton to="/services" variant="ghost">
-              Explore services
-            </CTAButton>
           </div>
           <div className="mt-3 text-xs text-clay">
-            <span>✓ $497 all-in · audit + full build</span>
+            <span>Beta pricing: $497 – 3 spots left.</span>
           </div>
         </div>
       </section>
