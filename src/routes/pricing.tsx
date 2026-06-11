@@ -65,7 +65,7 @@ function PricingPage() {
           <GuaranteeBadge description="$497 all-in · You own the system">
             One-Time Price
           </GuaranteeBadge>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
+          <h1 className="mt-6 font-display text-4xl md:text-7xl">
             You pay once.
             <br />
             <span className="text-signal">You own it forever.</span>
@@ -118,7 +118,7 @@ function PricingPage() {
                 <div className="op-label mb-2 text-signal">{plan.badge}</div>
               )}
               <h3 className="card-title text-3xl">{plan.name}</h3>
-              <div className="mt-2 font-display text-4xl tracking-tight">{plan.price}</div>
+              <div className="mt-2 font-display text-4xl">{plan.price}</div>
               <p className="mt-2 text-base text-muted-foreground">{plan.tagline}</p>
               {plan.isBeta && (
                 <div className="mt-4">

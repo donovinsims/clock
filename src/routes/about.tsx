@@ -32,7 +32,7 @@ function About() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <Eyebrow>About</Eyebrow>
-          <h1 className="font-display text-5xl md:text-7xl tracking-tight">
+          <h1 className="font-display text-4xl md:text-7xl">
             Your ops failures are the same ones
             <br />
             I fixed at Uber and Walgreens.
@@ -115,7 +115,7 @@ function About() {
             },
           ].map((c) => (
             <Card key={c.t} variant="outline" className="p-6">
-              <h3 className="card-title text-xl">{c.t}</h3>
+              <h3 className="card-title">{c.t}</h3>
               <p className="mt-3 text-base text-muted-foreground">{c.b}</p>
             </Card>
           ))}
@@ -126,7 +126,7 @@ function About() {
         <div className="mx-auto max-w-3xl">
           <Card className="p-8 md:p-10 text-center">
             <div className="eyebrow">The guarantee</div>
-            <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-foreground">
+            <blockquote className="mt-4 font-display text-2xl md:text-4xl text-foreground">
               &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
               I keep working until it does. Free.&rdquo;
             </blockquote>

@@ -22,7 +22,7 @@ function Terms() {
     <SiteLayout>
       <Section>
         <Eyebrow>Terms</Eyebrow>
-        <h1 className="font-display text-5xl md:text-6xl tracking-tight">Terms of service</h1>
+        <h1 className="font-display text-4xl md:text-7xl">Terms of service</h1>
         <div className="mt-12 max-w-prose space-y-6 text-lg text-muted-foreground">
           <p>Last updated: {new Date().getFullYear()}</p>
           <p>

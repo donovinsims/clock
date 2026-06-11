@@ -51,7 +51,7 @@ export function H2({
   size?: H2Size;
 }) {
   return (
-    <h2 className={`font-display ${h2Sizes[size]} tracking-tight ${className}`}>
+    <h2 className={`font-display ${h2Sizes[size]} ${className}`}>
       {children}
     </h2>
   );

@@ -218,9 +218,9 @@
     margin-top: 1.25em;
   }
 
-  /* Tight tracking for display text */
+  /* Tight tracking for display text — matches Tailwind's tracking-tight */
   h1, h2, h3 {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
   h1,
@@ -252,9 +252,16 @@
   /* Card / component titles — sans, tight, tough. Not serif. */
   .card-title {
     font-family: var(--font-sans);
+    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: -0.015em;
     line-height: 1.15;
+  }
+
+  @media (width >= 48rem) {
+    .card-title {
+      font-size: 1.5rem;
+    }
   }
 
   .rule {

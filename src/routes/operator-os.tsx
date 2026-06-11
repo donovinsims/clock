@@ -36,7 +36,7 @@ function OperatorOS() {
           <GuaranteeBadge description="10 hrs/wk in 30 days or free">
             Time-Back
           </GuaranteeBadge>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
+          <h1 className="mt-6 font-display text-4xl md:text-7xl">
             A methodology,
             <br />
             <span className="text-signal">not a product.</span>
@@ -86,7 +86,7 @@ function OperatorOS() {
               <div className="op-label text-signal">
                 {f.tag}
               </div>
-              <h3 className="mt-4 font-display text-2xl tracking-tight">{f.title}</h3>
+              <h3 className="mt-4 font-display text-2xl">{f.title}</h3>
               <p className="mt-3 text-base text-muted-foreground leading-relaxed">{f.body}</p>
             </div>
           ))}
@@ -144,7 +144,7 @@ function OperatorOS() {
             },
           ].map((d) => (
             <div key={d.title} className="rounded-2xl border border-border bg-card p-6">
-              <h3 className="card-title text-lg">{d.title}</h3>
+              <h3 className="card-title">{d.title}</h3>
               <p className="mt-2 text-base text-muted-foreground leading-relaxed">{d.body}</p>
             </div>
           ))}

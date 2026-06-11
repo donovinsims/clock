@@ -101,7 +101,7 @@ function FAQPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-3xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
-          <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
+          <h1 className="mt-6 font-display text-4xl md:text-7xl">
             FAQ
           </h1>
           <Lede>
@@ -123,7 +123,7 @@ function FAQPage() {
                 {faq.q}
                 <ChevronDown className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
               </summary>
-              <div className="mt-2 text-sm leading-relaxed text-ink/70">
+              <div className="mt-2 text-base leading-relaxed text-ink/70">
                 {faq.a}
               </div>
             </details>

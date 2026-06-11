@@ -12,7 +12,7 @@ export function Steps({ steps }: { steps: Step[] }) {
             0{i + 1}
           </span>
           <h3 className="text-base font-semibold">{step.title}</h3>
-          <p className="mt-3 text-sm text-muted-foreground">{step.body}</p>
+          <p className="mt-3 text-base leading-relaxed text-muted-foreground">{step.body}</p>
         </li>
       ))}
     </ol>

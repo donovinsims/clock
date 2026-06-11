@@ -23,7 +23,7 @@ function Contact() {
     <SiteLayout>
       <Section>
         <Eyebrow>Contact</Eyebrow>
-        <h1 className="font-display text-5xl md:text-7xl tracking-tight">Tell us what&apos;s broken.</h1>
+                  <h1 className="font-display text-4xl md:text-7xl">Tell us what&apos;s broken.</h1>
         <Lede>Direct line to the team. We answer every note within one business day.</Lede>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[1.2fr_1fr]">

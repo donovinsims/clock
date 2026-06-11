@@ -88,7 +88,7 @@ export function ExitIntentOverlay() {
         </button>
 
         {/* Anchoring: full price first, lock-in price with urgency */}
-        <h3 className="card-title text-2xl tracking-tight">
+        <h3 className="card-title">
           Lock In <span className="text-signal">$497</span> Before
           This Goes to{" "}
           <span className="line-through decoration-1">$1,494</span>

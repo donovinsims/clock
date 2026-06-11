@@ -54,7 +54,7 @@ function Assessment() {
     <SiteLayout>
       <Section>
         <Eyebrow>BETA OFFER — 3 SPOTS REMAINING</Eyebrow>
-        <h1 className="font-display text-5xl md:text-7xl tracking-tight">
+        <h1 className="font-display text-4xl md:text-7xl">
           $497 all-in.
           <br />
           Audit + full implementation.

@@ -57,7 +57,7 @@ function VerticalPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <Eyebrow>{meta?.name}</Eyebrow>
-          <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">{data.hero}</h1>
+          <h1 className="mt-6 font-display text-5xl md:text-7xl">{data.hero}</h1>
           <Lede>{data.heroLede}</Lede>
           <div className="mt-8 flex flex-wrap gap-4">
             <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>

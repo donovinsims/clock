@@ -22,25 +22,25 @@ function Privacy() {
     <SiteLayout>
       <Section>
         <Eyebrow>Privacy</Eyebrow>
-        <h1 className="font-display text-5xl md:text-6xl tracking-tight">Privacy policy</h1>
-        <div className="prose prose-lg mt-12 max-w-prose text-foreground">
-          <p className="text-lg text-muted-foreground">Last updated: {new Date().getFullYear()}</p>
+        <h1 className="font-display text-4xl md:text-7xl">Privacy policy</h1>
+        <div className="mt-12 max-w-prose space-y-6 text-lg text-muted-foreground">
+          <p>Last updated: {new Date().getFullYear()}</p>
           <h2 className="mt-10 font-display text-3xl">What we collect</h2>
-          <p className="text-muted-foreground">
+          <p>
             We collect the information you give us through forms (name, email, company, what you
             tell us about your business) and basic anonymous analytics about how this site is used.
           </p>
           <h2 className="mt-8 font-display text-3xl">How we use it</h2>
-          <p className="text-muted-foreground">
+          <p>
             To answer you, deliver work you've paid for, and improve our service. We don't sell your
             data.
           </p>
           <h2 className="mt-8 font-display text-3xl">How we store it</h2>
-          <p className="text-muted-foreground">
+          <p>
             In standard SaaS tools we use to run Clockout, with reasonable security practices.
           </p>
           <h2 className="mt-8 font-display text-3xl">Your rights</h2>
-          <p className="text-muted-foreground">
+          <p>
             Email us anytime to access, correct, or delete your data.
           </p>
         </div>

@@ -38,7 +38,7 @@ function Index() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
-          <h1 className="mt-6 font-display text-5xl md:text-8xl tracking-tight">
+          <h1 className="mt-6 font-display text-4xl md:text-7xl">
             Your Revenue Leaks
             <br />
             <span className="text-signal">Are Predictable.</span>
@@ -68,7 +68,7 @@ function Index() {
             ["$0", "RETAINERS. EVER."],
           ].map(([k, v]) => (
             <div key={k}>
-              <div className="card-title text-2xl md:text-3xl tabular-nums leading-none">{k}</div>
+              <div className="card-title tabular-nums">{k}</div>
               <div className="mt-2 text-xs font-mono font-semibold tracking-widest text-clay">{v}</div>
             </div>
           ))}
@@ -168,7 +168,7 @@ function SelfSelectCard({
       <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg">
         <div>
           <div className="op-label text-clay">{tag}</div>
-          <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
+          <h3 className="card-title mt-4">{title}</h3>
           <p className="mt-4 text-base text-muted-foreground">{body}</p>
         </div>
         <div className="op-label mt-8 text-ink/70 group-hover:text-signal">

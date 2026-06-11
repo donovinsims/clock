@@ -18,7 +18,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
           <div className={`op-label ${dark ? "text-bone/60" : "text-clay"}`}>
             BETA OFFER
           </div>
-          <h3 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
+          <h3 className="mt-3 font-display text-4xl md:text-5xl">
             Revenue Leak Audit + Full Implementation
           </h3>
           <p

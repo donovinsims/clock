@@ -112,7 +112,7 @@ function ServicesHub() {
               <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg hover:border-signal/40">
                 <div>
                   <div className="eyebrow">{v.name}</div>
-                  <h3 className="card-title mt-4 text-2xl md:text-3xl">{v.short}</h3>
+                  <h3 className="card-title mt-4">{v.short}</h3>
                   <p className="mt-4 text-base text-muted-foreground">{v.blurb}</p>
                 </div>
                 <div className="mt-8 text-sm font-medium text-ink/70 group-hover:text-signal">

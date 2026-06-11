@@ -56,7 +56,7 @@ function Blog() {
     <SiteLayout>
       <Section>
         <Eyebrow>Field notes</Eyebrow>
-        <h1 className="font-display text-3xl md:text-5xl tracking-tight">Plain writing for people who run things.</h1>
+        <h1 className="font-display text-4xl md:text-7xl">Plain writing for people who run things.</h1>
         <Lede>
           No thought leadership. No 12-step listicles. Just what we've seen, what we've built, and
           what's working right now.
@@ -70,7 +70,7 @@ function Blog() {
             >
               <div>
                 <div className="eyebrow">{p.tag}</div>
-                <h3 className="card-title mt-3 text-2xl md:text-3xl">{p.title}</h3>
+                <h3 className="card-title mt-3">{p.title}</h3>
               </div>
               <div className="text-sm text-muted-foreground">
                 {p.read}{p.date === "Coming soon" ? "" : ` · ${p.date}`}
