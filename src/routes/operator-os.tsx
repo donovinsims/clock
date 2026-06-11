@@ -33,7 +33,7 @@ function OperatorOS() {
       {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
-          <GuaranteeBadge description="10 hrs/wk in 30 days">
+          <GuaranteeBadge description="10 hrs/wk in 30 days or free">
             Time-Back
           </GuaranteeBadge>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
@@ -49,7 +49,7 @@ function OperatorOS() {
           </Lede>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
-              <span className="op-label">Claim a Beta Spot</span>
+              <span className="op-label">Reserve Beta Access</span>
             </CTAButton>
             <CTAButton to="/audit" variant="ghost">
               Start with an audit
@@ -162,7 +162,7 @@ function OperatorOS() {
             Operator OS build would look like for your business.
           </p>
           <div className="mt-8">
-            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
           </div>
         </div>
       </Section>

@@ -16,7 +16,7 @@ export const OFFER = {
     outcome: "Full workflow audit, complete automation build, and handover. Beta pricing.",
     guarantee:
       "If the system doesn't recover 10 hours a week within 30 days, I keep working until it does. Free.",
-    cta: "Claim a Beta Spot",
+    cta: "Reserve Beta Access",
   },
   build: {
     name: "Done-for-you build",
@@ -27,7 +27,7 @@ export const OFFER = {
 };
 
 export const CTA = {
-  primary: "Claim a Beta Spot",
+  primary: "Reserve Beta Access",
   secondary: "Explore services",
   build: "Start a build",
 };

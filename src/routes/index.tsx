@@ -5,6 +5,7 @@ import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 import { Steps } from "@/components/site/Steps";
+import { BetaCounter } from "@/components/site/BetaCounter";
 import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
 import { Link } from "@tanstack/react-router";
 import { fullUrl } from "@/lib/seo";
@@ -51,18 +52,19 @@ function Index() {
             The same failures bleeding local service businesses right now
             are the ones I stress-tested at 100x the scale.
           </Lede>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          {/* Scarcity — prominent, between value prop and CTA */}
+          <div className="mt-8 max-w-sm">
+            <BetaCounter />
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
             <CTAButton to="/services" variant="ghost">
               Explore services
             </CTAButton>
           </div>
-          <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs">
-            <span className="text-clay">✓ $497 all-in · audit + full build</span>
-            <span className="inline-flex items-center gap-1.5 text-signal">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-signal" aria-hidden />
-              12 of 15 beta spots filled
-            </span>
+          <div className="mt-3 text-xs text-clay">
+            <span>✓ $497 all-in · audit + full build</span>
           </div>
         </div>
       </section>

@@ -60,7 +60,7 @@ function VerticalPage() {
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">{data.hero}</h1>
           <Lede>{data.heroLede}</Lede>
           <div className="mt-8 flex flex-wrap gap-4">
-            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
             <CTAButton to="/solutions" variant="ghost">
               See the {data.name} build
             </CTAButton>

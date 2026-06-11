@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
 import { CTAButton } from "@/components/site/CTAButton";
+import { BetaCounter } from "@/components/site/BetaCounter";
 import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
 import { fullUrl } from "@/lib/seo";
 import { OFFER } from "@/lib/site";
@@ -42,9 +43,10 @@ const PLANS = [
       "Installed in your existing stack",
       "Full handover. Docs. Training.",
     ],
-    cta: "Claim a Beta Spot",
+    cta: "Reserve Beta Access",
     to: "/assessment",
     featured: true,
+    isBeta: true,
   },
   {
     name: "Standard Build",
@@ -59,7 +61,7 @@ const PLANS = [
       "Installed in your existing stack",
       "Full handover. Docs. Training.",
     ],
-    cta: "Claim a Beta Spot",
+    cta: "Get Started",
     to: "/assessment",
   },
 ];
@@ -76,7 +78,7 @@ function PricingPage() {
     <SiteLayout>
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
-          <GuaranteeBadge description="$497 all-in · done">
+          <GuaranteeBadge description="$497 all-in · You own the system">
             One-Time Price
           </GuaranteeBadge>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
@@ -134,6 +136,11 @@ function PricingPage() {
               <h3 className="card-title text-3xl">{plan.name}</h3>
               <div className="mt-2 font-display text-4xl tracking-tight">{plan.price}</div>
               <p className="mt-2 text-sm text-muted-foreground">{plan.tagline}</p>
+              {plan.isBeta && (
+                <div className="mt-4">
+                  <BetaCounter />
+                </div>
+              )}
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.features.map((f) => (
                   <li key={f} className="text-sm text-foreground flex items-start gap-2">

@@ -4,7 +4,6 @@ import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { CTAButton } from "@/components/site/CTAButton";
 import { Steps } from "@/components/site/Steps";
 import { AuditCard } from "@/components/site/AuditCard";
-import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
 import { fullUrl } from "@/lib/seo";
 import { OFFER } from "@/lib/site";
 
@@ -34,9 +33,6 @@ function AuditPage() {
     <SiteLayout>
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
-          <GuaranteeBadge description="$10K minimum or it's free">
-            Guarantee
-          </GuaranteeBadge>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
             You're leaking revenue <br />
             <span className="text-signal">right now. We'll name it.</span>

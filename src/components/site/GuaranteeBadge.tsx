@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 export function GuaranteeBadge({
-  description = "10 hrs/wk in 30 days",
+  description = "10 hrs/wk back in 30 days or free",
   className = "",
   children,
 }: {
@@ -14,7 +14,7 @@ export function GuaranteeBadge({
       className={`inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-signal/30 bg-signal/5 px-2.5 py-2 ${className}`}
     >
       <span className="op-label text-signal">{children ?? "Guarantee"}</span>
-      <span className="text-sm text-ink/80">{description}</span>
+      <span className="text-xs text-ink/80">{description}</span>
     </div>
   );
 }

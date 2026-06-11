@@ -9,13 +9,13 @@ import { fullUrl } from "@/lib/seo";
 export const Route = createFileRoute("/assessment")({
   head: () => ({
     meta: [
-      { title: "Claim a Beta Spot — Clockout" },
+      { title: "Revenue Leak Audit — Reserve Beta Access | Clockout" },
       {
         name: "description",
         content:
           "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots available. 10 hrs/week back in 30 days or I keep working.",
       },
-      { property: "og:title", content: "Claim a Beta Spot — Clockout" },
+      { property: "og:title", content: "Revenue Leak Audit — Reserve Beta Access | Clockout" },
       {
         property: "og:description",
         content: "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots. 10 hrs/week back in 30 days or I keep working. Free.",
