@@ -14,7 +14,7 @@ export const OFFER = {
     turnaround: "48-hour report / 7-day build",
     outcome: "Full workflow audit, complete automation build, and handover. Beta pricing.",
     guarantee:
-      "10 hrs/week back in 30 days or the build is free.",
+      "If the system doesn't recover 10 hours a week within 30 days, I keep working until it does. Free.",
     cta: "Claim a Beta Spot",
   },
   build: {

@@ -113,6 +113,17 @@ function Solutions() {
         </div>
       </Section>
       <Section>
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-lg text-muted-foreground">
+            Not ready for the beta yet?{" "}
+            <a href="/assessment" className="underline underline-offset-4 hover:text-signal transition-colors">
+              Get the free Operational Leak Audit Checklist
+            </a>
+            . The 5 most common revenue leaks in local service businesses. One page.
+          </p>
+        </div>
+      </Section>
+      <Section>
         <AuditCard variant="dark" />
       </Section>
     </SiteLayout>

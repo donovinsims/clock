@@ -62,7 +62,7 @@ function Index() {
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
             <span>✓ $497 all-in · audit + full build</span>
             <span>✓ 3 beta spots available</span>
-            <span>✓ 10 hrs/week back in 30 days or free</span>
+            <span>✓ 10 hrs/week back in 30 days or I keep working. Free.</span>
           </div>
         </div>
       </section>

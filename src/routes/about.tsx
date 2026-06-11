@@ -80,6 +80,19 @@ function About() {
         </div>
       </Section>
 
+      <Section>
+        <div className="rounded-3xl border border-border bg-card p-10 md:p-12">
+          <div className="eyebrow">The guarantee</div>
+          <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
+            I keep working until it does. Free.&rdquo;
+          </blockquote>
+          <p className="mt-4 text-base text-muted-foreground">
+            That&apos;s not a marketing line. It&apos;s how I intend to run this.
+          </p>
+        </div>
+      </Section>
+
       <Section className="bg-secondary/40">
         <Eyebrow>The founder</Eyebrow>
         <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">

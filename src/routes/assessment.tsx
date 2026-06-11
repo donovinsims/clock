@@ -16,7 +16,7 @@ export const Route = createFileRoute("/assessment")({
       { property: "og:title", content: "Claim a Beta Spot — Clockout" },
       {
         property: "og:description",
-        content: "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots. 10 hrs/week back in 30 days or free.",
+        content: "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots. 10 hrs/week back in 30 days or I keep working. Free.",
       },
       { property: "og:url", content: "/assessment" },
     ],
