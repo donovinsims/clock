@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, Lede } from "@/components/site/Section";
 import { OFFER } from "@/lib/site";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/assessment")({
   head: () => ({
@@ -18,9 +19,9 @@ export const Route = createFileRoute("/assessment")({
         property: "og:description",
         content: "$497 all-in for a full revenue leak audit + implementation build. 3 beta spots. 10 hrs/week back in 30 days or I keep working. Free.",
       },
-      { property: "og:url", content: "/assessment" },
+      { property: "og:url", content: fullUrl("/assessment") },
     ],
-    links: [{ rel: "canonical", href: "/assessment" }],
+    links: [{ rel: "canonical", href: fullUrl("/assessment") }],
   }),
   component: Assessment,
 });

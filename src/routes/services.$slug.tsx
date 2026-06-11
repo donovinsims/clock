@@ -5,8 +5,10 @@ import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
 import { Steps } from "@/components/site/Steps";
 import { CTAButton } from "@/components/site/CTAButton";
+import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { VERTICAL_CONTENT, type VerticalContent } from "@/lib/vertical-content";
 import { VERTICALS } from "@/lib/site";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -25,9 +27,9 @@ export const Route = createFileRoute("/services/$slug")({
         { name: "description", content: desc },
         { property: "og:title", content: title },
         { property: "og:description", content: desc },
-        { property: "og:url", content: url },
+        { property: "og:url", content: fullUrl(url) },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [{ rel: "canonical", href: fullUrl(url) }],
     };
   },
   component: VerticalPage,
@@ -46,6 +48,12 @@ function VerticalPage() {
   const meta = VERTICALS.find((v) => v.slug === data.slug);
   return (
     <SiteLayout>
+      <Breadcrumbs
+        crumbs={[
+          { label: "Services", href: "/services" },
+          { label: data.name },
+        ]}
+      />
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <div className="eyebrow">{meta?.name}</div>

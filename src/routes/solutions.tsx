@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
@@ -15,9 +16,9 @@ export const Route = createFileRoute("/solutions")({
       },
       { property: "og:title", content: "Solutions — Clockout" },
       { property: "og:description", content: "30+ automations, one-time build, no retainer. Built for local service businesses, not SaaS templates." },
-      { property: "og:url", content: "/solutions" },
+      { property: "og:url", content: fullUrl("/solutions") },
     ],
-    links: [{ rel: "canonical", href: "/solutions" }],
+    links: [{ rel: "canonical", href: fullUrl("/solutions") }],
   }),
   component: Solutions,
 });

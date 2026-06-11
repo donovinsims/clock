@@ -16,12 +16,15 @@ Trades and local service (HVAC, roofing, plumbing, electrical, landscaping, clea
 
 - Home: /
 - Services overview: /services
+- Industry pages: /services/hvac, /services/roofing, /services/plumbing, /services/electrical, /services/landscaping, /services/cleaning, /services/property-management, /services/real-estate
 - Operator OS: /operator-os
 - Solutions: /solutions
 - About: /about
 - Book the audit: /assessment
 - Blog (field notes): /blog
 - Contact: /contact
+- Privacy: /privacy
+- Terms: /terms
 
 ## Pricing
 

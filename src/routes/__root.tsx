@@ -137,6 +137,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
           logo: clockoutIcon.url,
           slogan: "Find your revenue leaks.",
+          url: "https://clockout.co",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Clockout",
+          description:
+            "Done-for-you AI automation for local service businesses. Revenue leak audits, AI front desk, missed-call rescue, quote follow-ups, and operations automation.",
+          url: "https://clockout.co",
+          image: clockoutIcon.url,
+          priceRange: "$497-$5,000",
+          areaServed: [
+            { "@type": "City", name: "Chicago" },
+            { "@type": "State", name: "Illinois" },
+          ],
+          founder: {
+            "@type": "Person",
+            name: "Donovin",
+          },
         }),
       },
     ],

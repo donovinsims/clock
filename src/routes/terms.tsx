@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow } from "@/components/site/Section";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
       { title: "Terms — Clockout" },
       { name: "description", content: "Terms of service for Clockout." },
-      { property: "og:url", content: "/terms" },
+      { property: "og:url", content: fullUrl("/terms") },
     ],
-    links: [{ rel: "canonical", href: "/terms" }],
+    links: [{ rel: "canonical", href: fullUrl("/terms") }],
   }),
   component: Terms,
 });

@@ -1,11 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { VERTICALS } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="bg-ink text-bone">
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2">
               <span className="inline-block h-2.5 w-2.5 rounded-full bg-signal" aria-hidden />
@@ -14,49 +13,49 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm text-bone/70">
               Done-for-you automation for owner-led businesses. One-time builds. You own the system.
             </p>
+            <p className="mt-3 text-xs text-bone/50">
+              Roscoe, IL — Serving Northern Illinois & Southern Wisconsin
+            </p>
           </div>
-          <FooterCol title="Services">
-            {VERTICALS.slice(0, 4).map((v) => (
-              <Link
-                key={v.slug}
-                to="/services/$slug"
-                params={{ slug: v.slug }}
-                className="block py-1 text-sm text-bone/70 hover:text-bone"
-              >
-                {v.name}
-              </Link>
-            ))}
-          </FooterCol>
-          <FooterCol title="More">
-            {VERTICALS.slice(4).map((v) => (
-              <Link
-                key={v.slug}
-                to="/services/$slug"
-                params={{ slug: v.slug }}
-                className="block py-1 text-sm text-bone/70 hover:text-bone"
-              >
-                {v.name}
-              </Link>
-            ))}
-          </FooterCol>
-          <FooterCol title="Company">
+          <FooterCol title="Product">
+            <Link to="/audit" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Audit
+            </Link>
+            <Link to="/pricing" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Pricing
+            </Link>
             <Link to="/operator-os" className="block py-1 text-sm text-bone/70 hover:text-bone">
               Operator OS
             </Link>
-            <Link to="/solutions" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Solutions
+            <Link to="/services" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Services
             </Link>
-            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              About
-            </Link>
+          </FooterCol>
+          <FooterCol title="Resources">
             <Link to="/blog" className="block py-1 text-sm text-bone/70 hover:text-bone">
               Blog
+            </Link>
+            <Link to="/faq" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              FAQ
             </Link>
             <Link to="/contact" className="block py-1 text-sm text-bone/70 hover:text-bone">
               Contact
             </Link>
             <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone">
-               Claim a Beta Spot
+              Claim a Beta Spot
+            </Link>
+          </FooterCol>
+          <FooterCol title="Company">
+            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              About
+            </Link>
+          </FooterCol>
+          <FooterCol title="Legal">
+            <Link to="/privacy" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Privacy
+            </Link>
+            <Link to="/terms" className="block py-1 text-sm text-bone/70 hover:text-bone">
+              Terms
             </Link>
           </FooterCol>
         </div>

@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
 import { AuditCard } from "@/components/site/AuditCard";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,9 +19,9 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Built by Donovin. Product operations at massive scale. Now fixing revenue leaks for local service businesses. No retainer, you own it.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: fullUrl("/about") },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: fullUrl("/about") }],
   }),
   component: About,
 });

@@ -1,15 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow } from "@/components/site/Section";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
       { title: "Privacy — Clockout" },
       { name: "description", content: "How Clockout handles your information." },
-      { property: "og:url", content: "/privacy" },
+      { property: "og:url", content: fullUrl("/privacy") },
     ],
-    links: [{ rel: "canonical", href: "/privacy" }],
+    links: [{ rel: "canonical", href: fullUrl("/privacy") }],
   }),
   component: Privacy,
 });

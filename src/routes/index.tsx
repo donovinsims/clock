@@ -7,6 +7,7 @@ import { AuditCard } from "@/components/site/AuditCard";
 import { Steps } from "@/components/site/Steps";
 import { GuaranteeBadge } from "@/components/site/GuaranteeBadge";
 import { Link } from "@tanstack/react-router";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,9 +23,9 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Your revenue leaks are predictable. So is the fix. I spent years building operational systems at massive scale. The same failures bleeding local service businesses are the ones I stress-tested at 100x the size.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: fullUrl("/") },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: fullUrl("/") }],
   }),
   component: Index,
 });
@@ -66,10 +67,11 @@ function Index() {
 
       {/* Proof bar */}
       <section className="border-b border-border bg-secondary/50">
-        <div className="mx-auto grid max-w-6xl grid-cols-3 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-4">
           {[
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
+            ["3 SPOTS", "BETA PRICING AVAILABLE NOW"],
             ["$0", "RETAINERS. EVER."],
           ].map(([k, v]) => (
             <div key={k}>

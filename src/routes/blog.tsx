@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog")({
   head: () => ({
@@ -15,9 +16,9 @@ export const Route = createFileRoute("/blog")({
         property: "og:description",
         content: "Practical writing on automation, AI, and running an owner-led business better.",
       },
-      { property: "og:url", content: "/blog" },
+      { property: "og:url", content: fullUrl("/blog") },
     ],
-    links: [{ rel: "canonical", href: "/blog" }],
+    links: [{ rel: "canonical", href: fullUrl("/blog") }],
   }),
   component: Blog,
 });

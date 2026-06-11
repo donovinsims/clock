@@ -13,9 +13,12 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as OperatorOsRouteImport } from './routes/operator-os'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AuditRouteImport } from './routes/audit'
 import { Route as AssessmentRouteImport } from './routes/assessment'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -42,9 +45,19 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OperatorOsRoute = OperatorOsRouteImport.update({
   id: '/operator-os',
   path: '/operator-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -55,6 +68,11 @@ const ContactRoute = ContactRouteImport.update({
 const BlogRoute = BlogRouteImport.update({
   id: '/blog',
   path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AssessmentRoute = AssessmentRouteImport.update({
@@ -87,9 +105,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/assessment': typeof AssessmentRoute
+  '/audit': typeof AuditRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/operator-os': typeof OperatorOsRoute
+  '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRouteWithChildren
   '/solutions': typeof SolutionsRoute
@@ -101,9 +122,12 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/assessment': typeof AssessmentRoute
+  '/audit': typeof AuditRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/operator-os': typeof OperatorOsRoute
+  '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/solutions': typeof SolutionsRoute
   '/terms': typeof TermsRoute
@@ -115,9 +139,12 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/assessment': typeof AssessmentRoute
+  '/audit': typeof AuditRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
+  '/faq': typeof FaqRoute
   '/operator-os': typeof OperatorOsRoute
+  '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/services': typeof ServicesRouteWithChildren
   '/solutions': typeof SolutionsRoute
@@ -131,9 +158,12 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/assessment'
+    | '/audit'
     | '/blog'
     | '/contact'
+    | '/faq'
     | '/operator-os'
+    | '/pricing'
     | '/privacy'
     | '/services'
     | '/solutions'
@@ -145,9 +175,12 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/assessment'
+    | '/audit'
     | '/blog'
     | '/contact'
+    | '/faq'
     | '/operator-os'
+    | '/pricing'
     | '/privacy'
     | '/solutions'
     | '/terms'
@@ -158,9 +191,12 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/assessment'
+    | '/audit'
     | '/blog'
     | '/contact'
+    | '/faq'
     | '/operator-os'
+    | '/pricing'
     | '/privacy'
     | '/services'
     | '/solutions'
@@ -173,9 +209,12 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AssessmentRoute: typeof AssessmentRoute
+  AuditRoute: typeof AuditRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
+  FaqRoute: typeof FaqRoute
   OperatorOsRoute: typeof OperatorOsRoute
+  PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   SolutionsRoute: typeof SolutionsRoute
@@ -212,11 +251,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/operator-os': {
       id: '/operator-os'
       path: '/operator-os'
       fullPath: '/operator-os'
       preLoaderRoute: typeof OperatorOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -231,6 +284,13 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog'
       preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/assessment': {
@@ -289,9 +349,12 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AssessmentRoute: AssessmentRoute,
+  AuditRoute: AuditRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
+  FaqRoute: FaqRoute,
   OperatorOsRoute: OperatorOsRoute,
+  PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   ServicesRoute: ServicesRouteWithChildren,
   SolutionsRoute: SolutionsRoute,

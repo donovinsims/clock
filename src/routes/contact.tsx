@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { SITE } from "@/lib/site";
+import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -10,9 +11,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Tell us what's broken in your ops. We'll reply within one business day." },
       { property: "og:title", content: "Contact — Clockout" },
       { property: "og:description", content: "Tell us what's broken in your ops. We'll reply within one business day." },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: fullUrl("/contact") },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: fullUrl("/contact") }],
   }),
   component: Contact,
 });

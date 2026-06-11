@@ -7,3 +7,5 @@ Allow: /
 # Block training-only Common Crawl bot
 User-agent: CCBot
 Disallow: /
+
+Sitemap: https://clockout.co/sitemap.xml

@@ -3,6 +3,7 @@ export const SITE = {
   tagline: "Find your revenue leaks.",
   description:
     "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
+  url: "https://clockout.co",
   bookingUrl: "#book", // TODO: real booking link (Cal.com / SavvyCal)
   email: "hello@clockout.co", // TODO: real email
 };
@@ -92,7 +93,8 @@ export type Vertical = (typeof VERTICALS)[number];
 
 export const NAV = [
   { label: "Services", href: "/services", hasMenu: true },
-  { label: "Solutions", href: "/solutions" },
+  { label: "Audit", href: "/audit" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Operator OS", href: "/operator-os" },
   { label: "About", href: "/about" },
   { label: "Blog", href: "/blog" },

@@ -13,7 +13,7 @@ export function Card({
 }) {
   const variants: Record<CardVariant, string> = {
     soft: "rounded-2xl border border-border bg-card",
-    outline: "rounded-2xl border border-border bg-card",
+    outline: "rounded-2xl border border-border bg-transparent",
     ghost: "rounded-2xl border border-transparent bg-transparent",
   };
 
