@@ -162,8 +162,24 @@
     font-family: var(--font-sans);
     font-size: 1rem;
     line-height: 1.6;
+    text-wrap: pretty;
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Prose content width constraint — prevents 80+ char lines on wide screens */
+  .prose-width {
+    max-width: 65ch;
+  }
+
+  /* Auto-space paragraphs in prose context */
+  .prose p + p {
+    margin-top: 1.25em;
+  }
+
+  /* Tight tracking for display text */
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
   }
 
   h1,

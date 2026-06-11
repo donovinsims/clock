@@ -33,8 +33,28 @@ export function Eyebrow({ children }: { children: ReactNode }) {
   return <div className="eyebrow mb-6">{children}</div>;
 }
 
-export function H2({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <h2 className={`font-display text-4xl md:text-6xl tracking-tight ${className}`}>{children}</h2>;
+type H2Size = "sm" | "md" | "lg";
+
+const h2Sizes: Record<H2Size, string> = {
+  sm: "text-2xl md:text-4xl",
+  md: "text-3xl md:text-5xl",
+  lg: "text-4xl md:text-6xl",
+};
+
+export function H2({
+  children,
+  className = "",
+  size = "md",
+}: {
+  children: ReactNode;
+  className?: string;
+  size?: H2Size;
+}) {
+  return (
+    <h2 className={`font-display ${h2Sizes[size]} tracking-tight ${className}`}>
+      {children}
+    </h2>
+  );
 }
 
 export function Lede({ children, className = "" }: { children: ReactNode; className?: string }) {

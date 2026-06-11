@@ -54,24 +54,26 @@ function About() {
           />
           <div>
             <H2>Donovin</H2>
-            <p className="mt-6 text-lg text-muted-foreground">
-              Grew up in Roscoe. Hononegah baseball, NIC-10 MVP, baseball scholarship to NIU.
-              Summers with the Winnebago County Highway Department — learned what real work
-              looks like before I learned what margin looks like. Came back home.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Then the corporate detour: Product Operations at Uber — major events, US &amp;
-              Canada, 50,000+ person venues, real-time dispatch, zero-margin operations.
-              Then Walgreens, where the same class of operational problems played out at
-              enterprise scale. The missed-call leak, the quote follow-up vacuum, the
-              maintenance customer who churns because nobody called — these aren't mysteries
-              to me. I've stress-tested them at a scale most operators never see.
-            </p>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Clockout is me applying everything I learned to the businesses that need it
-              most. At a price that doesn't require enterprise budget. In the region
-              where I grew up.
-            </p>
+            <div className="prose-width">
+              <p className="mt-6 text-lg text-muted-foreground">
+                Grew up in Roscoe. Hononegah baseball, NIC-10 MVP, baseball scholarship to NIU.
+                Summers with the Winnebago County Highway Department — learned what real work
+                looks like before I learned what margin looks like. Came back home.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Then the corporate detour: Product Operations at Uber — major events, US &amp;
+                Canada, 50,000+ person venues, real-time dispatch, zero-margin operations.
+                Then Walgreens, where the same class of operational problems played out at
+                enterprise scale. The missed-call leak, the quote follow-up vacuum, the
+                maintenance customer who churns because nobody called — these aren't mysteries
+                to me. I've stress-tested them at a scale most operators never see.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Clockout is me applying everything I learned to the businesses that need it
+                most. At a price that doesn't require enterprise budget. In the region
+                where I grew up.
+              </p>
+            </div>
           </div>
         </div>
       </Section>

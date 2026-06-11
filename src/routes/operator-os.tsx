@@ -154,9 +154,9 @@ function OperatorOS() {
       {/* CTA */}
       <Section tone="highlight">
         <div className="text-center">
-          <h2 className="font-display text-4xl md:text-5xl tracking-tight">
+          <H2 size="lg">
             Start with a conversation.
-          </h2>
+          </H2>
           <p className="mt-4 mx-auto max-w-lg text-muted-foreground">
             We'll map your current week, identify the gaps, and tell you exactly what an
             Operator OS build would look like for your business.

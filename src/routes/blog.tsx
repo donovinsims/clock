@@ -56,7 +56,7 @@ function Blog() {
     <SiteLayout>
       <Section>
         <Eyebrow>Field notes</Eyebrow>
-        <H2>Plain writing for people who run things.</H2>
+        <h1 className="font-display text-3xl md:text-5xl tracking-tight">Plain writing for people who run things.</h1>
         <Lede>
           No thought leadership. No 12-step listicles. Just what we've seen, what we've built, and
           what's working right now.
