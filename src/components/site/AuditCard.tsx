@@ -15,8 +15,11 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
       />
       <div className="relative grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
         <div>
-          <div className={`op-label ${dark ? "text-bone/60" : "text-clay"}`}>
-            BETA OFFER — 12 OF 15 CLAIMED
+          <div className={`inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-xs ${
+            dark ? "border-bone/15 bg-bone/5 text-bone/70" : "border-signal/20 bg-signal/5 text-signal"
+          }`}>
+            <span className="op-label">BETA OFFER</span>
+            <span className={dark ? "text-bone/60" : "text-clay/70"}>12 of 15 claimed</span>
           </div>
           <h3 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
             Revenue Leak Audit + Full Implementation
@@ -28,8 +31,8 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
           </p>
 
           {/* Scarcity progress + copy */}
-          <div className={`mt-5 max-w-sm ${dark ? "[--signal-text:theme(colors.bone)]" : ""}`}>
-            <BetaCounter />
+          <div className="mt-5 max-w-sm">
+            <BetaCounter dark={dark} />
           </div>
 
           <ul className={`mt-6 grid gap-2 text-sm ${dark ? "text-bone/85" : "text-ink/80"}`}>

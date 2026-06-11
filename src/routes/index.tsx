@@ -57,20 +57,22 @@ function Index() {
               Explore services
             </CTAButton>
           </div>
-          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
-            <span>✓ $497 all-in · audit + full build</span>
-            <span className="text-signal">12 of 15 beta spots filled</span>
+          <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-1 text-xs">
+            <span className="text-clay">✓ $497 all-in · audit + full build</span>
+            <span className="inline-flex items-center gap-1.5 text-signal">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-signal" aria-hidden />
+              12 of 15 beta spots filled
+            </span>
           </div>
         </div>
       </section>
 
       {/* Proof bar */}
       <section className="border-b border-border bg-secondary/50">
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-4">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-3">
           {[
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
-            ["12 / 15", "BETA SPOTS CLAIMED"],
             ["FLAT", "ONE PRICE. DONE."],
           ].map(([k, v]) => (
             <div key={k}>
