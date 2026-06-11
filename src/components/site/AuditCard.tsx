@@ -1,4 +1,5 @@
 import { CTAButton } from "./CTAButton";
+import { BetaCounter } from "./BetaCounter";
 
 export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" }) {
   const dark = variant === "dark";
@@ -15,7 +16,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
       <div className="relative grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
         <div>
           <div className={`op-label ${dark ? "text-bone/60" : "text-clay"}`}>
-            BETA OFFER — 3 SPOTS REMAINING
+            BETA OFFER — 12 OF 15 CLAIMED
           </div>
           <h3 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
             Revenue Leak Audit + Full Implementation
@@ -25,6 +26,12 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
           >
             $497 all-in. Normally $1,494.
           </p>
+
+          {/* Scarcity progress + copy */}
+          <div className={`mt-5 max-w-sm ${dark ? "[--signal-text:theme(colors.bone)]" : ""}`}>
+            <BetaCounter />
+          </div>
+
           <ul className={`mt-6 grid gap-2 text-sm ${dark ? "text-bone/85" : "text-ink/80"}`}>
             <li className="flex items-start gap-2">
               <span className="op-label mt-0.5 text-signal">AUDIT</span>
@@ -46,7 +53,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
         </div>
         <div className="flex flex-col items-start gap-3 md:items-end">
           <CTAButton to="/assessment" variant="primary">
-            <span className="op-label">Claim a Beta Spot</span>
+            <span className="op-label">Reserve Beta Access</span>
           </CTAButton>
         </div>
       </div>

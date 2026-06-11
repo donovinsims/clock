@@ -35,7 +35,7 @@ function AuditPage() {
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge description="$10K minimum or it's free">
-            Money-Back Guarantee
+            Guarantee
           </GuaranteeBadge>
           <h1 className="mt-6 font-display text-5xl md:text-7xl tracking-tight">
             You're leaking revenue <br />

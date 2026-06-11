@@ -61,9 +61,7 @@ function Assessment() {
           Audit + full implementation.
         </h1>
         <div className="mt-4">
-          <GuaranteeBadge description="10 hrs/wk back in 30 days or I keep working">
-            ✓ Guarantee
-          </GuaranteeBadge>
+          <GuaranteeBadge />
         </div>
         <Lede>
           Tell us about your business. We&apos;ll run a structured audit of your funnel, ops, and

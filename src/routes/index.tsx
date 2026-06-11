@@ -52,13 +52,14 @@ function Index() {
             are the ones I stress-tested at 100x the scale.
           </Lede>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <CTAButton to="/assessment"><span className="op-label">Claim a Beta Spot</span></CTAButton>
+            <CTAButton to="/assessment"><span className="op-label">Reserve Beta Access</span></CTAButton>
             <CTAButton to="/services" variant="ghost">
               Explore services
             </CTAButton>
           </div>
           <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-xs text-clay">
             <span>✓ $497 all-in · audit + full build</span>
+            <span className="text-signal">12 of 15 beta spots filled</span>
           </div>
         </div>
       </section>
@@ -69,7 +70,7 @@ function Index() {
           {[
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
             ["48 HRS", "TO YOUR WRITTEN AUDIT REPORT"],
-            ["3 SPOTS", "BETA PRICING AVAILABLE NOW"],
+            ["12 / 15", "BETA SPOTS CLAIMED"],
             ["FLAT", "ONE PRICE. DONE."],
           ].map(([k, v]) => (
             <div key={k}>
@@ -113,7 +114,7 @@ function Index() {
           <Steps
             steps={[
               {
-                title: "Audit — claim your beta spot",
+                title: "Audit — reserve your beta spot",
                 body: "Tell us about your business. We map your workflow, find the leaks, and quantify them in dollars. 48-hour written report.",
               },
               {

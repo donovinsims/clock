@@ -73,7 +73,7 @@ export function Header() {
 
         <div className="hidden md:block">
           <CTAButton to="/assessment" variant="primary">
-            Claim a Beta Spot
+            Beta Access
           </CTAButton>
         </div>
 
@@ -119,7 +119,7 @@ export function Header() {
             </Link>
             <div className="pt-3" onClick={() => setOpen(false)}>
               <CTAButton to="/assessment" variant="primary">
-                Claim a Beta Spot
+                Beta Access
               </CTAButton>
             </div>
           </div>
