@@ -13,18 +13,16 @@ const STORAGE_KEY = "clockout-exit-intent-dismissed";
  * — Scarcity: BetaCounter provides social proof + limited quantity
  *
  * Triggers (once/session via sessionStorage):
- * — Desktop: cursor leaves viewport top edge (existing)
- * — Homepage: scroll past 65% of page height
- * — Pricing: 12 seconds on page
+ * — Desktop: fires on mouseleave (cursor exits the viewport from top)
+ * — Homepage: fires on scroll past 600px (once)
+ * — Pricing & Services pages: fires after 12 seconds
  */
 export function ExitIntentOverlay() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
-
-    const isMobile = window.innerWidth < 768;
+    const cleanups: (() => void)[] = [];
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
     const path = window.location.pathname;
 
     const fire = () => {
@@ -32,39 +30,31 @@ export function ExitIntentOverlay() {
       sessionStorage.setItem(STORAGE_KEY, "1");
     };
 
-    /* ── Desktop: cursor leaves top edge ── */
+    // Desktop: mouseleave exit intent on the document
     if (!isMobile) {
       const handleMouseLeave = (e: MouseEvent) => {
-        if (e.clientY > 0) return;
-        fire();
+        if (e.clientY <= 0) fire();
       };
       document.documentElement.addEventListener("mouseleave", handleMouseLeave);
+      cleanups.push(() => document.documentElement.removeEventListener("mouseleave", handleMouseLeave));
     }
 
-    /* ── Homepage mobile: scroll past 65% ── */
+    // Homepage: scroll-based trigger (only once via { once: true })
     if (path === "/") {
       const handleScroll = () => {
-        const docHeight = document.documentElement.scrollHeight;
-        const winHeight = window.innerHeight;
-        const scrolled = window.scrollY;
-        const percent = scrolled / (docHeight - winHeight);
-        if (percent > 0.65) fire();
+        if (window.scrollY > 600) fire();
       };
       window.addEventListener("scroll", handleScroll, { once: true });
+      // { once: true } handles cleanup — no need to push
     }
 
-    /* ── Pricing page: 12 seconds ── */
+    // Pricing & Services: delayed trigger
     if (path.startsWith("/pricing") || path.startsWith("/services")) {
-      const timeout = setTimeout(fire, 12_000);
-      return () => {
-        clearTimeout(timeout);
-        document.documentElement.removeEventListener("mouseleave", fire);
-      };
+      const id = setTimeout(fire, 12_000);
+      cleanups.push(() => clearTimeout(id));
     }
 
-    return () => {
-      document.documentElement.removeEventListener("mouseleave", fire);
-    };
+    return () => { cleanups.forEach((fn) => fn()); };
   }, []);
 
   if (!show) return null;

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { Card } from "@/components/site/Card";
@@ -7,6 +7,9 @@ import { CTAButton } from "@/components/site/CTAButton";
 import { fullUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/solutions")({
+  beforeLoad: () => {
+    throw redirect({ to: "/services", replace: true });
+  },
   head: () => ({
     meta: [
       { title: "Solutions — Clockout" },
@@ -118,14 +121,14 @@ function Solutions() {
       <Section tone="highlight">
         <div className="mx-auto max-w-2xl">
           <Card className="p-10 md:p-12 text-center">
-            <div className="eyebrow">Free Resource</div>
-            <H2>Operational Leak Audit Checklist</H2>
+            <div className="eyebrow">Free Assessment</div>
+            <H2>Get your free automation assessment</H2>
             <p className="mt-4 text-lg text-muted-foreground">
-              The 5 most common revenue leaks in local service businesses.
-              One page. No email required.
+              Answer a few quick questions and we&apos;ll map out exactly where
+              your business is leaking revenue — no PDF download required.
             </p>
             <div className="mt-8">
-              <CTAButton to="/assessment">Download the checklist</CTAButton>
+              <CTAButton to="/assessment">Start the assessment</CTAButton>
             </div>
           </Card>
         </div>

@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ChevronDown } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { CTAButton } from "@/components/site/CTAButton";
@@ -113,17 +114,19 @@ function FAQPage() {
       <Section>
         <div className="mx-auto max-w-3xl">
           {FAQS.map((faq, i) => (
-            <div key={i}>
-              <h2 className="text-base md:text-lg font-semibold leading-snug">{faq.q}</h2>
-              <div className="mt-2 text-muted-foreground leading-relaxed space-y-2">
-                {faq.a.split("\n\n").map((p, j) => (
-                  <p key={j}>{p}</p>
-                ))}
+            <details
+              key={i}
+              className="group border-b border-stone-200 py-4"
+              {...(i === 0 ? { open: true } : {})}
+            >
+              <summary className="flex cursor-pointer items-center justify-between text-lg font-display transition-colors hover:text-ink/70">
+                {faq.q}
+                <ChevronDown className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <div className="mt-2 text-sm leading-relaxed text-ink/70">
+                {faq.a}
               </div>
-              {i < FAQS.length - 1 && (
-                <div className="mt-12 border-b border-border/50" />
-              )}
-            </div>
+            </details>
           ))}
         </div>
       </Section>

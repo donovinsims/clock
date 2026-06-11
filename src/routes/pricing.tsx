@@ -82,7 +82,7 @@ function PricingPage() {
       {/* Quick comparison table */}
       <Section tone="muted">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-6 opacity-60">
+          <div className="rounded-2xl border border-border bg-card p-6">
             <div className="op-label">Typical agency</div>
             <div className="mt-4 space-y-2 text-sm">
               <p>✗ $2,000–$5,000/month ongoing</p>
@@ -134,7 +134,7 @@ function PricingPage() {
                 ))}
               </ul>
               <div className="mt-8">
-                <CTAButton to={plan.to as "/assessment" | "/operator-os"}>
+                <CTAButton to="/assessment">
                   {plan.cta}
                 </CTAButton>
               </div>

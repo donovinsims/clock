@@ -188,8 +188,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <a href="#main-content" className="skip-to-content">
+        Skip to content
+      </a>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div id="main-content">
+        <Outlet />
+      </div>
     </QueryClientProvider>
   );
 }

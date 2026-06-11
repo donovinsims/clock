@@ -16,25 +16,35 @@ import { cn } from "@/lib/utils";
  * Compact variant: just the text line
  */
 export function BetaCounter({
+  filled = 0,
+  total = 3,
   compact,
   variant = "light",
   className,
 }: {
+  filled?: number;
+  total?: number;
   compact?: boolean;
   variant?: "light" | "dark";
   className?: string;
 }) {
-  const filled = 0; // ⬅️ Update when each beta client locks in
-  const total = 3;
   const remaining = total - filled;
   const currentPrice = 497;
   const fullPrice = 1494;
-  const progress = (filled / total) * 100;
+  const progress = total > 0 ? (filled / total) * 100 : 0;
 
   const inkColor = variant === "dark" ? "text-bone" : "text-ink";
   const clayColor = variant === "dark" ? "text-bone/65" : "text-clay";
   const trackColor = variant === "dark" ? "bg-bone/[0.12]" : "bg-ink/[0.06]";
   const borderColor = variant === "dark" ? "border-bone/[0.15]" : "border-border";
+
+  if (filled === 0) {
+    return (
+      <span className={cn("text-xs font-medium text-signal", className)}>
+        {remaining} of {total} beta spots remain at ${currentPrice}
+      </span>
+    );
+  }
 
   if (compact) {
     return (

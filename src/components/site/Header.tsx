@@ -80,14 +80,22 @@ export function Header() {
         <button
           className="md:hidden rounded-full border border-border px-3 py-1.5 text-sm"
           onClick={() => setOpen((o) => !o)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              setOpen((o) => !o);
+            }
+          }}
           aria-label="Toggle menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? "Close" : "Menu"}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background md:hidden">
+        <div id="mobile-menu" className="border-t border-border bg-background md:hidden">
           <div className="mx-auto max-w-6xl px-6 py-4 grid gap-1">
             <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
               Services

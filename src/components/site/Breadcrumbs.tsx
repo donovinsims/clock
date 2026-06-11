@@ -15,7 +15,7 @@ export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
           </Link>
         </li>
         {crumbs.map((crumb, i) => (
-          <li key={i} className="flex items-center gap-2">
+          <li key={i} className="flex items-center gap-2" {...(!crumb.href ? { 'aria-current': 'page' } : {})}>
             <span aria-hidden className="text-muted-foreground/40">/</span>
             {crumb.href ? (
               <Link to={crumb.href} className="hover:text-ink transition-colors">

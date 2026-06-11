@@ -4,8 +4,7 @@ export const SITE = {
   description:
     "AI automation that recovers your lost revenue. One-time builds. You own the system outright.",
   url: "https://clockout.us",
-  bookingUrl: "#book", // TODO: real booking link (Cal.com / SavvyCal)
-  email: "hello@clockout.us", // TODO: real email
+  email: "hello@clockout.us",
 };
 
 export const OFFER = {

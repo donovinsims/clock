@@ -36,3 +36,6 @@ dist-ssr
 # Screenshots
 clockout-*.png
 vite.config.timestamp_*.js
+
+# Deepwork tracking
+.slim/deepwork/

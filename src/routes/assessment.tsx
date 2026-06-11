@@ -37,8 +37,7 @@ function Assessment() {
       'script[src="https://tally.so/widgets/embed.js"]',
     );
     const load = () => {
-      // @ts-expect-error injected by Tally
-      if (typeof window.Tally !== "undefined") window.Tally.loadEmbeds();
+      ;(window as unknown as { Tally?: { loadEmbeds: () => void } }).Tally?.loadEmbeds();
     };
     if (existing) {
       load();
@@ -76,7 +75,7 @@ function Assessment() {
               data-tally-src={TALLY_SRC}
               loading="lazy"
               width="100%"
-              height="280"
+              height="600"
               frameBorder={0}
               marginHeight={0}
               marginWidth={0}
