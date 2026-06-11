@@ -160,6 +160,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.6;
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
@@ -169,8 +171,7 @@
   h3 {
     font-family: var(--font-display);
     font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 0.98;
+    line-height: 1.15;
     text-wrap: balance;
   }
 
@@ -185,6 +186,7 @@
   /* Operational label — for CTAs, stats, and tough operator phrases */
   .op-label {
     font-family: var(--font-mono);
+    font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -227,6 +229,8 @@
   --muted-foreground: oklch(0.45 0.03 258);
   --border: oklch(0.92 0.015 250);
   --ring: var(--imessage);
+  --imessage-accent: oklch(0.45 0.18 258);
+  --imessage-tag: oklch(0.55 0.22 258);
   background: linear-gradient(180deg, oklch(0.99 0.01 250) 0%, oklch(0.96 0.04 252) 100%);
 }
 

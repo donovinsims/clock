@@ -52,7 +52,7 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton to="/assessment">
-              <span className="op-label text-[0.7rem]">Claim a Beta Spot</span>
+              <span className="op-label">Claim a Beta Spot</span>
             </CTAButton>
             <CTAButton to="/services" variant="ghost">
               Explore services
@@ -74,7 +74,7 @@ function Index() {
           ].map(([k, v]) => (
             <div key={k}>
               <div className="card-title text-3xl md:text-4xl tabular-nums">{k}</div>
-              <div className="op-label mt-2 text-[0.65rem] text-clay">{v}</div>
+              <div className="op-label mt-2 text-clay">{v}</div>
             </div>
           ))}
         </div>
@@ -155,7 +155,7 @@ function SelfSelectCard({
     >
       <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg">
         <div>
-          <div className="op-label text-[0.7rem] text-clay">{tag}</div>
+          <div className="op-label text-clay">{tag}</div>
           <h3 className="card-title mt-4 text-2xl md:text-3xl">{title}</h3>
           <p className="mt-4 text-sm text-muted-foreground">{body}</p>
         </div>

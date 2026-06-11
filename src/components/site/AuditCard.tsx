@@ -14,7 +14,7 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
       />
       <div className="relative grid gap-8 md:grid-cols-[1.4fr_1fr] md:items-end">
         <div>
-          <div className={`op-label text-[0.7rem] ${dark ? "text-bone/60" : "text-clay"}`}>
+          <div className={`op-label ${dark ? "text-bone/60" : "text-clay"}`}>
             BETA OFFER — 3 SPOTS REMAINING
           </div>
           <h3 className="mt-3 font-display text-4xl md:text-5xl tracking-tight">
@@ -27,19 +27,19 @@ export function AuditCard({ variant = "light" }: { variant?: "light" | "dark" })
           </p>
           <ul className={`mt-6 grid gap-2 text-sm ${dark ? "text-bone/85" : "text-ink/80"}`}>
             <li className="flex items-start gap-2">
-              <span className="op-label mt-0.5 text-[0.65rem] text-signal">AUDIT</span>
+              <span className="op-label mt-0.5 text-signal">AUDIT</span>
               <span>Full workflow audit, leaks quantified in dollars. 48-hour report.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="op-label mt-0.5 text-[0.65rem] text-signal">BUILD</span>
+              <span className="op-label mt-0.5 text-signal">BUILD</span>
               <span>Complete automation build installed in your existing stack. 7 days.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="op-label mt-0.5 text-[0.65rem] text-signal">HANDOVER</span>
+              <span className="op-label mt-0.5 text-signal">HANDOVER</span>
               <span>Docs, access, training. You own everything outright.</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="op-label mt-0.5 text-[0.65rem] text-signal">EXCHANGE</span>
+              <span className="op-label mt-0.5 text-signal">EXCHANGE</span>
               <span>Before/after case study I can publish. One testimonial.</span>
             </li>
           </ul>

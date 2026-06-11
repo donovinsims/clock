@@ -34,7 +34,7 @@ export function Eyebrow({ children }: { children: ReactNode }) {
 }
 
 export function H2({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <h2 className={`text-4xl md:text-6xl tracking-tight ${className}`}>{children}</h2>;
+  return <h2 className={`font-display text-4xl md:text-6xl tracking-tight ${className}`}>{children}</h2>;
 }
 
 export function Lede({ children, className = "" }: { children: ReactNode; className?: string }) {

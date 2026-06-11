@@ -88,7 +88,7 @@ function Assessment() {
           {/* Sidebar */}
           <aside className="space-y-6">
             <div className="rounded-3xl border border-border bg-card p-8">
-              <div className="op-label text-[0.7rem] text-clay">What you get</div>
+              <div className="op-label text-clay">What you get</div>
               <ul className="mt-4 space-y-3 text-sm">
                 <li>— Full audit: every leak quantified in dollars (48 hrs)</li>
                 <li>— Complete automation build installed in your stack (7 days)</li>
@@ -98,18 +98,18 @@ function Assessment() {
             </div>
 
             <div className="rounded-3xl border border-border bg-card p-8">
-              <div className="op-label text-[0.7rem] text-clay">The deal</div>
+              <div className="op-label text-clay">The deal</div>
               <ul className="mt-4 space-y-3 text-sm">
                 <li className="flex items-baseline gap-2">
-                  <span className="op-label text-[0.65rem] text-signal">$497</span>
+                  <span className="op-label text-signal">$497</span>
                   <span>all-in (normally $1,494)</span>
                 </li>
                 <li className="flex items-baseline gap-2">
-                  <span className="op-label text-[0.65rem] text-signal">3 SPOTS</span>
+                  <span className="op-label text-signal">3 SPOTS</span>
                   <span>beta pricing — next is $1,494</span>
                 </li>
                 <li className="flex items-baseline gap-2">
-                  <span className="op-label text-[0.65rem] text-signal">30 DAYS</span>
+                  <span className="op-label text-signal">30 DAYS</span>
                   <span>or 10 hrs/week back, free</span>
                 </li>
               </ul>

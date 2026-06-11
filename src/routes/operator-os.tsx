@@ -31,11 +31,11 @@ function OperatorOS() {
         {/* Hero */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
-            <div className="eyebrow text-[oklch(0.45_0.18_258)]">Operator OS</div>
-            <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            <div className="eyebrow text-[var(--imessage-accent)]">Operator OS</div>
+            <h1 className="mt-6 font-display text-6xl md:text-8xl tracking-tight text-foreground">
               You Are the Bottleneck.
               <br />
-              <span className="italic text-[oklch(0.55_0.22_258)]">This Is the Fix.</span>
+              <span className="italic text-[var(--imessage-tag)]">This Is the Fix.</span>
             </h1>
             <p className="mt-8 max-w-2xl text-lg md:text-2xl text-muted-foreground">
               A personal AI operating system for founders, sales reps, agents, and professionals
@@ -85,8 +85,8 @@ function OperatorOS() {
         {/* Problem */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-24">
-            <div className="eyebrow text-[oklch(0.45_0.18_258)]">The problem</div>
-            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            <div className="eyebrow text-[var(--imessage-accent)]">The problem</div>
+            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-foreground">
               You already work hard. The problem isn't effort.
             </h2>
             <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
@@ -102,8 +102,8 @@ function OperatorOS() {
         {/* What it is */}
         <section className="border-b border-border bg-white/50">
           <div className="mx-auto max-w-6xl px-6 py-24">
-            <div className="eyebrow text-[oklch(0.45_0.18_258)]">What it is</div>
-            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            <div className="eyebrow text-[var(--imessage-accent)]">What it is</div>
+            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-foreground">
               Voice memo or text. That's the whole input.
             </h2>
             <p className="mt-6 max-w-3xl text-lg text-muted-foreground">
@@ -115,8 +115,8 @@ function OperatorOS() {
             <div className="mt-16 grid gap-4 md:grid-cols-2">
               {FEATURES.map((f) => (
                 <div key={f.title} className="rounded-2xl border border-border bg-white p-8">
-                  <div className="font-mono text-xs text-[oklch(0.55_0.22_258)]">{f.tag}</div>
-                  <h3 className="mt-3 font-display text-3xl text-[oklch(0.16_0.02_258)]">
+                  <div className="font-mono text-xs text-[var(--imessage-tag)]">{f.tag}</div>
+                  <h3 className="mt-3 font-display text-3xl text-foreground">
                     {f.title}
                   </h3>
                   <p className="mt-3 text-sm text-muted-foreground">{f.body}</p>
@@ -129,8 +129,8 @@ function OperatorOS() {
         {/* How it works */}
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-6 py-24">
-            <div className="eyebrow text-[oklch(0.45_0.18_258)]">How it works</div>
-            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            <div className="eyebrow text-[var(--imessage-accent)]">How it works</div>
+            <h2 className="mt-4 font-display text-4xl md:text-6xl tracking-tight text-foreground">
               Built for you. Around how you actually work.
             </h2>
             <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -149,8 +149,8 @@ function OperatorOS() {
                 },
               ].map((s) => (
                 <div key={s.t} className="rounded-2xl border border-border bg-white p-6">
-                  <div className="font-mono text-xs text-[oklch(0.55_0.22_258)]">{s.t}</div>
-                  <p className="mt-4 text-lg text-[oklch(0.16_0.02_258)]">{s.b}</p>
+                  <div className="font-mono text-xs text-[var(--imessage-tag)]">{s.t}</div>
+                  <p className="mt-4 text-lg text-foreground">{s.b}</p>
                 </div>
               ))}
             </div>
@@ -165,7 +165,7 @@ function OperatorOS() {
               <CTAButton
                 to="/assessment"
                 variant="primary"
-                className="!bg-white !text-[oklch(0.45_0.18_258)] hover:!bg-white/90"
+                className="!bg-white !text-[var(--imessage-accent)] hover:!bg-white/90"
               >
                 Claim a Beta Spot
               </CTAButton>

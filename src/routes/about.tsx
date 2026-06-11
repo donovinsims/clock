@@ -73,14 +73,14 @@ function About() {
         <H2>Run better, not busier.</H2>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
           <Card variant="outline" className="p-6">
-            <div className="op-label text-[0.7rem] text-clay">Most &ldquo;automation&rdquo;</div>
+            <div className="op-label text-clay">Most &ldquo;automation&rdquo;</div>
             <p className="mt-3 text-lg text-muted-foreground">
               Most tools give you another dashboard, another login, and a monthly bill.
               You still have to figure out the workflow.
             </p>
           </Card>
           <Card variant="soft" className="p-6">
-            <div className="op-label text-[0.7rem] text-clay">What Clockout does</div>
+            <div className="op-label text-clay">What Clockout does</div>
             <p className="mt-3 text-lg text-muted-foreground">
               I build the actual workflow — calls, quotes, follow-ups — install it inside
               your business, and hand you the keys. No retainer, no lock-in.
@@ -116,7 +116,7 @@ function About() {
         <div className="mx-auto max-w-3xl">
           <Card className="p-8 md:p-10 text-center">
             <div className="eyebrow">The guarantee</div>
-            <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-[oklch(0.16_0.02_258)]">
+            <blockquote className="mt-4 font-display text-2xl md:text-4xl tracking-tight text-foreground">
               &ldquo;If the system doesn&apos;t recover 10 hours a week within 30 days,
               I keep working until it does. Free.&rdquo;
             </blockquote>
