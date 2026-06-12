@@ -7,7 +7,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState(false);
   const navLink =
-    "rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink";
+    "rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink active:bg-ink/10 active:scale-[0.97] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2";
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">

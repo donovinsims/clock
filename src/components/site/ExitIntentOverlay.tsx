@@ -115,7 +115,7 @@ export function ExitIntentOverlay() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center animate-in fade-in duration-150 bg-ink/15 backdrop-blur-sm">
+    <div className="fixed inset-0 z-modal flex items-center justify-center animate-in fade-in duration-150 bg-ink/15 backdrop-blur-sm">
       {/* Click backdrop to dismiss */}
       <button
         type="button"
@@ -139,7 +139,7 @@ export function ExitIntentOverlay() {
           className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full text-clay hover:bg-ink/5 hover:text-ink transition-colors"
           aria-label="Close dialog"
         >
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path
               d="M1 1l12 12M13 1L1 13"
               stroke="currentColor"

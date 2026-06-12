@@ -11,7 +11,7 @@ export function GuaranteeBadge({
 }) {
   return (
     <div
-      className={`inline-flex whitespace-nowrap items-center gap-2 rounded-full border border-signal/30 bg-signal/5 px-2.5 py-2 ${className}`}
+      className={`inline-flex whitespace-nowrap items-center gap-2 rounded-xl border border-signal/30 bg-signal/5 px-2.5 py-2 ${className}`}
     >
       <span className="op-label text-signal">{children ?? "Guarantee"}</span>
       <span className="text-xs text-ink/80">{description}</span>

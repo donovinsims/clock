@@ -29,7 +29,7 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <Eyebrow>About</Eyebrow>
           <h1 className="font-display text-4xl md:text-7xl">

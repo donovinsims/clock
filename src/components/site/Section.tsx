@@ -14,9 +14,9 @@ export function Section({
   tone?: SectionTone;
 }) {
   const toneClasses: Record<SectionTone, string> = {
-    default: "border-b border-border bg-background",
-    muted: "border-b border-border bg-secondary/40",
-    highlight: "border-b border-border bg-card/40",
+    default: "bg-background",
+    muted: "bg-secondary/40",
+    highlight: "bg-signal/5",
     naked: "",
   };
 

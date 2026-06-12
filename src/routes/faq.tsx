@@ -98,7 +98,7 @@ const FAQS = [
 function FAQPage() {
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-3xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
           <h1 className="mt-6 font-display text-4xl md:text-7xl">
@@ -116,7 +116,7 @@ function FAQPage() {
           {FAQS.map((faq, i) => (
             <details
               key={i}
-              className="group border-b border-stone-200 py-4"
+              className="group border-b border-border py-4"
               {...(i === 0 ? { open: true } : {})}
             >
               <summary className="flex cursor-pointer items-center justify-between text-lg font-display transition-colors hover:text-ink/70">

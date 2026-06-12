@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-ink text-bone">
       <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2">
               <span className="inline-block h-2.5 w-2.5 rounded-full bg-signal" aria-hidden />
@@ -17,44 +17,40 @@ export function Footer() {
               Roscoe, IL — Serving Northern Illinois & Southern Wisconsin
             </p>
           </div>
-          <FooterCol title="Product">
-            <Link to="/audit" className="block py-1 text-sm text-bone/70 hover:text-bone">
+          <FooterCol title="Services">
+            <Link to="/services" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              All Services
+            </Link>
+            <Link to="/audit" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
               Audit
             </Link>
-            <Link to="/pricing" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Pricing
-            </Link>
-            <Link to="/operator-os" className="block py-1 text-sm text-bone/70 hover:text-bone">
+            <Link to="/operator-os" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
               Operator OS
             </Link>
-            <Link to="/services" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Services
-            </Link>
-          </FooterCol>
-          <FooterCol title="Resources">
-            <Link to="/blog" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Blog
-            </Link>
-            <Link to="/faq" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              FAQ
-            </Link>
-            <Link to="/contact" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Contact
-            </Link>
-            <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone">
-              Beta Access
+            <Link to="/pricing" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              Pricing
             </Link>
           </FooterCol>
           <FooterCol title="Company">
-            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone">
+            <Link to="/about" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
               About
             </Link>
-          </FooterCol>
-          <FooterCol title="Legal">
-            <Link to="/privacy" className="block py-1 text-sm text-bone/70 hover:text-bone">
+            <Link to="/blog" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              Blog
+            </Link>
+            <Link to="/faq" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              FAQ
+            </Link>
+            <Link to="/contact" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              Contact
+            </Link>
+            <Link to="/assessment" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
+              Beta Access
+            </Link>
+            <Link to="/privacy" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
               Privacy
             </Link>
-            <Link to="/terms" className="block py-1 text-sm text-bone/70 hover:text-bone">
+            <Link to="/terms" className="block py-1 text-sm text-bone/70 hover:text-bone transition-colors">
               Terms
             </Link>
           </FooterCol>

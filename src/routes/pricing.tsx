@@ -60,7 +60,7 @@ const FAQS = [
 function PricingPage() {
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge description="$497 all-in · You own the system">
             One-Time Price

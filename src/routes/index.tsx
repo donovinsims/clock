@@ -35,10 +35,10 @@ function Index() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge />
-          <h1 className="mt-6 font-display text-4xl md:text-7xl">
+          <h1 className="mt-6 font-display text-4xl md:text-7xl text-balance">
             Your Revenue Leaks
             <br />
             <span className="text-signal">Are Predictable.</span>
@@ -54,13 +54,13 @@ function Index() {
             missed handoff costs real money in real time.
           </Lede>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <CTAButton to="/assessment">Reserve Beta Access – $497 (3 spots left)</CTAButton>
+            <CTAButton to="/assessment">Reserve Beta Access – $497 (3&nbsp;spots left)</CTAButton>
           </div>
         </div>
       </section>
 
       {/* Proof bar */}
-      <section className="border-b border-border bg-secondary/50">
+      <section className="bg-secondary/50">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 py-12 md:grid-cols-3">
           {[
             ["6+ YRS", "OPERATIONS EXPERIENCE"],
@@ -76,7 +76,7 @@ function Index() {
       </section>
 
       {/* Trust signals */}
-      <section className="border-b border-border bg-card/50 py-8">
+      <section className="bg-card/50 py-8">
         <div className="mx-auto max-w-6xl px-6 text-center">
           <p className="text-lg font-medium">Trusted by local service businesses across the Midwest</p>
           <div className="mt-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-4">
@@ -94,7 +94,7 @@ function Index() {
       </section>
 
       <Section>
-        <H2>Which one sounds like you?</H2>
+        <H2 className="text-balance">Which one sounds like you?</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           <SelfSelectCard
             to="/services"
@@ -120,7 +120,7 @@ function Index() {
       {/* How it works */}
       <Section tone="muted">
         <Eyebrow>How it works</Eyebrow>
-        <H2>Three steps. Flat and done.</H2>
+        <H2 className="text-balance">Three steps. Flat and done.</H2>
         <div className="mt-12">
           <Steps
             steps={[
@@ -163,9 +163,9 @@ function SelfSelectCard({
   return (
     <Link
       to={to as "/services"}
-      className="group flex flex-col justify-between"
+      className="group flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 rounded-2xl"
     >
-      <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg">
+      <Card className="flex flex-col justify-between p-6 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg border border-transparent hover:border-border">
         <div>
           <div className="op-label text-clay">{tag}</div>
           <h3 className="card-title mt-4">{title}</h3>

@@ -31,7 +31,7 @@ export const Route = createFileRoute("/audit")({
 function AuditPage() {
   return (
     <SiteLayout>
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <h1 className="mt-6 font-display text-4xl md:text-7xl">
             You're leaking revenue <br />

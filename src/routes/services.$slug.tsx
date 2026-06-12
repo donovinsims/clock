@@ -54,7 +54,7 @@ function VerticalPage() {
           { label: data.name },
         ]}
       />
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <Eyebrow>{meta?.name}</Eyebrow>
           <h1 className="mt-6 font-display text-5xl md:text-7xl">{data.hero}</h1>

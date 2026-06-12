@@ -31,7 +31,7 @@ function OperatorOS() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="border-b border-border">
+      <section>
         <div className="mx-auto max-w-6xl px-6 pt-14 pb-16 md:pt-24 md:pb-24">
           <GuaranteeBadge description="10 hrs/wk in 30 days or free">
             Time-Back
