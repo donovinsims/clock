@@ -34,7 +34,7 @@ dist-ssr
 .omx/
 
 # Screenshots
-clockout-*.png
+screenshots/
 vite.config.timestamp_*.js
 
 # Deepwork tracking

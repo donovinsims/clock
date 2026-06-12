@@ -76,19 +76,27 @@ function Index() {
       </section>
 
       {/* Trust signals */}
-      <section className="bg-card/50 py-8">
+      <section className="bg-card/50 py-12">
         <div className="mx-auto max-w-6xl px-6 text-center">
-          <p className="text-lg font-medium">Trusted by local service businesses across the Midwest</p>
-          <div className="mt-6 flex flex-wrap justify-center items-center gap-x-10 gap-y-4">
-            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
-              <span className="text-xs font-mono tracking-wider text-muted-foreground">MIDWEST HVAC</span>
-            </div>
-            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
-              <span className="text-xs font-mono tracking-wider text-muted-foreground">PRAIRIE PLUMBING</span>
-            </div>
-            <div className="h-10 w-28 rounded-lg bg-secondary/70 flex items-center justify-center">
-              <span className="text-xs font-mono tracking-wider text-muted-foreground">NORTH SHORE ELEC</span>
-            </div>
+          <p className="text-base font-medium text-muted-foreground">Trusted by local service businesses across the Midwest</p>
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+            {[
+              { initials: "MH", name: "Midwest HVAC", bg: "bg-signal/15", fg: "text-signal" },
+              { initials: "PP", name: "Prairie Plumbing", bg: "bg-ink/10", fg: "text-ink" },
+              { initials: "NS", name: "North Shore Electric", bg: "bg-clay/20", fg: "text-clay" },
+            ].map((logo) => (
+              <div key={logo.name} className="flex items-center gap-3">
+                <div
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${logo.bg}`}
+                  aria-hidden
+                >
+                  <span className={`text-sm font-bold tracking-tight ${logo.fg}`}>
+                    {logo.initials}
+                  </span>
+                </div>
+                <span className="text-sm font-medium text-muted-foreground">{logo.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
