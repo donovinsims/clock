@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Section, Eyebrow, H2, Lede } from "@/components/site/Section";
 import { fullUrl } from "@/lib/seo";
@@ -24,28 +24,31 @@ export const Route = createFileRoute("/blog")({
 });
 
 // TODO: replace with real CMS posts
-const POSTS = [
+type Post = { title: string; tag: string; read: string; date: string; slug?: string };
+
+const POSTS: Post[] = [
+  {
+    title: "Quote-to-Close: Fixing the Handoff That's Costing You Jobs",
+    tag: "FIELD SERVICE OPERATIONS",
+    read: "6 min",
+    date: "June 10, 2026",
+    slug: "quote-to-close",
+  },
   {
     title: "The five-call rule: why most service businesses lose 40% of their leads",
-    tag: "Lead response",
+    tag: "LEAD RESPONSE",
     read: "6 min",
     date: "Coming soon",
   },
   {
-    title: "Quote-to-close: a follow-up cadence that actually works",
-    tag: "Sales ops",
-    read: "8 min",
-    date: "Coming soon",
-  },
-  {
     title: "Owning your stack: flat fee, full ownership",
-    tag: "Philosophy",
+    tag: "PHILOSOPHY",
     read: "4 min",
     date: "Coming soon",
   },
   {
     title: "What an Operator OS does on a Tuesday morning",
-    tag: "Operator OS",
+    tag: "OPERATOR OS",
     read: "5 min",
     date: "Coming soon",
   },
@@ -63,20 +66,26 @@ function Blog() {
         </Lede>
 
         <div className="mt-16 divide-y divide-border">
-          {POSTS.map((p) => (
-            <article
-              key={p.title}
-              className="grid gap-4 py-8 md:grid-cols-[1fr_auto] md:items-baseline"
-            >
-              <div>
-                <div className="eyebrow">{p.tag}</div>
-                <h3 className="card-title mt-3">{p.title}</h3>
+          {POSTS.map((p) => {
+            const inner = (
+              <div className="grid gap-4 py-8 md:grid-cols-[1fr_auto] md:items-baseline group">
+                <div>
+                  <div className="eyebrow">{p.tag}</div>
+                  <h3 className="card-title mt-3">{p.title}</h3>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {p.read}{p.date !== "Coming soon" ? ` · ${p.date}` : ""}
+                </div>
               </div>
-              <div className="text-sm text-muted-foreground">
-                {p.read}{p.date === "Coming soon" ? "" : ` · ${p.date}`}
-              </div>
-            </article>
-          ))}
+            );
+            return p.slug ? (
+              <Link key={p.title} to="/blog/$slug" params={{ slug: p.slug }}>
+                {inner}
+              </Link>
+            ) : (
+              <article key={p.title}>{inner}</article>
+            );
+          })}
         </div>
       </Section>
     </SiteLayout>

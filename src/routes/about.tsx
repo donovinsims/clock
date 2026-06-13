@@ -48,10 +48,12 @@ function About() {
       <Section tone="muted">
         <Eyebrow>The founder</Eyebrow>
         <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:items-start">
-          <div
-            className="aspect-square rounded-3xl bg-gradient-to-br from-signal/40 to-ink/20"
-            aria-hidden
-          />
+          <div className="relative aspect-square overflow-hidden rounded-3xl bg-gradient-to-br from-signal/30 to-ink/30" aria-hidden>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,var(--color-signal)/15_0%,transparent_50%)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-ink/20 to-transparent" />
+            <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-signal/10 blur-2xl" />
+            <div className="absolute bottom-8 left-8 h-16 w-16 rounded-full bg-bone/10 blur-xl" />
+          </div>
           <div>
             <H2>Donovin</H2>
             <div className="prose-width">
@@ -82,18 +84,18 @@ function About() {
         <Eyebrow>The philosophy</Eyebrow>
         <H2>Run better, not busier.</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
-          <Card variant="soft" className="p-6">
+          <Card variant="outline" className="p-6 opacity-70">
             <div className="op-label text-clay">Most &ldquo;automation&rdquo;</div>
             <p className="mt-3 text-base text-muted-foreground">
               Most tools give you another dashboard, another login, and a monthly bill.
               You still have to figure out the workflow.
             </p>
           </Card>
-          <Card variant="soft" className="p-6">
-            <div className="op-label text-clay">What Clockout does</div>
-            <p className="mt-3 text-base text-muted-foreground">
-              I build the actual workflow — calls, quotes, follow-ups — install it inside
-              your business, and hand you the keys. No lock-in, no monthly fees.
+          <Card variant="elevated" className="border border-signal/20 p-6 shadow-md">
+            <div className="op-label text-signal">What Clockout does</div>
+            <p className="mt-3 text-base text-foreground">
+              I build the <strong>actual workflow</strong> — calls, quotes, follow-ups — install
+              it inside your business, and hand you the keys. No lock-in, no monthly fees.
             </p>
           </Card>
         </div>
@@ -103,22 +105,21 @@ function About() {
         <Eyebrow>The model</Eyebrow>
         <H2>You own it. Outright.</H2>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {[
-            { t: "One-time price", b: "No monthly fees. No license fee. No surprise SaaS bills." },
-            {
-              t: "Your stack",
-              b: "Built on tools you already use, or ones we recommend that you'll own.",
-            },
-            {
-              t: "Full handover",
-              b: "Docs, training, access. If we got hit by a bus tomorrow, your system keeps running.",
-            },
-          ].map((c) => (
-            <Card key={c.t} variant="outline" className="p-6">
-              <h3 className="card-title">{c.t}</h3>
-              <p className="mt-3 text-base text-muted-foreground">{c.b}</p>
-            </Card>
-          ))}
+          <Card variant="outline" className="p-6">
+            <span className="font-display text-3xl text-signal/60" aria-hidden>01</span>
+            <h3 className="card-title mt-3">One-time price</h3>
+            <p className="mt-3 text-base text-muted-foreground">No monthly fees. No license fee. No surprise SaaS bills.</p>
+          </Card>
+          <Card variant="outline" className="border-signal/30 bg-signal/[0.02] p-6">
+            <span className="font-display text-3xl text-signal/60" aria-hidden>02</span>
+            <h3 className="card-title mt-3">Your stack</h3>
+            <p className="mt-3 text-base text-muted-foreground">Built on tools you already use, or ones we recommend that you'll own.</p>
+          </Card>
+          <Card variant="outline" className="p-6">
+            <span className="font-display text-3xl text-signal/60" aria-hidden>03</span>
+            <h3 className="card-title mt-3">Full handover</h3>
+            <p className="mt-3 text-base text-muted-foreground">Docs, training, access. If we got hit by a bus tomorrow, your system keeps running.</p>
+          </Card>
         </div>
       </Section>
 
