@@ -1,13 +1,29 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { VERTICALS } from "@/lib/site";
 import { CTAButton } from "./CTAButton";
 
 export function Header() {
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [services, setServices] = useState(false);
-  const navLink =
-    "rounded-full px-4 py-2 text-sm text-ink/80 hover:bg-ink/5 hover:text-ink active:bg-ink/10 active:scale-[0.97] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2";
+
+  function isActive(path: string) {
+    if (path === "/services") {
+      return pathname === path || pathname.startsWith(path + "/");
+    }
+    return pathname === path;
+  }
+
+  function navLink(path: string) {
+    const active = isActive(path);
+    return [
+      "rounded-full px-4 py-2 text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2",
+      active
+        ? "bg-ink/8 text-ink font-medium"
+        : "text-ink/80 hover:bg-ink/5 hover:text-ink active:bg-ink/10 active:scale-[0.97]",
+    ].join(" ");
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -23,7 +39,7 @@ export function Header() {
             onMouseEnter={() => setServices(true)}
             onMouseLeave={() => setServices(false)}
           >
-            <Link to="/services" className={navLink}>
+            <Link to="/services" className={navLink("/services")}>
               Services
             </Link>
             {services && (
@@ -54,19 +70,19 @@ export function Header() {
               </div>
             )}
           </div>
-          <Link to="/audit" className={navLink}>
+          <Link to="/audit" className={navLink("/audit")}>
             Audit
           </Link>
-          <Link to="/pricing" className={navLink}>
+          <Link to="/pricing" className={navLink("/pricing")}>
             Pricing
           </Link>
-          <Link to="/operator-os" className={navLink}>
+          <Link to="/operator-os" className={navLink("/operator-os")}>
             Operator OS
           </Link>
-          <Link to="/about" className={navLink}>
+          <Link to="/about" className={navLink("/about")}>
             About
           </Link>
-          <Link to="/blog" className={navLink}>
+          <Link to="/blog" className={navLink("/blog")}>
             Blog
           </Link>
         </nav>
@@ -97,7 +113,8 @@ export function Header() {
       {open && (
         <div id="mobile-menu" className="border-t border-border bg-background md:hidden">
           <div className="mx-auto max-w-6xl px-6 py-4 grid gap-1">
-            <Link to="/services" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/services" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/services") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Services
             </Link>
             {VERTICALS.map((v) => (
@@ -105,24 +122,29 @@ export function Header() {
                 key={v.slug}
                 to={`/services/${v.slug}`}
                 onClick={() => setOpen(false)}
-                className="pl-4 py-1.5 text-sm text-muted-foreground active:bg-ink/5"
+                className={`pl-6 py-1.5 text-sm rounded-lg ${isActive("/services/" + v.slug) ? "bg-ink/8 font-medium text-foreground" : "text-muted-foreground active:bg-ink/5"}`}
               >
                 {v.name}
               </Link>
             ))}
-            <Link to="/audit" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/audit" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/audit") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Audit
             </Link>
-            <Link to="/pricing" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/pricing" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/pricing") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Pricing
             </Link>
-            <Link to="/operator-os" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/operator-os" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/operator-os") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Operator OS
             </Link>
-            <Link to="/about" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/about" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/about") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               About
             </Link>
-            <Link to="/blog" onClick={() => setOpen(false)} className="py-2 text-sm active:bg-ink/5">
+            <Link to="/blog" onClick={() => setOpen(false)}
+              className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/blog") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Blog
             </Link>
             <div className="pt-3" onClick={() => setOpen(false)}>

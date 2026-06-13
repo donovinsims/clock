@@ -81,25 +81,29 @@ function PricingPage() {
 
       {/* Quick comparison table */}
       <Section tone="muted">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-6">
+        <div className="grid gap-6 md:grid-cols-[1fr_auto_1fr] items-center">
+          <div className="rounded-2xl bg-card p-6 opacity-70">
             <div className="op-label">Typical agency</div>
             <div className="mt-4 space-y-2 text-sm">
-              <p>✗ $2,000–$5,000/month ongoing</p>
-              <p>✗ 12-month contract</p>
-              <p>✗ You don't own the system</p>
-              <p>✗ Pay to make changes</p>
-              <p>✗ Pay to cancel</p>
+              <p className="text-ink/80 line-through decoration-ink/30">✗ $2,000–$5,000/month ongoing</p>
+              <p className="text-ink/80 line-through decoration-ink/30">✗ 12-month contract</p>
+              <p className="text-ink/80 line-through decoration-ink/30">✗ You don't own the system</p>
+              <p className="text-ink/80 line-through decoration-ink/30">✗ Pay to make changes</p>
+              <p className="text-ink/80 line-through decoration-ink/30">✗ Pay to cancel</p>
             </div>
           </div>
-          <div className="rounded-2xl border border-signal/30 bg-card p-6">
+          <div className="hidden md:flex flex-col items-center justify-center">
+            <span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">vs</span>
+            <div className="mt-2 h-px w-8 bg-border" />
+          </div>
+          <div className="rounded-2xl border border-signal/30 bg-signal/5 p-6">
             <div className="op-label text-signal">Clockout</div>
             <div className="mt-4 space-y-2 text-sm font-medium">
-              <p>✓ One-time price. Done.</p>
-              <p>✓ No contract. No commitment.</p>
-              <p>✓ You own the system. All the logins.</p>
-              <p>✓ Full handover and training included</p>
-              <p>✓ Walk away anytime. No penalty.</p>
+              <p className="text-foreground">✓ One-time price. Done.</p>
+              <p className="text-foreground">✓ No contract. No commitment.</p>
+              <p className="text-foreground">✓ You own the system. All the logins.</p>
+              <p className="text-foreground">✓ Full handover and training included</p>
+              <p className="text-foreground">✓ Walk away anytime. No penalty.</p>
             </div>
           </div>
         </div>
