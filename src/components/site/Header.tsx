@@ -48,7 +48,8 @@ export function Header() {
                   {VERTICALS.map((v) => (
                     <Link
                       key={v.slug}
-                      to={`/services/${v.slug}`}
+                      to="/services/$slug"
+                      params={{ slug: v.slug }}
                       className="flex flex-col rounded-xl px-3 py-2 hover:bg-secondary"
                     >
                       <span className="text-sm font-medium">{v.name}</span>
@@ -117,10 +118,11 @@ export function Header() {
               className={`py-2 text-sm rounded-lg px-2 -mx-2 ${isActive("/services") ? "bg-ink/8 font-medium" : "active:bg-ink/5"}`}>
               Services
             </Link>
-            {VERTICALS.map((v) => (
+              {VERTICALS.map((v) => (
               <Link
                 key={v.slug}
-                to={`/services/${v.slug}`}
+                to="/services/$slug"
+                params={{ slug: v.slug }}
                 onClick={() => setOpen(false)}
                 className={`pl-6 py-1.5 text-sm rounded-lg ${isActive("/services/" + v.slug) ? "bg-ink/8 font-medium text-foreground" : "text-muted-foreground active:bg-ink/5"}`}
               >
